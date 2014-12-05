@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A388a" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BitWatch_Watch_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" height="0.20000000000000015" alignment="left" verticalAlignment="bottom" title="Go!" id="qgU-SD-Di1">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="GoButtonPressed" destination="AgC-eL-Hgc" id="YLk-P4-Ao4"/>
+                            </connections>
+                        </button>
+                        <group width="1" height="0.45000000000000001" alignment="left" accessibilityLabel="WorkGroup" layout="vertical" hasDetent="YES" id="cGx-Y9-Lwc">
+                            <items>
+                                <label height="0.29999999999999999" alignment="left" accessibilityLabel="WorkLabel" text="Work" id="mb1-JO-1s1">
+                                    <color key="textColor" red="0.44167889160000001" green="1" blue="0.25641622580000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
+                                </label>
+                                <timer width="1" height="0.69999999999999996" alignment="right" accessibilityLabel="WorkTimer" textAlignment="right" id="Cyk-XC-wG9">
+                                    <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                </timer>
+                            </items>
+                        </group>
+                        <group width="1" height="0.45000000000000001" alignment="left" accessibilityLabel="RestGroup" layout="vertical" hasDetent="YES" id="lXm-YV-4KO">
+                            <items>
+                                <label height="0.29999999999999999" alignment="left" accessibilityLabel="RestLabel" text="Rest" id="LZS-Wt-RPQ">
+                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
+                                </label>
+                                <timer width="1" height="0.69999999999999996" alignment="right" accessibilityLabel="RestTimer" textAlignment="right" id="SL4-yv-hd3">
+                                    <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                </timer>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="GoButton" destination="qgU-SD-Di1" id="lvq-Js-l84"/>
+                        <outlet property="RestTimer" destination="SL4-yv-hd3" id="CjJ-98-tMa"/>
+                        <outlet property="WorkTimer" destination="Cyk-XC-wG9" id="NgV-Y2-smT"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="276"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="SRy-we-2Ne">
+            <objects>
+                <controller id="drF-rA-r3o">
+                    <items>
+                        <timer width="1" height="0.69999999999999996" alignment="right" verticalAlignment="bottom" accessibilityLabel="WorkTimer" textAlignment="center" id="8eo-OG-Epx">
+                            <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                        </timer>
+                        <label width="1" height="0.29999999999999999" alignment="left" accessibilityLabel="WorkLabel" text="Work" textAlignment="center" id="7OO-IF-72n">
+                            <color key="textColor" red="0.44167889160000001" green="1" blue="0.25641622580000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="43"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="544" y="276"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="BitWatch_Watch_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="BitWatch_Watch_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
