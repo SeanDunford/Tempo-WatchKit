@@ -15,26 +15,27 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="GoButtonPressed" destination="AgC-eL-Hgc" id="YLk-P4-Ao4"/>
+                                <segue destination="drF-rA-r3o" kind="push" id="rr2-kg-Jsx"/>
                             </connections>
                         </button>
-                        <group width="1" height="0.45000000000000001" alignment="left" accessibilityLabel="WorkGroup" layout="vertical" hasDetent="YES" id="cGx-Y9-Lwc">
+                        <group width="1" height="0.40000000000000002" alignment="left" accessibilityLabel="WorkGroup" layout="vertical" hasDetent="YES" id="cGx-Y9-Lwc" userLabel="Work Timer Group">
                             <items>
                                 <label height="0.29999999999999999" alignment="left" accessibilityLabel="WorkLabel" text="Work" id="mb1-JO-1s1">
                                     <color key="textColor" red="0.44167889160000001" green="1" blue="0.25641622580000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
                                 </label>
-                                <timer width="1" height="0.69999999999999996" alignment="right" accessibilityLabel="WorkTimer" textAlignment="right" id="Cyk-XC-wG9">
+                                <timer width="1" height="0.69999999999999996" alignment="right" accessibilityLabel="WorkTimer" textAlignment="right" previewedSeconds="900" id="Cyk-XC-wG9">
                                     <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 </timer>
                             </items>
                         </group>
-                        <group width="1" height="0.45000000000000001" alignment="left" accessibilityLabel="RestGroup" layout="vertical" hasDetent="YES" id="lXm-YV-4KO">
+                        <group width="1" height="0.40000000000000002" alignment="left" accessibilityLabel="RestGroup" layout="vertical" hasDetent="YES" id="lXm-YV-4KO" userLabel="Rest Timer Group">
                             <items>
                                 <label height="0.29999999999999999" alignment="left" accessibilityLabel="RestLabel" text="Rest" id="LZS-Wt-RPQ">
                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
                                 </label>
-                                <timer width="1" height="0.69999999999999996" alignment="right" accessibilityLabel="RestTimer" textAlignment="right" id="SL4-yv-hd3">
+                                <timer width="1" height="0.69999999999999996" alignment="right" accessibilityLabel="RestTimer" textAlignment="right" previewedSeconds="300" id="SL4-yv-hd3">
                                     <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 </timer>
                             </items>
