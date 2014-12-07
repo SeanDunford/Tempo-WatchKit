@@ -703,6 +703,7 @@
 				47D387A81A318A2E0074A1AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47D387AA1A318A2E0074A1AA /* Build configuration list for PBXNativeTarget "BitWatch WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -711,6 +712,7 @@
 				47D387A61A318A2E0074A1AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B876B5F1A1C9F2D00A76FAF /* Build configuration list for PBXProject "BitWatch" */ = {
 			isa = XCConfigurationList;
