@@ -21,8 +21,9 @@ class InterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         NSLog("%@ init", self)
+        initTimers()
     }
-
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -34,15 +35,22 @@ class InterfaceController: WKInterfaceController {
         NSLog("%@ did deactivate", self)
         super.didDeactivate()
     }
-
-    @IBAction func GoButtonPressed() {
+    func initTimers(){
         var d: NSDate = NSDate()
-        var secs: NSTimeInterval = 300
-        d = d.dateByAddingTimeInterval(secs)
+        var wsecs: NSTimeInterval = 901
+        var rsecs: NSTimeInterval = 301
+        var wd = d.dateByAddingTimeInterval(wsecs)
+        var rd = d.dateByAddingTimeInterval(rsecs)
         
-        WorkTimer.setDate(d)
-        RestTimer.setDate(d)
-        
+        WorkTimer.setDate(wd)
+        RestTimer.setDate(rd)
+        WorkTimer.start()
+        RestTimer.start()
+        WorkTimer.stop()
+        RestTimer.stop()
+    }
+    @IBAction func GoButtonPressed() {
+        initTimers()
         WorkTimer.start()
         RestTimer.start()
         
