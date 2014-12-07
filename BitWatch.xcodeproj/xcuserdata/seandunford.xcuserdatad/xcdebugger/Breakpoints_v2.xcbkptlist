@@ -9,29 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitWatch WatchKit Extension/InterfaceController.swift"
-            timestampString = "439464979.645881"
+            filePath = "BitWatch WatchKit Extension/PausedController.swift"
+            timestampString = "439636728.357903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "workUpdate()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BitWatch WatchKit Extension/InterfaceController.swift"
-            timestampString = "439464979.645881"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "restUpdate()"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "GoButtonPressed()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
