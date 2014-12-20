@@ -18,6 +18,8 @@
 		47D387A41A318A2E0074A1AA /* BitWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47D387871A318A2E0074A1AA /* BitWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		47D387AC1A31A3CF0074A1AA /* InterfaceController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D387AB1A31A3CF0074A1AA /* InterfaceController.storyboard */; };
 		47D387AE1A3422D30074A1AA /* RunningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D387AD1A3422D30074A1AA /* RunningController.swift */; };
+		6306FA511A45C90700E18868 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 6306FA501A45C90600E18868 /* Montserrat */; };
+		6306FA591A45D28400E18868 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6306FA581A45D28400E18868 /* menu-icon.png */; };
 		7B876B6A1A1C9F2D00A76FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B876B691A1C9F2D00A76FAF /* AppDelegate.swift */; };
 		7B876B6F1A1C9F2D00A76FAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B876B6D1A1C9F2D00A76FAF /* Main.storyboard */; };
 		7B876B711A1C9F2D00A76FAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B876B701A1C9F2D00A76FAF /* Images.xcassets */; };
@@ -92,6 +94,9 @@
 		47D387A01A318A2E0074A1AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47D387AB1A31A3CF0074A1AA /* InterfaceController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InterfaceController.storyboard; sourceTree = "<group>"; };
 		47D387AD1A3422D30074A1AA /* RunningController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningController.swift; sourceTree = "<group>"; };
+		6306FA501A45C90600E18868 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
+		6306FA581A45D28400E18868 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
+		63FB9F551A37781D004B27ED /* BitWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BitWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		7B876B641A1C9F2D00A76FAF /* BitWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B876B681A1C9F2D00A76FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B876B691A1C9F2D00A76FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +142,7 @@
 		47D387891A318A2E0074A1AA /* BitWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				63FB9F551A37781D004B27ED /* BitWatch WatchKit Extension.entitlements */,
 				47D387AD1A3422D30074A1AA /* RunningController.swift */,
 				47D3878D1A318A2E0074A1AA /* PausedController.swift */,
 				47D3878F1A318A2E0074A1AA /* NotificationController.swift */,
@@ -175,6 +181,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6306FA541A45CBC100E18868 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6306FA581A45D28400E18868 /* menu-icon.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		6306FA571A45D20300E18868 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6306FA501A45C90600E18868 /* Montserrat */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		7B876B5B1A1C9F2D00A76FAF = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +228,8 @@
 				7B876B701A1C9F2D00A76FAF /* Images.xcassets */,
 				7B876B721A1C9F2D00A76FAF /* LaunchScreen.xib */,
 				7B876B6D1A1C9F2D00A76FAF /* Main.storyboard */,
+				6306FA541A45CBC100E18868 /* Images */,
+				6306FA571A45D20300E18868 /* Fonts */,
 				7B876B671A1C9F2D00A76FAF /* Supporting Files */,
 			);
 			path = BitWatch;
@@ -343,12 +367,19 @@
 				TargetAttributes = {
 					47D387861A318A2E0074A1AA = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = CB8A2UT3FF;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					47D387961A318A2E0074A1AA = {
 						CreatedOnToolsVersion = 6.2;
 					};
 					7B876B631A1C9F2D00A76FAF = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = CB8A2UT3FF;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -405,8 +436,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B876B6F1A1C9F2D00A76FAF /* Main.storyboard in Resources */,
+				6306FA511A45C90700E18868 /* Montserrat in Resources */,
 				7B876B741A1C9F2D00A76FAF /* LaunchScreen.xib in Resources */,
 				7B876B711A1C9F2D00A76FAF /* Images.xcassets in Resources */,
+				6306FA591A45D28400E18868 /* menu-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +525,7 @@
 		47D387A51A318A2E0074A1AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BitWatch WatchKit Extension/BitWatch WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -501,6 +535,7 @@
 				INFOPLIST_FILE = "BitWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -508,11 +543,13 @@
 		47D387A61A318A2E0074A1AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BitWatch WatchKit Extension/BitWatch WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BitWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -566,7 +603,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Wagner (3685K98G2T)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Wagner (3685K98G2T)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -586,6 +624,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "3aa61d01-a459-469e-814e-469d4e902a9f";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -609,7 +648,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matthew Wagner (CB8A2UT3FF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Matthew Wagner (CB8A2UT3FF)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -622,6 +662,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "3aa61d01-a459-469e-814e-469d4e902a9f";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -639,6 +680,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -653,6 +695,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

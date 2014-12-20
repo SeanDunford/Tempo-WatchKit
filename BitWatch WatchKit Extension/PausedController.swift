@@ -41,6 +41,7 @@ class PausedController: WKInterfaceController {
 //        self.pushControllerWithName("RunningController", context: timerObj)
         self.presentControllerWithName("RunningController", context: timerObj)
     }
+    
     func initTimers(){
         workTimer.setDate(NSDate().dateByAddingTimeInterval(timerObj.getWaitSeconds()))
         restTimer.setDate(NSDate().dateByAddingTimeInterval(timerObj.getRestSeconds()))
