@@ -10,8 +10,9 @@ import UIKit
 import BitWatchKit
 
 class PriceViewController: UIViewController {
-  
-  @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
+    
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,10 +21,10 @@ class PriceViewController: UIViewController {
     var screenWidth = screenSize.width;
     var screenHeight = screenSize.height;
     
-    self.timeLabel = UILabel(frame: CGRectMake( 0.0, 0.0, screenWidth * 0.75, 40.0 ));
-    self.timeLabel.text = "99:99";
     self.timeLabel.adjustsFontSizeToFitWidth = true;
-//    
+    
+    var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true);
+    
 //    view.tintColor = UIColor.blackColor()
 //    
 //    horizontalLayoutConstraint.constant = 0

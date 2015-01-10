@@ -44,6 +44,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="stateLabel" destination="7N3-uw-KCN" id="WeR-r8-kMF"/>
+                        <outlet property="timeLabel" destination="pjm-AP-Xd9" id="gr0-5g-DKN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
