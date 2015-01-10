@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
         
         // Create the Home View
         var homeView: UIView = UIView(frame: CGRectMake(0, (height / 2), width, 50));
-        homeView.backgroundColor = UIColor(white: 1.0, alpha: 1.0);
+        homeView.backgroundColor = UIColor.whiteColor();
         
         // Create the "Begin" button
         var beginButton: UIButton = UIButton(frame: CGRectMake(0, (height * 0.25), width, (height * 0.75)));
@@ -27,11 +27,11 @@ class HomeViewController: UIViewController {
         
         // Create the "Menu" button
         var menuButton: UIButton = UIButton(frame: CGRectMake(width - 60, 10, 50, 50));
-        var menuImage: UIImage = UIImage(contentsOfFile: "menu-icon")!;
+        var menuImage: UIImage = UIImage(named:"menu-icon")!;
             menuButton.setBackgroundImage(menuImage, forState: UIControlState.Normal);
         
-        homeView.addSubview(beginButton);
-        homeView.addSubview(menuButton);
+         homeView.addSubview(beginButton);
+         homeView.addSubview(menuButton);
         self.view.addSubview(homeView);
     }
 
