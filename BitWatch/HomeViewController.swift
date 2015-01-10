@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BitWatchKit
 
 class HomeViewController: UIViewController {
 
@@ -27,7 +28,7 @@ class HomeViewController: UIViewController {
         
         // Create the "Menu" button
         var menuButton: UIButton = UIButton(frame: CGRectMake(width - 60, 10, 50, 50));
-        var menuImage: UIImage = UIImage(contentsOfFile: "menu-icon")!;
+        var menuImage: UIImage! = UIImage(named: "menu-icon");
             menuButton.setBackgroundImage(menuImage, forState: UIControlState.Normal);
         
         homeView.addSubview(beginButton);
@@ -39,7 +40,14 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    func foo(){
+        var timer: TimerModel! = TimerModel()
+        var defaults: NSUserDefaults
+        var group = "group.alphastory.bitwatch"
+        defaults = NSUserDefaults(suiteName: group)!
+        defaults.setObject(timer, forKey:"timer")
+    }
 
     /*
     // MARK: - Navigation

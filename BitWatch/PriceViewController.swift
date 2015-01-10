@@ -10,9 +10,12 @@ import UIKit
 import BitWatchKit
 
 class PriceViewController: UIViewController {
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
-    
+    var timer: NSTimer!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,45 +26,10 @@ class PriceViewController: UIViewController {
     
     self.timeLabel.adjustsFontSizeToFitWidth = true;
     
-    var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true);
+    timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true);
     var obj: Tracker = Tracker()
     var obj2: TimerModel = TimerModel()
     
-    
-//    view.tintColor = UIColor.blackColor()
-//    
-//    horizontalLayoutConstraint.constant = 0
-//    
-//    let originalPrice = tracker.cachedPrice()
-//    updateDate(tracker.cachedDate())
-//    updatePrice(originalPrice)
-//    tracker.requestPrice { (price, error) -> () in
-//      if error? == nil {
-//        self.updateDate(NSDate())
-//        self.updateImage(originalPrice, newPrice: price!)
-//        self.updatePrice(price!)
-//      }
-//    }
   }
-  
-//  private func updateDate(date: NSDate) {
-//    self.dateLabel.text = "Last updated \(Tracker.dateFormatter.stringFromDate(date))"
-//  }
-//  
-//  private func updateImage(originalPrice: NSNumber, newPrice: NSNumber) {
-//    if originalPrice.isEqualToNumber(newPrice) {
-//      horizontalLayoutConstraint.constant = 0
-//    } else {
-//      if newPrice.doubleValue > originalPrice.doubleValue {
-//        imageView.image = UIImage(named: "Up")
-//      } else {
-//        imageView.image = UIImage(named: "Down")
-//      }
-//      horizontalLayoutConstraint.constant = xOffset
-//    }
-//  }
-//  
-//  private func updatePrice(price: NSNumber) {
-//    self.priceLabel.text = Tracker.priceFormatter.stringFromNumber(price)
-//  }
+
 }
