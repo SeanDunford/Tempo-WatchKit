@@ -24,6 +24,9 @@ class PriceViewController: UIViewController {
     self.timeLabel.adjustsFontSizeToFitWidth = true;
     
     var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true);
+    var obj: Tracker = Tracker()
+    var obj2: TimerModel = TimerModel()
+    
     
 //    view.tintColor = UIColor.blackColor()
 //    

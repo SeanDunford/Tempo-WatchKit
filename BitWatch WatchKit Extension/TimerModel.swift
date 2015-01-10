@@ -19,7 +19,7 @@ public class TimerModel: NSObject {
     private var rsecs: Double = defaultRSecs
     private var ssecs: Double = defaultSSecs
     
-    override init() {
+    public override init() {
         super.init()
     }
     public func setWorkSeconds(secs: Double){
