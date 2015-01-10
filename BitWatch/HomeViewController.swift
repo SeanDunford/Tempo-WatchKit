@@ -27,7 +27,8 @@ class HomeViewController: UIViewController {
         
         // Create the "Menu" button
         var menuButton: UIButton = UIButton(frame: CGRectMake(width - 60, 10, 50, 50));
-            menuButton.setTitle("Menu", forState:UIControlState.Normal);
+        var menuImage: UIImage = UIImage(contentsOfFile: "menu-icon")!;
+            menuButton.setBackgroundImage(menuImage, forState: UIControlState.Normal);
         
         homeView.addSubview(beginButton);
         homeView.addSubview(menuButton);
