@@ -13,23 +13,33 @@ var height: CGFloat = CGFloat();
 var width: CGFloat = CGFloat();
 var mainView: UIScrollView = UIScrollView();
 var homeView: UIView = UIView();
+var workView: UIView = UIView();
+var restView: UIView = UIView();
 var beginButton: UIButton = UIButton();
 var countDownLabel: UILabel = UILabel();
 var countDownTimer: NSTimer = NSTimer();
 var countDown = 0;
+var intervalGreen: UIColor = UIColor();
+var workPurple: UIColor = UIColor();
+var restRed: UIColor = UIColor();
+var workSetting: UITextField = UITextField();
+var restSetting: UITextField = UITextField();
+var intervalSetting: UITextField = UITextField();
+var menuOpen: Bool = false;
 
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         // Create the Main Scroll View View
         height = self.view.frame.size.height;
         width = self.view.frame.size.width;
         
-        countDown = 10;
+        countDown = 3;
+        intervalGreen = UIColor(red:(124.0/255.0), green:(208.0/255.0), blue:(126.0/255.0), alpha: 1.0);
+        workPurple = UIColor(red: (178.0/255.0), green: (124.0/255.0), blue: (209.0/255.0), alpha: 1.0);
+        restRed = UIColor(red: (208.0/255.0), green: (93.0/255.0), blue: (93.0/255.0), alpha: 1.0);
         
         mainView = UIScrollView(frame: CGRectMake(0, 0, width, height));
         mainView.contentSize = CGSizeMake((width * 2.0) - 45.0, height);
@@ -68,18 +78,78 @@ class HomeViewController: UIViewController {
         beginButton = UIButton(frame: CGRectMake(0, (height * 0.1), width, (height * 0.75)));
         beginButton.alpha = 1.0;
         beginButton.setTitle("begin", forState:UIControlState.Normal);
-        beginButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
-        beginButton.titleLabel!.font = UIFont(name: "Montserrat-Bold.ttf", size: 36);
+        beginButton.setTitleColor(intervalGreen, forState: UIControlState.Normal);
+        beginButton.titleLabel!.font = UIFont(name: "Montserrat-Bold", size: 36);
         beginButton.addTarget(self, action: "beginCountdown", forControlEvents: UIControlEvents.TouchUpInside);
         
         // Create the "Menu" button
-        var menuButton: UIButton = UIButton(frame: CGRectMake(width - 35, 10, 25, 25));
-        var menuImage: UIImage! = UIImage(named: "menu-icon");
-        menuButton.setBackgroundImage(menuImage, forState: UIControlState.Normal);
+        self.addMenuButtonToView(homeView);
         
         homeView.addSubview(beginButton);
-        homeView.addSubview(menuButton);
         mainView.addSubview(homeView);
+    }
+    
+    
+    // *********************************
+    // Build Work View
+    // *********************************
+    
+    func buildWorkView(){
+        homeView.removeFromSuperview();
+        
+        // Create the Home View
+        workView = UIView(frame: CGRectMake(0, 0, width, height));
+        
+        var workLabel: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4) - 30, width, 50));
+            workLabel.text = "Work";
+            workLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
+            workLabel.textColor = workPurple;
+            workLabel.textAlignment = NSTextAlignment.Center;
+        
+        var workTime: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4), width, 125));
+            workTime.text = "99:99";
+            workTime.font = UIFont(name: "Montserrat-Bold", size: 100);
+            workTime.textColor = workPurple;
+            workTime.textAlignment = NSTextAlignment.Center;
+        
+        // Create the "Menu" button
+        self.addMenuButtonToView(workView);
+        
+        workView.addSubview(workLabel);
+        workView.addSubview(workTime);
+        mainView.addSubview(workView);
+    }
+    
+    
+    // *********************************
+    // Build Rest View
+    // *********************************
+    
+    func buildRestView(){
+        homeView.removeFromSuperview();
+        
+        // Create the Rest View
+        restView = UIView(frame: CGRectMake(0, 0, width, height));
+        
+        var restLabel: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4) - 30, width, 50));
+        restLabel.text = "Rest";
+        restLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
+        restLabel.textColor = restRed;
+        restLabel.textAlignment = NSTextAlignment.Center;
+        
+        var restTime: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4), width, 125));
+        restTime.text = "99:99";
+        restTime.font = UIFont(name: "Montserrat-Bold", size: 100);
+        restTime.textColor = restRed;
+        restTime.textAlignment = NSTextAlignment.Center;
+        
+        // Create the "Menu" button
+        self.addMenuButtonToView(restView);
+        
+        workView.addSubview(restLabel);
+        workView.addSubview(restTime);
+        mainView.addSubview(workView);
+
     }
     
     
@@ -91,13 +161,16 @@ class HomeViewController: UIViewController {
         // Create the Settings View
         let settingsWidth = width - 45;
         var settingsView: UIView = UIView(frame: CGRectMake(width, 0, settingsWidth, height));
+        settingsView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.02);
         
         // Create the Work Setting Text Field
         var workLabel: UILabel = UILabel(frame: CGRectMake(20, (height * 0.15) - 30, settingsWidth - 40, 50));
-            workLabel.font = UIFont(name: "Montserrat-Bold", size: 36);
+            workLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
+            workLabel.textColor = workPurple;
             workLabel.text = "Work";
         var workSetting: UITextField = UITextField(frame: CGRectMake(20, height * 0.15, settingsWidth - 40, 50));
-            workSetting.font = UIFont(name: "Montserrat-Bold", size: 36);
+            workSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
+            workSetting.textColor = workPurple;
             workSetting.text = "99:99";
         
         settingsView.addSubview(workLabel);
@@ -105,16 +178,54 @@ class HomeViewController: UIViewController {
         
         // Create the Rest Setting Text Field
         var restLabel: UILabel = UILabel(frame: CGRectMake(20, (height * 0.5) - 30, settingsWidth - 40, 50));
-            restLabel.font = UIFont(name: "Montserrat-Bold", size: 36);
-            restLabel.text = "Rest";
+        restLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
+        restLabel.textColor = restRed;
+        restLabel.text = "Rest";
         var restSetting: UITextField = UITextField(frame: CGRectMake(20, height * 0.5, settingsWidth - 40, 50));
-            restSetting.font = UIFont(name: "Montserrat-Bold", size: 36);
-            restSetting.text = "99:99";
+        restSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
+        restSetting.textColor = restRed;
+        restSetting.text = "99:99";
         
         settingsView.addSubview(restLabel);
         settingsView.addSubview(restSetting);
         
+        // Create the Interval Setting Text Field
+        var intervalLabel: UILabel = UILabel(frame: CGRectMake(20, (height * 0.8) - 30, settingsWidth - 40, 50));
+        intervalLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
+        intervalLabel.textColor = intervalGreen;
+        intervalLabel.text = "Intervals";
+        intervalSetting = UITextField(frame: CGRectMake(20, height * 0.8, settingsWidth - 40, 50));
+        intervalSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
+        intervalSetting.textColor = intervalGreen;
+        intervalSetting.text = "9999";
+        
+        settingsView.addSubview(intervalLabel);
+        settingsView.addSubview(intervalSetting);
+        
         mainView.addSubview(settingsView);
+    }
+    
+    
+    // *********************************
+    // Add the Menu Button to the View
+    // *********************************
+    
+    func addMenuButtonToView(view: UIView){
+        var menuButton: UIButton = UIButton(frame: CGRectMake(width - 35, 10, 25, 25));
+        var menuImage: UIImage! = UIImage(named: "menu-icon");
+        menuButton.setBackgroundImage(menuImage, forState: UIControlState.Normal);
+        menuButton.addTarget(self, action: "menuClicked", forControlEvents: UIControlEvents.TouchUpInside);
+        view.addSubview(menuButton);
+    }
+    
+    func menuClicked() {
+        if( menuOpen ){
+            mainView.setContentOffset(CGPointMake(0, 0), animated: true);
+            menuOpen = false;
+        } else {
+            mainView.setContentOffset(CGPointMake(width - 45, 0), animated: true);
+            menuOpen = true;
+        }
     }
     
     
@@ -130,11 +241,12 @@ class HomeViewController: UIViewController {
         countDownLabel = UILabel(frame: CGRectMake(0, (height * 0.1), width, (height * 0.75)));
         countDownLabel.text = String(countDown);
         countDownLabel.textAlignment = NSTextAlignment.Center;
-        countDownLabel.font = UIFont(name: "Montserrat-Bold.ttf", size: 36);
+        countDownLabel.textColor = intervalGreen;
+        countDownLabel.font = UIFont(name: "Montserrat-Bold", size: 125);
         homeView.addSubview(countDownLabel);
         
         // Start the Countdown
-        countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
+        countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
     }
     
     func updateCountdown() {
@@ -158,7 +270,7 @@ class HomeViewController: UIViewController {
     // *********************************
     
     func startWorking(){
-        print("Working");
+        self.buildWorkView();
     }
     
     // ***********************************
@@ -170,8 +282,10 @@ class HomeViewController: UIViewController {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             if( swipeGesture.direction == UISwipeGestureRecognizerDirection.Right){
                 mainView.setContentOffset(CGPointMake(0, 0), animated: true);
+                menuOpen = false;
             } else if( swipeGesture.direction == UISwipeGestureRecognizerDirection.Left ){
                 mainView.setContentOffset(CGPointMake(width - 45, 0), animated: true);
+                menuOpen = true;
             }
         }
     }
