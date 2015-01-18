@@ -8,26 +8,38 @@
 
 import UIKit
 import BitWatchKit
+import iAd
 
+// Sizes
 var height: CGFloat = CGFloat();
 var width: CGFloat = CGFloat();
+
+// Views
 var mainView: UIScrollView = UIScrollView();
 var homeView: UIView = UIView();
 var workView: UIView = UIView();
 var restView: UIView = UIView();
+
+// Labels and Buttons
 var beginButton: UIButton = UIButton();
 var countDownLabel: UILabel = UILabel();
 var countDownTimer: NSTimer = NSTimer();
 var countDown = 0;
+
+// Colors
 var intervalGreen: UIColor = UIColor();
 var workPurple: UIColor = UIColor();
 var restRed: UIColor = UIColor();
+
+// Text Fields
 var workSetting: UITextField = UITextField();
 var restSetting: UITextField = UITextField();
 var intervalSetting: UITextField = UITextField();
 var menuOpen: Bool = false;
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, ADBannerViewDelegate {
+    
+    @IBOutlet var adBannerView: ADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +48,19 @@ class HomeViewController: UIViewController {
         height = self.view.frame.size.height;
         width = self.view.frame.size.width;
         
+        // iAd Stuff
+        self.canDisplayBannerAds = true;
+        self.adBannerView = ADBannerView(frame: CGRectMake(0, height - 50, width, 50));
+        self.adBannerView.delegate = self;
+        self.adBannerView.hidden = true;
+        
         countDown = 3;
         intervalGreen = UIColor(red:(124.0/255.0), green:(208.0/255.0), blue:(126.0/255.0), alpha: 1.0);
         workPurple = UIColor(red: (178.0/255.0), green: (124.0/255.0), blue: (209.0/255.0), alpha: 1.0);
         restRed = UIColor(red: (208.0/255.0), green: (93.0/255.0), blue: (93.0/255.0), alpha: 1.0);
         
-        mainView = UIScrollView(frame: CGRectMake(0, 0, width, height));
-        mainView.contentSize = CGSizeMake((width * 2.0) - 45.0, height);
+        mainView = UIScrollView(frame: CGRectMake(0, 0, width, height - 50));
+        mainView.contentSize = CGSizeMake((width * 2.0) - 45.0, mainView.frame.size.height);
         mainView.scrollEnabled = false;
         mainView.pagingEnabled = false;
         mainView.backgroundColor = UIColor.whiteColor();
@@ -62,9 +80,22 @@ class HomeViewController: UIViewController {
         // Create the Settings View
         self.buildSettingsView();
         
-        self.view = mainView;
+        self.view.addSubview(mainView);
     }
     
+    
+    // *********************************
+    // iAd Banner Stuff
+    // *********************************
+    
+    func bannerViewWillLoadAd(banner: ADBannerView!) {
+        println("Banner Will Load Ad");
+    }
+    
+    func bannerViewDidLoadAd(banner: ADBannerView!) {
+        println("Banner did load Ad");
+        self.adBannerView.hidden = false;
+    }
     
     // *********************************
     // Build Home View
@@ -72,10 +103,10 @@ class HomeViewController: UIViewController {
     
     func buildHomeView(){
         // Create the Home View
-        homeView = UIView(frame: CGRectMake(0, 0, width, height));
+        homeView = UIView(frame: CGRectMake(0, 0, width, mainView.frame.size.height));
         
         // Create the "Begin" button
-        beginButton = UIButton(frame: CGRectMake(0, (height * 0.1), width, (height * 0.75)));
+        beginButton = UIButton(frame: CGRectMake(0, (mainView.frame.size.height * 0.1), width, (mainView.frame.size.height * 0.75)));
         beginButton.alpha = 1.0;
         beginButton.setTitle("begin", forState:UIControlState.Normal);
         beginButton.setTitleColor(intervalGreen, forState: UIControlState.Normal);
@@ -98,15 +129,15 @@ class HomeViewController: UIViewController {
         homeView.removeFromSuperview();
         
         // Create the Home View
-        workView = UIView(frame: CGRectMake(0, 0, width, height));
+        workView = UIView(frame: CGRectMake(0, 0, width, mainView.frame.size.height));
         
-        var workLabel: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4) - 30, width, 50));
+        var workLabel: UILabel = UILabel(frame: CGRectMake(0, (mainView.frame.size.height * 0.4) - 30, width, 50));
             workLabel.text = "Work";
             workLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
             workLabel.textColor = workPurple;
             workLabel.textAlignment = NSTextAlignment.Center;
         
-        var workTime: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4), width, 125));
+        var workTime: UILabel = UILabel(frame: CGRectMake(0, (mainView.frame.size.height * 0.4), width, 125));
             workTime.text = "99:99";
             workTime.font = UIFont(name: "Montserrat-Bold", size: 100);
             workTime.textColor = workPurple;
@@ -129,15 +160,15 @@ class HomeViewController: UIViewController {
         homeView.removeFromSuperview();
         
         // Create the Rest View
-        restView = UIView(frame: CGRectMake(0, 0, width, height));
+        restView = UIView(frame: CGRectMake(0, 0, width, mainView.frame.size.height));
         
-        var restLabel: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4) - 30, width, 50));
+        var restLabel: UILabel = UILabel(frame: CGRectMake(0, (mainView.frame.size.height * 0.4) - 30, width, 50));
         restLabel.text = "Rest";
         restLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
         restLabel.textColor = restRed;
         restLabel.textAlignment = NSTextAlignment.Center;
         
-        var restTime: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4), width, 125));
+        var restTime: UILabel = UILabel(frame: CGRectMake(0, (mainView.frame.size.height * 0.4), width, 125));
         restTime.text = "99:99";
         restTime.font = UIFont(name: "Montserrat-Bold", size: 100);
         restTime.textColor = restRed;
@@ -160,15 +191,15 @@ class HomeViewController: UIViewController {
     func buildSettingsView(){
         // Create the Settings View
         let settingsWidth = width - 45;
-        var settingsView: UIView = UIView(frame: CGRectMake(width, 0, settingsWidth, height));
+        var settingsView: UIView = UIView(frame: CGRectMake(width, 0, settingsWidth, mainView.frame.size.height));
         settingsView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.02);
         
         // Create the Work Setting Text Field
-        var workLabel: UILabel = UILabel(frame: CGRectMake(20, (height * 0.15) - 30, settingsWidth - 40, 50));
+        var workLabel: UILabel = UILabel(frame: CGRectMake(20, (mainView.frame.size.height * 0.15) - 30, settingsWidth - 40, 50));
             workLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
             workLabel.textColor = workPurple;
             workLabel.text = "Work";
-        var workSetting: UITextField = UITextField(frame: CGRectMake(20, height * 0.15, settingsWidth - 40, 50));
+        var workSetting: UITextField = UITextField(frame: CGRectMake(20, mainView.frame.size.height * 0.15, settingsWidth - 40, 50));
             workSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
             workSetting.textColor = workPurple;
             workSetting.text = "99:99";
@@ -177,11 +208,11 @@ class HomeViewController: UIViewController {
         settingsView.addSubview(workSetting);
         
         // Create the Rest Setting Text Field
-        var restLabel: UILabel = UILabel(frame: CGRectMake(20, (height * 0.5) - 30, settingsWidth - 40, 50));
+        var restLabel: UILabel = UILabel(frame: CGRectMake(20, (mainView.frame.size.height * 0.5) - 30, settingsWidth - 40, 50));
         restLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
         restLabel.textColor = restRed;
         restLabel.text = "Rest";
-        var restSetting: UITextField = UITextField(frame: CGRectMake(20, height * 0.5, settingsWidth - 40, 50));
+        var restSetting: UITextField = UITextField(frame: CGRectMake(20, mainView.frame.size.height * 0.5, settingsWidth - 40, 50));
         restSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
         restSetting.textColor = restRed;
         restSetting.text = "99:99";
@@ -190,11 +221,11 @@ class HomeViewController: UIViewController {
         settingsView.addSubview(restSetting);
         
         // Create the Interval Setting Text Field
-        var intervalLabel: UILabel = UILabel(frame: CGRectMake(20, (height * 0.8) - 30, settingsWidth - 40, 50));
+        var intervalLabel: UILabel = UILabel(frame: CGRectMake(20, (mainView.frame.size.height * 0.8) - 30, settingsWidth - 40, 50));
         intervalLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
         intervalLabel.textColor = intervalGreen;
         intervalLabel.text = "Intervals";
-        intervalSetting = UITextField(frame: CGRectMake(20, height * 0.8, settingsWidth - 40, 50));
+        intervalSetting = UITextField(frame: CGRectMake(20, mainView.frame.size.height * 0.8, settingsWidth - 40, 50));
         intervalSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
         intervalSetting.textColor = intervalGreen;
         intervalSetting.text = "9999";
@@ -238,7 +269,7 @@ class HomeViewController: UIViewController {
         beginButton.alpha = 0.0;
         
         // Setup the Countdown Label
-        countDownLabel = UILabel(frame: CGRectMake(0, (height * 0.1), width, (height * 0.75)));
+        countDownLabel = UILabel(frame: CGRectMake(0, (mainView.frame.size.height * 0.1), width, (mainView.frame.size.height * 0.75)));
         countDownLabel.text = String(countDown);
         countDownLabel.textAlignment = NSTextAlignment.Center;
         countDownLabel.textColor = intervalGreen;
