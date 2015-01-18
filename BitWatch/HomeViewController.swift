@@ -10,7 +10,7 @@ import UIKit
 import BitWatchKit
 import iAd
 
-class HomeViewController: UIViewController, ADBannerViewDelegate {
+class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDelegate {
     enum HomeViewControllerState: Int{
         case home = 0
         case work = 1
@@ -71,6 +71,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate {
         
         f = CGRectMake(width, 0, width, height)
         settingsView = SettingsView(frame:f)
+        settingsView.delegate = self;
         
         setState(.home)
         self.view.backgroundColor = UIColor.purpleColor()
@@ -158,6 +159,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate {
             setState(HomeViewControllerState.work)
             homeView.stopTimer()
         }
+    }
+    
+    func scrollToPoint(point: CGPoint) {
+        containerView.scrollView.setContentOffset(point, animated: true);
     }
 
     override func didReceiveMemoryWarning() {

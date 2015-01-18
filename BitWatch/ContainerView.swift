@@ -53,6 +53,8 @@ class ContainerView: UIView{
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left;
         scrollView.addGestureRecognizer(swipeLeft);
     }
+    
+    
     func swipeRight(){
     
     }
