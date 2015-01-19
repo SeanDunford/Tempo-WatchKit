@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47042E901A6D09380004D163 /* BWCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47042E8E1A6D09380004D163 /* BWCircularSlider.swift */; };
+		47042E911A6D09380004D163 /* BWCircularSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47042E8F1A6D09380004D163 /* BWCircularSliderView.swift */; };
+		47042E931A6E48AC0004D163 /* xBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 47042E921A6E48AC0004D163 /* xBtn.png */; };
 		4725A5C71A6B7E2B001676FC /* UIColor+BitWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A5C61A6B7E2B001676FC /* UIColor+BitWatch.swift */; };
 		4725A5C91A6B7FDC001676FC /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A5C81A6B7FDC001676FC /* ContainerView.swift */; };
 		479A20271A61C73E00976B6C /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A902BA1A342868004812C7 /* TimerModel.swift */; };
@@ -89,6 +92,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		47042E8E1A6D09380004D163 /* BWCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BWCircularSlider.swift; path = ../../circularSlide/TB_CustomControlsSwift/BWCircularSlider.swift; sourceTree = "<group>"; };
+		47042E8F1A6D09380004D163 /* BWCircularSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BWCircularSliderView.swift; path = ../../circularSlide/TB_CustomControlsSwift/BWCircularSliderView.swift; sourceTree = "<group>"; };
+		47042E921A6E48AC0004D163 /* xBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xBtn.png; path = ../../../Downloads/xBtn.png; sourceTree = "<group>"; };
 		4725A5C61A6B7E2B001676FC /* UIColor+BitWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+BitWatch.swift"; sourceTree = "<group>"; };
 		4725A5C81A6B7FDC001676FC /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		47A902BA1A342868004812C7 /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerModel.swift; path = "../BitWatch WatchKit Extension/TimerModel.swift"; sourceTree = "<group>"; };
@@ -154,6 +160,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47042E8D1A6D091C0004D163 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				47042E8E1A6D09380004D163 /* BWCircularSlider.swift */,
+				47042E8F1A6D09380004D163 /* BWCircularSliderView.swift */,
+			);
+			name = Slider;
+			sourceTree = "<group>";
+		};
 		4725A5C51A6B7E13001676FC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +233,7 @@
 		6306FA541A45CBC100E18868 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				47042E921A6E48AC0004D163 /* xBtn.png */,
 				6306FA581A45D28400E18868 /* menu-icon.png */,
 			);
 			name = Images;
@@ -267,6 +283,7 @@
 		7B876B661A1C9F2D00A76FAF /* BitWatch */ = {
 			isa = PBXGroup;
 			children = (
+				47042E8D1A6D091C0004D163 /* Slider */,
 				4725A5C51A6B7E13001676FC /* Extension */,
 				63F185B41A61C2B20020C193 /* HomeViewController */,
 				7B876B691A1C9F2D00A76FAF /* AppDelegate.swift */,
@@ -481,6 +498,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47042E931A6E48AC0004D163 /* xBtn.png in Resources */,
 				63A9DF8E1A6AE00600ACDCDF /* Montserrat-Regular.ttf in Resources */,
 				63A9DF8D1A6AE00000ACDCDF /* Montserrat-Bold.ttf in Resources */,
 				7B876B6F1A1C9F2D00A76FAF /* Main.storyboard in Resources */,
@@ -520,10 +538,12 @@
 				4725A5C91A6B7FDC001676FC /* ContainerView.swift in Sources */,
 				47AC90FC1A6B7A01007F5BC3 /* SettingsView.swift in Sources */,
 				47AC90F61A6B7870007F5BC3 /* HomeView.swift in Sources */,
+				47042E901A6D09380004D163 /* BWCircularSlider.swift in Sources */,
 				7B876B6A1A1C9F2D00A76FAF /* AppDelegate.swift in Sources */,
 				47AC90F81A6B7932007F5BC3 /* WorkView.swift in Sources */,
 				47AC90FA1A6B793E007F5BC3 /* RestView.swift in Sources */,
 				63F185B61A61C3130020C193 /* HomeViewController.swift in Sources */,
+				47042E911A6D09380004D163 /* BWCircularSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
