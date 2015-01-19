@@ -60,8 +60,12 @@ public class HomeView: UIView {
     func stopTimer(){
         beginButton.alpha = 1
         countDownLabel.alpha = 0
+        countDownLabel.text = String(countDown)
     }
     func beginPressed(){
         beginBlock?()
+    }
+    func updateTime(seconds: Int){
+        countDownLabel.text = String(seconds)
     }
 }

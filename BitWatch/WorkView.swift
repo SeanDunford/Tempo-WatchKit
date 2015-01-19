@@ -12,6 +12,9 @@ import UIKit
 public class WorkView: UIView{
     var height: CGFloat!
     var width: CGFloat!
+    var workTime: UILabel!
+    var countDown = 100
+    
     override init(frame: CGRect) {
         super.init(frame:frame)
         height = frame.size.height
@@ -28,8 +31,7 @@ public class WorkView: UIView{
         workLabel.textColor = UIColor().workPurple();
         workLabel.textAlignment = NSTextAlignment.Center;
         
-        var workTime: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4), width, 125));
-        workTime.text = "99:99";
+        workTime = UILabel(frame: CGRectMake(0, (height * 0.4), width, 125));
         workTime.font = UIFont(name: "Montserrat-Bold", size: 100);
         workTime.textColor = UIColor().workPurple();
         workTime.textAlignment = NSTextAlignment.Center;
@@ -37,5 +39,17 @@ public class WorkView: UIView{
         self.addSubview(workLabel);
         self.addSubview(workTime);
     }
-    
+    func updateTime(secs: Int){
+        var m = (secs / 60) % 60;
+        var s = secs % 60;
+        
+        var formattedTime: NSString = String(format: "%02u:%02u", m, s);
+        workTime.text = formattedTime
+    }
+    func startTimer(){
+        updateTime(countDown)
+    }
+    func stopTimer(){
+        
+    }
 }
