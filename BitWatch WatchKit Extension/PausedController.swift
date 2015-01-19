@@ -17,9 +17,12 @@ class PausedController: WKInterfaceController {
     @IBOutlet weak var workTimer: WKInterfaceTimer!
     @IBOutlet weak var restTimer: WKInterfaceTimer!
     
-    override init(context: AnyObject?) {
+    
+    
+    
+    override init() {
         // Initialize variables here.
-        super.init(context: context)
+        super.init()
         
         // Configure interface objects here.
         NSLog("%@ init", self)
