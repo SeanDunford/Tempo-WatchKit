@@ -16,6 +16,7 @@ protocol SettingsViewDelegate {
 public class SettingsView: UIView, UITextFieldDelegate{
     var width: CGFloat!
     var height: CGFloat!
+    var mode: Int!
     
     var intervalAmount: Int!{
         willSet(i){
@@ -76,6 +77,8 @@ public class SettingsView: UIView, UITextFieldDelegate{
     func initialize(){
         let settingsWidth = width - 45;
     
+        mode = 0
+        
         workLabel = UILabel(frame: CGRectMake(20, (self.frame.size.height * 0.15) - 30, settingsWidth - 40, 50));
         workLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
         workLabel.textColor = UIColor().workPurple();
@@ -149,7 +152,19 @@ public class SettingsView: UIView, UITextFieldDelegate{
         
     }
     func xBtnPressed(){
+        var val = circleView.currValue
+        switch(mode){
+        case 0:
+            workCountDown = Int(val)
+        case 1:
+            restCountDown = Int(val)
+        case 2:
+            intervalAmount = Int(val)
+        default:
+            return;
+        }
         fadeSettingsViews(true)
+        mode = 0
     }
     func btnPressed(btn: UIButton){
         var tag: Int = btn.tag
@@ -174,6 +189,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
             timeMode = false
             currValue = CGFloat(intervalAmount)
         }
+        mode = tag
         circleView.updateView(color,
             beginColor: color,
             endColor: color,
