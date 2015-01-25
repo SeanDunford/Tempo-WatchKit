@@ -108,19 +108,19 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         restView = RestView(frame: f)
         workView = WorkView(frame: f)
         
-        f = CGRectMake(width, 0, width, height)
+        f = CGRectMake(width, 0, width - 45, height)
         settingsView = SettingsView(frame:f)
         settingsView.delegate = self;
         
         self.state = .home
-        self.view.backgroundColor = UIColor.purpleColor()
+        self.view.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(containerView);
         containerView.addSubview(settingsView)
         
         //Replace this with NSUserDefaults
         homeCountDown = 3
-        workCountDown = 2
-        restCountDown = 1
+        workCountDown = 1200
+        restCountDown = 60
         intervalAmount = 2
         
         setupViews()
