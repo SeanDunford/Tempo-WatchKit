@@ -40,19 +40,27 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     
     var countDownTimer: NSTimer!
     var currentCountDown = 0
+    var currentInterval: Int = 0
     var homeCountDown: Int!{
         willSet(i){
-            self.homeView.countDown = i;
+            self.homeView.countDown = i
         }
     }
     var restCountDown: Int!{
         willSet(i){
-            self.restView.countDown = i;
+            self.restView.countDown = i
+            self.settingsView.restCountDown = i
         }
     }
     var workCountDown: Int!{
         willSet(i){
-            self.workView.countDown = i;
+            self.workView.countDown = i
+            self.settingsView.workCountDown = i
+        }
+    }
+    var intervalAmount: Int!{
+        willSet(i){
+            self.settingsView.intervalAmount = i
         }
     }
     
@@ -110,9 +118,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         containerView.addSubview(settingsView)
         
         //Replace this with NSUserDefaults
-        homeCountDown = 5
-        workCountDown = 50
-        restCountDown = 25
+        homeCountDown = 3
+        workCountDown = 2
+        restCountDown = 1
+        intervalAmount = 2
         
         setupViews()
     }
@@ -132,7 +141,12 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         case .rest:
             self.state = .work
         case .work:
-            self.state = .rest
+            if(currentInterval++ >= intervalAmount){
+                self.state = .home
+            }
+            else{
+                self.state = .rest
+            }
         default:
             var str = "can't increment state if it's at state: " + String(state.rawValue)
             println(str)

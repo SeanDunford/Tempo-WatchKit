@@ -36,7 +36,6 @@ public class RestView: UIView{
         restTime.font = UIFont(name: "Montserrat-Bold", size: 100);
         restTime.textColor = UIColor().restRed();
         restTime.textAlignment = NSTextAlignment.Center;
-        
 
         let settingsWidth = width - 45;
         var settingsView: UIView = UIView(frame: CGRectMake(width, 0, settingsWidth, height));

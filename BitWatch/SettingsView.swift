@@ -17,6 +17,32 @@ public class SettingsView: UIView, UITextFieldDelegate{
     var width: CGFloat!
     var height: CGFloat!
     
+    var intervalAmount: Int!{
+        willSet(i){
+            intervalSetting.text = String(i)
+        }
+    }
+    
+    var restCountDown: Int!{
+        willSet(i){
+            var m = (i / 60) % 60;
+            var s = i % 60;
+            
+            var formattedTime: NSString = String(format: "%02u:%02u", m, s);
+            restSetting.text = formattedTime
+        }
+    }
+    
+    var workCountDown: Int!{
+        willSet(i){
+            var m = (i / 60) % 60;
+            var s = i % 60;
+            
+            var formattedTime: NSString = String(format: "%02u:%02u", m, s);
+            workSetting.text = formattedTime
+        }
+    }
+    
     // Text Fields
     var workSetting: UITextField!
     var restSetting: UITextField!
@@ -45,7 +71,6 @@ public class SettingsView: UIView, UITextFieldDelegate{
         workSetting = UITextField(frame: CGRectMake(20, self.frame.size.height * 0.15, settingsWidth - 40, 50));
         workSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
         workSetting.textColor = UIColor().workPurple();
-        workSetting.text = "99:99";
         workSetting.delegate = self;
         workSetting.tag = 0
     
@@ -59,9 +84,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
         restLabel.text = "Rest";
         restSetting = UITextField(frame: CGRectMake(20, self.frame.size.height * 0.5, settingsWidth - 40, 50));
         restSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
-        restSetting.textColor = UIColor().restRed();
-        restSetting.text = "99:99";
-        restSetting.delegate = self;
+        restSetting.textColor = UIColor().restRed();        restSetting.delegate = self;
         restSetting.tag = 1;
     
         self.addSubview(restLabel);
@@ -75,7 +98,6 @@ public class SettingsView: UIView, UITextFieldDelegate{
         intervalSetting = UITextField(frame: CGRectMake(20, self.frame.size.height * 0.8, settingsWidth - 40, 50));
         intervalSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
         intervalSetting.textColor = UIColor().intervalGreen();
-        intervalSetting.text = "9999";
         intervalSetting.delegate = self;
         intervalSetting.tag = 2;
         
@@ -99,4 +121,5 @@ public class SettingsView: UIView, UITextFieldDelegate{
     public func textFieldDidEndEditing(textField: UITextField) {
         delegate.scrollToPoint(CGPointMake(width, 0));
     }
+    
 }
