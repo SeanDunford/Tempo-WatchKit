@@ -34,6 +34,7 @@ class ContainerView: UIView{
         scrollView.scrollEnabled = false;
         scrollView.pagingEnabled = false;
         scrollView.backgroundColor = UIColor.whiteColor();
+        scrollView.showsHorizontalScrollIndicator = false
         super.addSubview(scrollView)
         
         
@@ -83,7 +84,12 @@ class ContainerView: UIView{
         }
     }
     
+    func enableScrolling(enable:Bool){
+        //I don't know what to do here....
+    }
+    
     func menuClicked() {
         toggleMenuOpen()
     }
+    
 }

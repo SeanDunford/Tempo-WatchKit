@@ -11,6 +11,7 @@ import UIKit
 
 protocol SettingsViewDelegate {
     func scrollToPoint(point: CGPoint);
+    func enableScroll(enable: Bool)
 }
 
 public class SettingsView: UIView, UITextFieldDelegate{
@@ -143,11 +144,12 @@ public class SettingsView: UIView, UITextFieldDelegate{
         var xImg =  UIImage(named:"xBtn")
         var size = xImg?.size
         
-        xBtn = UIButton(frame: CGRectMake(width - 30 - 10, 10, 30, 30))
+        xBtn = UIButton(frame: CGRectMake(width - 30 - 5, 10, 25, 25))
         xBtn.setBackgroundImage(xImg, forState: UIControlState.Normal)
         xBtn.alpha = 0
         xBtn.addTarget(self, action: "xBtnPressed", forControlEvents: UIControlEvents.TouchUpInside)
         xBtn.backgroundColor = UIColor.clearColor()
+        xBtn.contentMode = UIViewContentMode.ScaleAspectFill
         self.addSubview(xBtn)
         
     }
@@ -165,6 +167,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
         }
         fadeSettingsViews(true)
         mode = 0
+        self.delegate.enableScroll(true)
     }
     func btnPressed(btn: UIButton){
         var tag: Int = btn.tag
@@ -190,6 +193,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
             currValue = CGFloat(intervalAmount)
         }
         mode = tag
+        self.delegate.enableScroll(false)
         circleView.updateView(color,
             beginColor: color,
             endColor: color,

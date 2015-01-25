@@ -249,6 +249,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         containerView.scrollView.setContentOffset(point, animated: true);
     }
 
+    func enableScroll(enable: Bool){
+        self.containerView.enableScrolling(enable)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
