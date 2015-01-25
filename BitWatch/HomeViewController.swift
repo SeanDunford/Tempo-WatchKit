@@ -119,8 +119,8 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         
         //Replace this with NSUserDefaults
         homeCountDown = 3
-        workCountDown = 2
-        restCountDown = 1
+        workCountDown = 1200
+        restCountDown = 60
         intervalAmount = 2
         
         setupViews()

@@ -130,7 +130,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
         self.addSubview(intervalSetting);
         self.addSubview(intervalBtn)
         
-        var frame = CGRectMake(0, (self.height - (self.width - 30))/2, self.width - 30, self.width - 30)
+        var frame = CGRectMake(-(45/2), (self.height - self.width)/2, self.width, self.width)
         var color = UIColor().workPurple()
         
         circleView = BWCircularSlider(textColor:color, startColor:color, endColor:color, frame: frame)
@@ -185,7 +185,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
         
     }
     public func fadeSettingsViews(fadeIn: Bool){
-        UIView.animateWithDuration(0.2, animations: {
+        UIView.animateWithDuration(0.4, animations: {
             
                 //If fadeIn make visible else make clear
                 var alpha: CGFloat = (fadeIn) ? 1.0 : 0.0
@@ -203,7 +203,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
                 self.xBtn.alpha = alpha
             }, completion: {
                 (value: Bool) in
-                println("fade in, fade out")
+                
         })
         
     }
