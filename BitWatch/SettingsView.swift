@@ -97,15 +97,15 @@ public class SettingsView: UIView, UITextFieldDelegate{
         self.addSubview(workBtn)
         
         // Create the Rest Setting Text Field
-        restLabel = UILabel(frame: CGRectMake(20, (self.frame.size.height * 0.5) - 30, settingsWidth - 40, 50));
+        restLabel = UILabel(frame: CGRectMake(20, (self.frame.size.height * 0.45) - 30, settingsWidth - 40, 50));
         restLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
         restLabel.textColor = UIColor().restRed();
         restLabel.text = "Rest";
-        restSetting = UILabel(frame: CGRectMake(20, self.frame.size.height * 0.5, settingsWidth - 40, 50));
+        restSetting = UILabel(frame: CGRectMake(20, self.frame.size.height * 0.45, settingsWidth - 40, 50));
         restSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
         restSetting.textColor = UIColor().restRed();
         restSetting.tag = 1;
-        restBtn = UIButton(frame: CGRectMake(20, (self.frame.size.height * 0.5) - 30, settingsWidth, 100))
+        restBtn = UIButton(frame: CGRectMake(20, (self.frame.size.height * 0.45) - 30, settingsWidth, 100))
         restBtn.backgroundColor = UIColor.clearColor()
         restBtn.addTarget(self, action: "btnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         restBtn.tag = 1
@@ -115,15 +115,15 @@ public class SettingsView: UIView, UITextFieldDelegate{
         self.addSubview(restBtn)
         
         // Create the Interval Setting Text Field
-        intervalLabel = UILabel(frame: CGRectMake(20, (self.frame.size.height * 0.8) - 30, settingsWidth - 40, 50));
+        intervalLabel = UILabel(frame: CGRectMake(20, (self.frame.size.height * 0.75) - 30, settingsWidth - 40, 50));
         intervalLabel.font = UIFont(name: "Montserrat-Bold", size: 22);
         intervalLabel.textColor = UIColor().intervalGreen();
         intervalLabel.text = "Intervals";
-        intervalSetting = UILabel(frame: CGRectMake(20, self.frame.size.height * 0.8, settingsWidth - 40, 50));
+        intervalSetting = UILabel(frame: CGRectMake(20, self.frame.size.height * 0.75, settingsWidth - 40, 50));
         intervalSetting.font = UIFont(name: "Montserrat-Bold", size: 48);
         intervalSetting.textColor = UIColor().intervalGreen();
         intervalSetting.tag = 2;
-        intervalBtn = UIButton(frame: CGRectMake(20, (self.frame.size.height * 0.8) - 30, settingsWidth, 100))
+        intervalBtn = UIButton(frame: CGRectMake(20, (self.frame.size.height * 0.75) - 30, settingsWidth, 100))
         intervalBtn.backgroundColor = UIColor.clearColor()
         intervalBtn.addTarget(self, action: "btnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         intervalBtn.backgroundColor = UIColor.clearColor()
