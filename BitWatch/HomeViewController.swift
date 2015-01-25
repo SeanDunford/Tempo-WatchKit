@@ -17,13 +17,44 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         case rest = 2
         case settings = 3
     }
-    var state: HomeViewControllerState = .home
+    var state: HomeViewControllerState = .home{
+        willSet(s){
+            switch(s){
+            case .home:
+                setHomeView()
+            case .rest:
+                setRestView()
+                beginRestCountdown()
+            case .work:
+                setWorkView()
+                beginWorkCountdown()
+            case .settings:
+                setSettingsView()
+            default:
+                println("state is " + String(state.rawValue))
+            }
+        }
+    }
     
     var adBannerView: ADBannerView!
     
-    var countDownLabel: UILabel!
     var countDownTimer: NSTimer!
-    var countDown = 0;
+    var currentCountDown = 0
+    var homeCountDown: Int!{
+        willSet(i){
+            self.homeView.countDown = i;
+        }
+    }
+    var restCountDown: Int!{
+        willSet(i){
+            self.restView.countDown = i;
+        }
+    }
+    var workCountDown: Int!{
+        willSet(i){
+            self.workView.countDown = i;
+        }
+    }
     
     //Main Views
     var containerView: ContainerView!
@@ -73,37 +104,39 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         settingsView = SettingsView(frame:f)
         settingsView.delegate = self;
         
-        setState(.home)
+        self.state = .home
         self.view.backgroundColor = UIColor.purpleColor()
         self.view.addSubview(containerView);
         containerView.addSubview(settingsView)
         
-        countDown = 3
+        //Replace this with NSUserDefaults
+        homeCountDown = 5
+        workCountDown = 50
+        restCountDown = 25
+        
         setupViews()
     }
     func setupViews(){
-        homeView.countDown = countDown
-        homeView.beginBlock = beginCountdown
+        homeView.countDown = homeCountDown
+        homeView.beginBlock = beginHomeCountdown
         
         addMenuButtonToView(homeView)
         addMenuButtonToView(workView)
         addMenuButtonToView(restView)
         
     }
-    func setState(state:HomeViewControllerState){
+    func increaseState(){
         switch(state){
         case .home:
-            setHomeView()
+            self.state = .work
         case .rest:
-            setRestView()
+            self.state = .work
         case .work:
-            setWorkView()
-        case .settings:
-            setSettingsView()
+            self.state = .rest
         default:
-            println("state is " + String(state.rawValue))
+            var str = "can't increment state if it's at state: " + String(state.rawValue)
+            println(str)
         }
-        self.state = state
     }
     func setHomeView(){
         homeView.removeFromSuperview()
@@ -138,26 +171,63 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         self.adBannerView.hidden = false;
     }
     
-    func beginCountdown() {
+    func beginHomeCountdown() {
         homeView.startTimer()
+        currentCountDown = homeCountDown
+        countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
+    }
+    
+    func beginWorkCountdown(){
+        workView.startTimer()
+        currentCountDown = workCountDown
+        countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
+    }
+    
+    func beginRestCountdown(){
+        restView.startTimer()
+        currentCountDown = restCountDown
         countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
     }
     
     func updateCountdown() {
-        println(countDown)
-        // If we're not at 0, update it with the appropriate number
-        if( countDown - 1 > 0 ){
-            countDown--;
-            homeView.countDownLabel.text = String(countDown);
+        if( currentCountDown - 1 > 0 ){
+            currentCountDown--;
+            updateTime()
         }
         
         // if we are at 0, reset the countdown, update the label and stop the countdown timer.
-        else if( countDown - 1 == 0 ){
-            homeView.countDown = 10;
-            homeView.countDownLabel.text = "Go!";
+        else if( currentCountDown - 1 == 0 ){
             countDownTimer.invalidate();
-            setState(HomeViewControllerState.work)
+            stopTimer()
+        }
+    }
+    
+    func updateTime(){
+        switch(state){
+        case .home:
+            homeView.updateTime(currentCountDown)
+        case .rest:
+            restView.updateTime(currentCountDown)
+        case .work:
+            workView.updateTime(currentCountDown)
+        default:
+            return
+        }
+    }
+    
+    func stopTimer(){
+        switch(state){
+        case .home:
+            increaseState()
             homeView.stopTimer()
+        case .rest:
+            increaseState()
+            restView.stopTimer()
+        case .work:
+            increaseState()
+            workView.stopTimer()
+        default:
+            return
         }
     }
     

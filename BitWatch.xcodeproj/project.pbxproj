@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		470574BA1A6B8C1F006B003F /* oldHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470574B91A6B8C1F006B003F /* oldHomeVC.swift */; };
 		4725A5C71A6B7E2B001676FC /* UIColor+BitWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A5C61A6B7E2B001676FC /* UIColor+BitWatch.swift */; };
 		4725A5C91A6B7FDC001676FC /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4725A5C81A6B7FDC001676FC /* ContainerView.swift */; };
 		479A20271A61C73E00976B6C /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A902BA1A342868004812C7 /* TimerModel.swift */; };
@@ -90,7 +89,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		470574B91A6B8C1F006B003F /* oldHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oldHomeVC.swift; sourceTree = "<group>"; };
 		4725A5C61A6B7E2B001676FC /* UIColor+BitWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+BitWatch.swift"; sourceTree = "<group>"; };
 		4725A5C81A6B7FDC001676FC /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		47A902BA1A342868004812C7 /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerModel.swift; path = "../BitWatch WatchKit Extension/TimerModel.swift"; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 			children = (
 				47AC90F41A6B7856007F5BC3 /* Views */,
 				63F185B51A61C3130020C193 /* HomeViewController.swift */,
-				470574B91A6B8C1F006B003F /* oldHomeVC.swift */,
 			);
 			name = HomeViewController;
 			sourceTree = "<group>";
@@ -519,7 +516,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				470574BA1A6B8C1F006B003F /* oldHomeVC.swift in Sources */,
 				4725A5C71A6B7E2B001676FC /* UIColor+BitWatch.swift in Sources */,
 				4725A5C91A6B7FDC001676FC /* ContainerView.swift in Sources */,
 				47AC90FC1A6B7A01007F5BC3 /* SettingsView.swift in Sources */,

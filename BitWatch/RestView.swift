@@ -12,6 +12,8 @@ import UIKit
 public class RestView: UIView{
     var height: CGFloat!
     var width: CGFloat!
+    var countDown = 50
+    var restTime: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame:frame)
@@ -29,7 +31,7 @@ public class RestView: UIView{
         restLabel.textColor = UIColor().restRed();
         restLabel.textAlignment = NSTextAlignment.Center;
     
-        var restTime: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4), width, 125));
+        restTime = UILabel(frame: CGRectMake(0, (height * 0.4), width, 125));
         restTime.text = "99:99";
         restTime.font = UIFont(name: "Montserrat-Bold", size: 100);
         restTime.textColor = UIColor().restRed();
@@ -39,6 +41,22 @@ public class RestView: UIView{
         let settingsWidth = width - 45;
         var settingsView: UIView = UIView(frame: CGRectMake(width, 0, settingsWidth, height));
         settingsView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.02);
+        
+        self.addSubview(restLabel)
+        self.addSubview(restTime)
+    }
+    func updateTime(secs: Int){
+        var m = (secs / 60) % 60;
+        var s = secs % 60;
+        
+        var formattedTime: NSString = String(format: "%02u:%02u", m, s);
+        restTime.text = formattedTime
+    }
+    func startTimer(){
+        updateTime(countDown)
+    }
+    func stopTimer(){
+        
     }
 
 }
