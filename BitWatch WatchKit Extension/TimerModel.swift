@@ -33,8 +33,17 @@ public class TimerModel: NSObject {
         super.init()
         setupNSDefaults()
         getStoredValues()
+        setupKVO()
     }
-
+    private func setupKVO(){
+        defaults.addObserver(self, forKeyPath: wkey, options: NSKeyValueObservingOptions.New, context: nil)
+        defaults.addObserver(self, forKeyPath: rkey, options: NSKeyValueObservingOptions.New, context: nil)
+        defaults.addObserver(self, forKeyPath: skey, options: NSKeyValueObservingOptions.New, context: nil)
+        defaults.addObserver(self, forKeyPath: ikey, options: NSKeyValueObservingOptions.New, context: nil)
+    }
+    override public func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+        NSLog("Output : \(object) changed property \(keyPath) to value \(change)");
+    }
     private func setupNSDefaults(){
         defaults = NSUserDefaults(suiteName: group)!
     }
@@ -52,6 +61,12 @@ public class TimerModel: NSObject {
         defaults.setInteger(rsecs, forKey: rkey)
         defaults.setInteger(ssecs, forKey: skey)
         defaults.setInteger(iAmnt, forKey: ikey)
+        
+        defaults.didChangeValueForKey(wkey)
+        defaults.didChangeValueForKey(rkey)
+        defaults.didChangeValueForKey(skey)
+        defaults.didChangeValueForKey(ikey)
+        
         
         defaults.synchronize()
     }
