@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import BitWatchKit
 
 protocol SettingsViewDelegate {
     func scrollToPoint(point: CGPoint);
@@ -18,30 +19,9 @@ public class SettingsView: UIView, UITextFieldDelegate{
     var width: CGFloat!
     var height: CGFloat!
     var mode: Int!
-    
-    var intervalAmount: Int!{
-        willSet(i){
-            intervalSetting.text = String(i)
-        }
-    }
-    
-    var restCountDown: Int!{
-        willSet(i){
-            var m = (i / 60) % 60;
-            var s = i % 60;
-            
-            var formattedTime: NSString = String(format: "%02u:%02u", m, s);
-            restSetting.text = formattedTime
-        }
-    }
-    
-    var workCountDown: Int!{
-        willSet(i){
-            var m = (i / 60) % 60;
-            var s = i % 60;
-            
-            var formattedTime: NSString = String(format: "%02u:%02u", m, s);
-            workSetting.text = formattedTime
+    var timerObj: TimerModel!{
+        didSet{
+            updateLabels()
         }
     }
     
@@ -157,14 +137,15 @@ public class SettingsView: UIView, UITextFieldDelegate{
         var val = circleView.currValue
         switch(mode){
         case 0:
-            workCountDown = Int(val)
+            timerObj.setWorkSeconds(Int(val))
         case 1:
-            restCountDown = Int(val)
+            timerObj.setRestSeconds(Int(val))
         case 2:
-            intervalAmount = Int(val)
+            timerObj.setIntervalAmount(Int(val))
         default:
             return;
         }
+        updateLabels()
         fadeSettingsViews(true)
         mode = 0
         self.delegate.enableScroll(true)
@@ -177,20 +158,20 @@ public class SettingsView: UIView, UITextFieldDelegate{
         var currValue: CGFloat
         if(tag == 0){ //Work
             color = UIColor().workPurple()
-            maxValue = 3600
+            maxValue = 1800
             timeMode = true
-            currValue = CGFloat(workCountDown)
+            currValue = CGFloat(timerObj.getWorkSeconds())
         } else if(tag == 1){ //Rest
             color = UIColor().restRed()
-            maxValue = 3600
+            maxValue = 1800
             timeMode = true
-            currValue = CGFloat(restCountDown)
+            currValue = CGFloat(timerObj.getRestSeconds())
         }
         else{ // Interval
             color = UIColor().intervalGreen()
             maxValue = 10
             timeMode = false
-            currValue = CGFloat(intervalAmount)
+            currValue = CGFloat(timerObj.getIntervalAmount())
         }
         mode = tag
         self.delegate.enableScroll(false)
@@ -201,6 +182,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
             currValue: currValue,
             timeMode:timeMode)
         
+        updateLabels()
         fadeSettingsViews(false)
         
     }
@@ -242,6 +224,25 @@ public class SettingsView: UIView, UITextFieldDelegate{
     
     public func textFieldDidEndEditing(textField: UITextField) {
         delegate.scrollToPoint(CGPointMake(width, 0));
+    }
+    
+    func updateLabels(){
+        
+        var intervals = self.timerObj.getIntervalAmount()
+        var restSecs = self.timerObj.getRestSeconds()
+        var workSecs = self.timerObj.getWorkSeconds()
+        
+        intervalSetting.text = String(intervals)
+        
+        var m = (restSecs / 60) % 60;
+        var s = restSecs % 60;
+        var formattedTime: NSString = String(format: "%02u:%02u", m, s);
+        restSetting.text = formattedTime
+        
+        m = (workSecs / 60) % 60;
+        s = workSecs % 60;
+        formattedTime = String(format: "%02u:%02u", m, s);
+        workSetting.text = formattedTime
     }
     
 }

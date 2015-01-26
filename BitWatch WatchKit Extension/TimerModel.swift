@@ -8,37 +8,80 @@
 
 import Foundation
 
-//var defaultWSecs = 901.00
-//var defaultRSecs = 301.00
-var defaultWSecs = 121.00
-var defaultRSecs = 61.00
-var defaultSSecs = 3.00
+var defaultWSecs = 120
+var defaultRSecs = 60
+var defaultSSecs = 3
+var defaultIntervals = 2
 public class TimerModel: NSObject {
 
-    private var wsecs: Double = defaultWSecs
-    private var rsecs: Double = defaultRSecs
-    private var ssecs: Double = defaultSSecs
+    private var wsecs: Int = defaultWSecs
+    private var rsecs: Int = defaultRSecs
+    private var ssecs: Int = defaultSSecs
+    private var iAmnt: Int = defaultIntervals
+    
+    private var defaults = NSUserDefaults()
+    private var group = "group.alphastory.bitwatch"
+    
+    private var wkey = "work Timer Value"
+    private var rkey = "rest Timer Value"
+    private var skey = "start Timer Value"
+    private var ikey = "interval Count Value"
+    
+    
     
     public override init() {
         super.init()
+        setupNSDefaults()
+        getStoredValues()
     }
-    public func setWorkSeconds(secs: Double){
+
+    private func setupNSDefaults(){
+        defaults = NSUserDefaults(suiteName: group)!
+    }
+    private func getStoredValues(){
+        if(defaults.integerForKey(wkey) == 0){
+            return updateStoredValues()
+        }
+        wsecs = defaults.integerForKey(wkey)
+        rsecs = defaults.integerForKey(rkey)
+        ssecs = defaults.integerForKey(skey)
+        iAmnt = defaults.integerForKey(ikey)     
+    }
+    private func updateStoredValues(){
+        defaults.setInteger(wsecs, forKey: wkey)
+        defaults.setInteger(rsecs, forKey: rkey)
+        defaults.setInteger(ssecs, forKey: skey)
+        defaults.setInteger(iAmnt, forKey: ikey)
+        
+        defaults.synchronize()
+    }
+    public func setWorkSeconds(secs: Int){
         wsecs = (secs > 0 ) ? secs : wsecs
+        updateStoredValues()
     }
-    public func setRestSeconds(secs: Double){
+    public func setRestSeconds(secs: Int){
         rsecs = (secs > 0 ) ? secs : rsecs
+        updateStoredValues()
     }
-    public func setStartSeconds(secs: Double){
+    public func setStartSeconds(secs: Int){
         ssecs = (secs > 0 ) ? secs : ssecs
+        updateStoredValues()
     }
-    public func getRestSeconds()-> Double{
+    public func setIntervalAmount(amnt: Int){
+        iAmnt = (amnt > 0 ) ? amnt :iAmnt
+        updateStoredValues()
+    }
+    public func getRestSeconds()-> Int{
         return rsecs;
     }
-    public func getWaitSeconds()-> Double{
+    public func getWorkSeconds()-> Int{
         return wsecs;
     }
-    public func getStartSeconds()-> Double{
+    public func getStartSeconds()-> Int{
         return ssecs;
+    }
+    public func getIntervalAmount()-> Int{
+        return iAmnt;
     }
     
 }

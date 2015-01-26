@@ -8,12 +8,17 @@
 
 import Foundation
 import UIKit
+import BitWatchKit
 
 public class WorkView: UIView{
     var height: CGFloat!
     var width: CGFloat!
     var workTime: UILabel!
-    var countDown = 100
+    var timerObj: TimerModel!{
+        willSet(x){
+            workTime.text = String(x.getWorkSeconds());
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame:frame)
@@ -47,7 +52,7 @@ public class WorkView: UIView{
         workTime.text = formattedTime
     }
     func startTimer(){
-        updateTime(countDown)
+        updateTime(Int(timerObj.getWorkSeconds()))
     }
     func stopTimer(){
         

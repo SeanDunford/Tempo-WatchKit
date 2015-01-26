@@ -8,12 +8,17 @@
 
 import Foundation
 import UIKit
+import BitWatchKit
 
 public class RestView: UIView{
     var height: CGFloat!
     var width: CGFloat!
-    var countDown = 50
     var restTime: UILabel!
+    var timerObj: TimerModel!{
+        willSet(x){
+            restTime.text = String(x.getRestSeconds());
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame:frame)
@@ -52,7 +57,7 @@ public class RestView: UIView{
         restTime.text = formattedTime
     }
     func startTimer(){
-        updateTime(countDown)
+        updateTime(Int(timerObj.getRestSeconds()))
     }
     func stopTimer(){
         

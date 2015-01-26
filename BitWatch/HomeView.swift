@@ -8,16 +8,16 @@
 
 import Foundation
 import UIKit
+import BitWatchKit
 
 public class HomeView: UIView {
     var beginButton: UIButton!
     var countDownLabel: UILabel!
     var width: CGFloat!
     var height: CGFloat!
-    var defaultCountDown = 1
-    var countDown: Int!{
-        willSet(i){
-            countDownLabel.text = String(i)
+    var timerObj: TimerModel!{
+        willSet(x){
+            countDownLabel.text = String(x.getStartSeconds());
         }
     }
     var beginBlock: (() -> ())?
@@ -28,7 +28,6 @@ public class HomeView: UIView {
         super.init(frame: frame)
         width = frame.size.width
         height = frame.size.height
-        countDown = defaultCountDown
         initialize()
     }
     required public init(coder aDecoder: NSCoder) {
@@ -46,7 +45,6 @@ public class HomeView: UIView {
         
         // Setup the Countdown Label
         countDownLabel = UILabel(frame: CGRectMake(0, (height * 0.1), width, (height * 0.75)));
-        countDownLabel.text = String(countDown);
         countDownLabel.textAlignment = NSTextAlignment.Center;
         countDownLabel.textColor = UIColor().intervalGreen();
         countDownLabel.font = UIFont(name: "Montserrat-Bold", size: 125);
@@ -60,7 +58,10 @@ public class HomeView: UIView {
     func stopTimer(){
         beginButton.alpha = 1
         countDownLabel.alpha = 0
-        countDownLabel.text = String(countDown)
+        if((timerObj) != nil){
+            countDownLabel.text = String(timerObj.getStartSeconds())
+    
+        }
     }
     func beginPressed(){
         beginBlock?()

@@ -37,32 +37,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     
     var adBannerView: ADBannerView!
-    
+    var timerObj = TimerModel()
     var countDownTimer: NSTimer!
     var currentCountDown = 0
-    var currentInterval: Int = 0
-    var homeCountDown: Int!{
-        willSet(i){
-            self.homeView.countDown = i
-        }
-    }
-    var restCountDown: Int!{
-        willSet(i){
-            self.restView.countDown = i
-            self.settingsView.restCountDown = i
-        }
-    }
-    var workCountDown: Int!{
-        willSet(i){
-            self.workView.countDown = i
-            self.settingsView.workCountDown = i
-        }
-    }
-    var intervalAmount: Int!{
-        willSet(i){
-            self.settingsView.intervalAmount = i
-        }
-    }
+    var currentInterval: Int = 1
     
     //Main Views
     var containerView: ContainerView!
@@ -112,21 +90,21 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         settingsView = SettingsView(frame:f)
         settingsView.delegate = self;
         
+
+        
         self.state = .home
         self.view.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(containerView);
         containerView.addSubview(settingsView)
         
-        //Replace this with NSUserDefaults
-        homeCountDown = 3
-        workCountDown = 1200
-        restCountDown = 60
-        intervalAmount = 2
+        homeView.timerObj = self.timerObj
+        restView.timerObj = self.timerObj
+        workView.timerObj = self.timerObj
+        settingsView.timerObj = self.timerObj
         
         setupViews()
     }
     func setupViews(){
-        homeView.countDown = homeCountDown
         homeView.beginBlock = beginHomeCountdown
         
         addMenuButtonToView(homeView)
@@ -139,20 +117,24 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         case .home:
             self.state = .work
         case .rest:
-            self.state = .work
-        case .work:
-            if(currentInterval++ >= intervalAmount){
+            if(currentInterval++ >= timerObj.getIntervalAmount()){
+                currentInterval = 1;
                 self.state = .home
             }
             else{
-                self.state = .rest
+                self.state = .work
             }
+        case .work:
+            self.state = .rest
         default:
             var str = "can't increment state if it's at state: " + String(state.rawValue)
             println(str)
         }
     }
     func setHomeView(){
+        if(countDownTimer != nil){
+            countDownTimer.invalidate()
+        }
         homeView.removeFromSuperview()
         workView.removeFromSuperview()
         restView.removeFromSuperview()
@@ -187,19 +169,19 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     
     func beginHomeCountdown() {
         homeView.startTimer()
-        currentCountDown = homeCountDown
+        currentCountDown = timerObj.getStartSeconds()
         countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
     }
     
     func beginWorkCountdown(){
         workView.startTimer()
-        currentCountDown = workCountDown
+        currentCountDown = timerObj.getWorkSeconds()
         countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
     }
     
     func beginRestCountdown(){
         restView.startTimer()
-        currentCountDown = restCountDown
+        currentCountDown = timerObj.getRestSeconds()
         countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
     }
     
@@ -256,14 +238,6 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    func foo(){
-        var timer: TimerModel! = TimerModel()
-        var defaults: NSUserDefaults
-        var group = "group.alphastory.bitwatch"
-        defaults = NSUserDefaults(suiteName: group)!
-        defaults.setObject(timer, forKey:"timer")
     }
     func addMenuButtonToView(view: UIView){
         var menuButton: UIButton = UIButton(frame: CGRectMake(width - 35, 10, 25, 25));
