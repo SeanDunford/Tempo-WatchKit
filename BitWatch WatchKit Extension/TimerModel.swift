@@ -20,7 +20,7 @@ public class TimerModel: NSObject {
     private var iAmnt: Int = defaultIntervals
     
     private var defaults = NSUserDefaults()
-    private var group = "group.alphastory.bitwatch"
+    private var group = "group.tempo"
     
     private var wkey = "work Timer Value"
     private var rkey = "rest Timer Value"
