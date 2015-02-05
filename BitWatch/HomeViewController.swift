@@ -245,7 +245,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
 
     func enableScroll(enable: Bool){
-        self.containerView.enableScrolling(enable)
+        self.containerView.disableScrolling = !enable
     }
     
     override func didReceiveMemoryWarning() {
