@@ -80,7 +80,6 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     func defualtsChanged(notification: NSNotification){
         var defaults: NSUserDefaults = notification.object as NSUserDefaults
-        println("notification received")
     }
     override func viewDidLoad() {
         super.viewDidLoad()

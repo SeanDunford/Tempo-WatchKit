@@ -8,6 +8,11 @@
 
 import Foundation
 
+
+let iOS7 = floor(NSFoundationVersionNumber) <= floor(NSFoundationVersionNumber_iOS_7_1)
+let iOS8 = floor(NSFoundationVersionNumber) > floor(NSFoundationVersionNumber_iOS_7_1)
+
+
 var defaultWSecs = 120
 var defaultRSecs = 60
 var defaultSSecs = 3
@@ -84,7 +89,9 @@ public class TimerModel: NSObject {
         defaults.didChangeValueForKey(ikey)
         
         defaults.synchronize()
-        wormhole.updateWatchTimers()
+        if(iOS8){
+            wormhole.updateWatchTimers()
+        }
     }
     public func setWorkSeconds(secs: Int){
         wsecs = (secs > 0 ) ? secs : wsecs

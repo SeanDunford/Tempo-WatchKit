@@ -56,7 +56,6 @@ class PausedController: WKInterfaceController {
     }
     func defualtsChanged(notification: NSNotification){
         var defaults: NSUserDefaults = notification.object as NSUserDefaults
-        println("notification received")
         initTimers()
     }
     override func didDeactivate() {
