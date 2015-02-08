@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		470C59171A87284100014E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59161A87284100014E14 /* AppDelegate.swift */; };
+		470C591A1A87284100014E14 /* TempoWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 470C59181A87284100014E14 /* TempoWatch.xcdatamodeld */; };
+		470C591C1A87284100014E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C591B1A87284100014E14 /* ViewController.swift */; };
+		470C591F1A87284100014E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470C591D1A87284100014E14 /* Main.storyboard */; };
+		470C59211A87284100014E14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 470C59201A87284100014E14 /* Images.xcassets */; };
+		470C59241A87284100014E14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470C59221A87284100014E14 /* LaunchScreen.xib */; };
+		470C59301A87284100014E14 /* TempoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C592F1A87284100014E14 /* TempoWatchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		470C592A1A87284100014E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 470C59091A87284100014E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 470C59101A87284100014E14;
+			remoteInfo = TempoWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		470C59111A87284100014E14 /* TempoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		470C59151A87284100014E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		470C59161A87284100014E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		470C59191A87284100014E14 /* TempoWatch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TempoWatch.xcdatamodel; sourceTree = "<group>"; };
+		470C591B1A87284100014E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		470C591E1A87284100014E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		470C59201A87284100014E14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		470C59231A87284100014E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		470C59291A87284100014E14 /* TempoWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempoWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		470C592E1A87284100014E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		470C592F1A87284100014E14 /* TempoWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoWatchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		470C590E1A87284100014E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		470C59261A87284100014E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		470C59081A87284100014E14 = {
+			isa = PBXGroup;
+			children = (
+				470C59131A87284100014E14 /* TempoWatch */,
+				470C592C1A87284100014E14 /* TempoWatchTests */,
+				470C59121A87284100014E14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		470C59121A87284100014E14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				470C59111A87284100014E14 /* TempoWatch.app */,
+				470C59291A87284100014E14 /* TempoWatchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		470C59131A87284100014E14 /* TempoWatch */ = {
+			isa = PBXGroup;
+			children = (
+				470C59161A87284100014E14 /* AppDelegate.swift */,
+				470C591B1A87284100014E14 /* ViewController.swift */,
+				470C591D1A87284100014E14 /* Main.storyboard */,
+				470C59201A87284100014E14 /* Images.xcassets */,
+				470C59221A87284100014E14 /* LaunchScreen.xib */,
+				470C59181A87284100014E14 /* TempoWatch.xcdatamodeld */,
+				470C59141A87284100014E14 /* Supporting Files */,
+			);
+			path = TempoWatch;
+			sourceTree = "<group>";
+		};
+		470C59141A87284100014E14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				470C59151A87284100014E14 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		470C592C1A87284100014E14 /* TempoWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				470C592F1A87284100014E14 /* TempoWatchTests.swift */,
+				470C592D1A87284100014E14 /* Supporting Files */,
+			);
+			path = TempoWatchTests;
+			sourceTree = "<group>";
+		};
+		470C592D1A87284100014E14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				470C592E1A87284100014E14 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		470C59101A87284100014E14 /* TempoWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 470C59331A87284100014E14 /* Build configuration list for PBXNativeTarget "TempoWatch" */;
+			buildPhases = (
+				470C590D1A87284100014E14 /* Sources */,
+				470C590E1A87284100014E14 /* Frameworks */,
+				470C590F1A87284100014E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TempoWatch;
+			productName = TempoWatch;
+			productReference = 470C59111A87284100014E14 /* TempoWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		470C59281A87284100014E14 /* TempoWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 470C59361A87284100014E14 /* Build configuration list for PBXNativeTarget "TempoWatchTests" */;
+			buildPhases = (
+				470C59251A87284100014E14 /* Sources */,
+				470C59261A87284100014E14 /* Frameworks */,
+				470C59271A87284100014E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				470C592B1A87284100014E14 /* PBXTargetDependency */,
+			);
+			name = TempoWatchTests;
+			productName = TempoWatchTests;
+			productReference = 470C59291A87284100014E14 /* TempoWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		470C59091A87284100014E14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = GetGainz;
+				TargetAttributes = {
+					470C59101A87284100014E14 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					470C59281A87284100014E14 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 470C59101A87284100014E14;
+					};
+				};
+			};
+			buildConfigurationList = 470C590C1A87284100014E14 /* Build configuration list for PBXProject "TempoWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 470C59081A87284100014E14;
+			productRefGroup = 470C59121A87284100014E14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				470C59101A87284100014E14 /* TempoWatch */,
+				470C59281A87284100014E14 /* TempoWatchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		470C590F1A87284100014E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				470C591F1A87284100014E14 /* Main.storyboard in Resources */,
+				470C59241A87284100014E14 /* LaunchScreen.xib in Resources */,
+				470C59211A87284100014E14 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		470C59271A87284100014E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		470C590D1A87284100014E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				470C591C1A87284100014E14 /* ViewController.swift in Sources */,
+				470C59171A87284100014E14 /* AppDelegate.swift in Sources */,
+				470C591A1A87284100014E14 /* TempoWatch.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		470C59251A87284100014E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				470C59301A87284100014E14 /* TempoWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		470C592B1A87284100014E14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 470C59101A87284100014E14 /* TempoWatch */;
+			targetProxy = 470C592A1A87284100014E14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		470C591D1A87284100014E14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				470C591E1A87284100014E14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		470C59221A87284100014E14 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				470C59231A87284100014E14 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		470C59311A87284100014E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		470C59321A87284100014E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		470C59341A87284100014E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TempoWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		470C59351A87284100014E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TempoWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		470C59371A87284100014E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TempoWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TempoWatch.app/TempoWatch";
+			};
+			name = Debug;
+		};
+		470C59381A87284100014E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TempoWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TempoWatch.app/TempoWatch";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		470C590C1A87284100014E14 /* Build configuration list for PBXProject "TempoWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				470C59311A87284100014E14 /* Debug */,
+				470C59321A87284100014E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		470C59331A87284100014E14 /* Build configuration list for PBXNativeTarget "TempoWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				470C59341A87284100014E14 /* Debug */,
+				470C59351A87284100014E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		470C59361A87284100014E14 /* Build configuration list for PBXNativeTarget "TempoWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				470C59371A87284100014E14 /* Debug */,
+				470C59381A87284100014E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		470C59181A87284100014E14 /* TempoWatch.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				470C59191A87284100014E14 /* TempoWatch.xcdatamodel */,
+			);
+			currentVersion = 470C59191A87284100014E14 /* TempoWatch.xcdatamodel */;
+			path = TempoWatch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 470C59091A87284100014E14 /* Project object */;
+}
