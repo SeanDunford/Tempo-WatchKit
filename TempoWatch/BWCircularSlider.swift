@@ -75,11 +75,18 @@ class BWCircularSlider: UIControl {
         radius = self.frame.size.width/2 - Config.TB_SAFEAREA_PADDING
         
         //Define the Font
-        let font = UIFont(name: "Montserrat-Bold", size: Config.TB_FONTSIZE)
+        var f = UIFont(name: "Montserrat-Bold", size: Config.TB_FONTSIZE)
+        
+        if(f == nil){
+            f = UIFont(name:"HelveticaNeue", size: Config.TB_FONTSIZE)
+
+        }
+        let font = f
         //Calculate font size needed to display 3 numbers
         let str = "000:000" as NSString
         let fontSize:CGSize = str.sizeWithAttributes([NSFontAttributeName:font!])
         
+
         //Using a TextField area we can easily modify the control to get user input from this field
         let textFieldRect = CGRectMake(
             (frame.size.width  - fontSize.width) / 2.0,
