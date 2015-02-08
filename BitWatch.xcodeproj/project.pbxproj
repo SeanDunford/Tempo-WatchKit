@@ -18,6 +18,7 @@
 		4783C1C31A81FD6400D28097 /* MMWormhole.h in Headers */ = {isa = PBXBuildFile; fileRef = 4783C1C11A81FD6400D28097 /* MMWormhole.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4783C1C41A81FD6400D28097 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 4783C1C21A81FD6400D28097 /* MMWormhole.m */; };
 		4783C1C51A821C4B00D28097 /* iWatchMsgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717B8FE1A81F92B00FD2EA3 /* iWatchMsgController.swift */; };
+		4783C1C71A8714A800D28097 /* LaunchScreen640.png in Resources */ = {isa = PBXBuildFile; fileRef = 4783C1C61A8714A800D28097 /* LaunchScreen640.png */; };
 		479A20271A61C73E00976B6C /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A902BA1A342868004812C7 /* TimerModel.swift */; };
 		47A902BB1A342868004812C7 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A902BA1A342868004812C7 /* TimerModel.swift */; };
 		47AC90F61A6B7870007F5BC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC90F51A6B7870007F5BC3 /* HomeView.swift */; };
@@ -106,6 +107,7 @@
 		4725A5C81A6B7FDC001676FC /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		4783C1C11A81FD6400D28097 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMWormhole.h; path = BitWatchKit/MMWormhole.h; sourceTree = SOURCE_ROOT; };
 		4783C1C21A81FD6400D28097 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMWormhole.m; path = BitWatchKit/MMWormhole.m; sourceTree = SOURCE_ROOT; };
+		4783C1C61A8714A800D28097 /* LaunchScreen640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchScreen640.png; path = ../LaunchScreen640.png; sourceTree = "<group>"; };
 		47A902BA1A342868004812C7 /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerModel.swift; path = "../BitWatch WatchKit Extension/TimerModel.swift"; sourceTree = "<group>"; };
 		47AC90F51A6B7870007F5BC3 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		47AC90F71A6B7932007F5BC3 /* WorkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		6306FA541A45CBC100E18868 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4783C1C61A8714A800D28097 /* LaunchScreen640.png */,
 				4717B87A1A75DD5500FD2EA3 /* menu-icon.png */,
 				4717B87B1A75DD5500FD2EA3 /* xbtn.png */,
 			);
@@ -530,6 +533,7 @@
 				63A9DF8E1A6AE00600ACDCDF /* Montserrat-Regular.ttf in Resources */,
 				4717B87D1A75DD5500FD2EA3 /* xbtn.png in Resources */,
 				63A9DF8D1A6AE00000ACDCDF /* Montserrat-Bold.ttf in Resources */,
+				4783C1C71A8714A800D28097 /* LaunchScreen640.png in Resources */,
 				4717B87C1A75DD5500FD2EA3 /* menu-icon.png in Resources */,
 				7B876B6F1A1C9F2D00A76FAF /* Main.storyboard in Resources */,
 				7B876B741A1C9F2D00A76FAF /* LaunchScreen.xib in Resources */,
@@ -695,6 +699,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"$(ARCHS_STANDARD_32_BIT",
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -741,6 +749,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"$(ARCHS_STANDARD_32_BIT",
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -768,6 +780,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "3aa61d01-a459-469e-814e-469d4e902a9f";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/BitWatch/BitWatch-Bridging-Header.h";
@@ -780,6 +793,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BitWatch/BitWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -797,6 +811,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BitWatch/BitWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
