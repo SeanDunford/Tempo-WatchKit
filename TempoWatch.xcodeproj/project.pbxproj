@@ -9,35 +9,136 @@
 /* Begin PBXBuildFile section */
 		470C59171A87284100014E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59161A87284100014E14 /* AppDelegate.swift */; };
 		470C591A1A87284100014E14 /* TempoWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 470C59181A87284100014E14 /* TempoWatch.xcdatamodeld */; };
-		470C591C1A87284100014E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C591B1A87284100014E14 /* ViewController.swift */; };
 		470C591F1A87284100014E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470C591D1A87284100014E14 /* Main.storyboard */; };
 		470C59211A87284100014E14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 470C59201A87284100014E14 /* Images.xcassets */; };
 		470C59241A87284100014E14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470C59221A87284100014E14 /* LaunchScreen.xib */; };
-		470C59301A87284100014E14 /* TempoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C592F1A87284100014E14 /* TempoWatchTests.swift */; };
+		470C596A1A87293E00014E14 /* TempoSharedFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 470C59691A87293E00014E14 /* TempoSharedFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		470C59911A872B1300014E14 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59851A872B1300014E14 /* ContainerView.swift */; };
+		470C59921A872B1300014E14 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59861A872B1300014E14 /* HomeView.swift */; };
+		470C59931A872B1300014E14 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59871A872B1300014E14 /* HomeViewController.swift */; };
+		470C59951A872B1300014E14 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 470C59891A872B1300014E14 /* Montserrat-Bold.ttf */; };
+		470C59961A872B1300014E14 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 470C598A1A872B1300014E14 /* Montserrat-Regular.ttf */; };
+		470C59981A872B1300014E14 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C598C1A872B1300014E14 /* RestView.swift */; };
+		470C59991A872B1300014E14 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C598D1A872B1300014E14 /* SettingsView.swift */; };
+		470C599A1A872B1300014E14 /* UIColor+Tempo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C598F1A872B1300014E14 /* UIColor+Tempo.swift */; };
+		470C599B1A872B1300014E14 /* WorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59901A872B1300014E14 /* WorkView.swift */; };
+		470C59A01A872C9A00014E14 /* TempoSharedFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470C59651A87293E00014E14 /* TempoSharedFramework.framework */; };
+		470C59A11A872C9A00014E14 /* TempoSharedFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 470C59651A87293E00014E14 /* TempoSharedFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		470C59A81A872CB600014E14 /* MMWormhole.h in Headers */ = {isa = PBXBuildFile; fileRef = 470C59A51A872CB600014E14 /* MMWormhole.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		470C59A91A872CB600014E14 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 470C59A61A872CB600014E14 /* MMWormhole.m */; };
+		470C59AC1A872D5200014E14 /* iWatchMsgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59AB1A872D5200014E14 /* iWatchMsgController.swift */; };
+		470C59AF1A872F0100014E14 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59AE1A872F0100014E14 /* TimerModel.swift */; };
+		470C59B21A87302F00014E14 /* BWCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59B01A87302F00014E14 /* BWCircularSlider.swift */; };
+		470C59B31A87302F00014E14 /* BWCircularSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59B11A87302F00014E14 /* BWCircularSliderView.swift */; };
+		470C59B51A8730B700014E14 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 470C59B41A8730B700014E14 /* Default-568h@2x.png */; };
+		470C59B81A8733BC00014E14 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 470C59B71A8733BC00014E14 /* menu-icon.png */; };
+		470C59BC1A87370F00014E14 /* xbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 470C59BB1A87370E00014E14 /* xbtn.png */; };
+		47344B9C1A87404400A4C3FC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344B9B1A87404400A4C3FC /* InterfaceController.swift */; };
+		47344B9E1A87404400A4C3FC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344B9D1A87404400A4C3FC /* NotificationController.swift */; };
+		47344BA01A87404400A4C3FC /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344B9F1A87404400A4C3FC /* GlanceController.swift */; };
+		47344BA21A87404400A4C3FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47344BA11A87404400A4C3FC /* Images.xcassets */; };
+		47344BA61A87404400A4C3FC /* TempoWatch WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 47344BA51A87404400A4C3FC /* TempoWatch WatchKit App.app */; };
+		47344BAE1A87404400A4C3FC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47344BAC1A87404400A4C3FC /* Interface.storyboard */; };
+		47344BB01A87404400A4C3FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47344BAF1A87404400A4C3FC /* Images.xcassets */; };
+		47344BB31A87404400A4C3FC /* TempoWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47344B961A87404400A4C3FC /* TempoWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		47344BBC1A8741C000A4C3FC /* PausedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBA1A8741C000A4C3FC /* PausedController.swift */; };
+		47344BBD1A8741C000A4C3FC /* RunningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBB1A8741C000A4C3FC /* RunningController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		470C592A1A87284100014E14 /* PBXContainerItemProxy */ = {
+		470C59A21A872C9A00014E14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 470C59091A87284100014E14 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 470C59101A87284100014E14;
-			remoteInfo = TempoWatch;
+			remoteGlobalIDString = 470C59641A87293E00014E14;
+			remoteInfo = TempoSharedFramework;
+		};
+		47344BA71A87404400A4C3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 470C59091A87284100014E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47344BA41A87404400A4C3FC;
+			remoteInfo = "TempoWatch WatchKit App";
+		};
+		47344BB11A87404400A4C3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 470C59091A87284100014E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47344B951A87404400A4C3FC;
+			remoteInfo = "TempoWatch WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		470C595F1A87291600014E14 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				47344BB31A87404400A4C3FC /* TempoWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		470C59A41A872C9A00014E14 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				470C59A11A872C9A00014E14 /* TempoSharedFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		470C59111A87284100014E14 /* TempoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		470C59151A87284100014E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		470C59161A87284100014E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		470C59191A87284100014E14 /* TempoWatch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TempoWatch.xcdatamodel; sourceTree = "<group>"; };
-		470C591B1A87284100014E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		470C591E1A87284100014E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		470C59201A87284100014E14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		470C59231A87284100014E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		470C59291A87284100014E14 /* TempoWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempoWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		470C592E1A87284100014E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		470C592F1A87284100014E14 /* TempoWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoWatchTests.swift; sourceTree = "<group>"; };
+		470C59651A87293E00014E14 /* TempoSharedFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TempoSharedFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		470C59681A87293E00014E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		470C59691A87293E00014E14 /* TempoSharedFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempoSharedFramework.h; sourceTree = "<group>"; };
+		470C59851A872B1300014E14 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		470C59861A872B1300014E14 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		470C59871A872B1300014E14 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		470C59891A872B1300014E14 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		470C598A1A872B1300014E14 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		470C598C1A872B1300014E14 /* RestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
+		470C598D1A872B1300014E14 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		470C598E1A872B1300014E14 /* TempoWatch-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempoWatch-Bridging-Header.h"; sourceTree = "<group>"; };
+		470C598F1A872B1300014E14 /* UIColor+Tempo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Tempo.swift"; sourceTree = "<group>"; };
+		470C59901A872B1300014E14 /* WorkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
+		470C59A51A872CB600014E14 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
+		470C59A61A872CB600014E14 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
+		470C59AB1A872D5200014E14 /* iWatchMsgController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iWatchMsgController.swift; sourceTree = "<group>"; };
+		470C59AE1A872F0100014E14 /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		470C59B01A87302F00014E14 /* BWCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWCircularSlider.swift; sourceTree = "<group>"; };
+		470C59B11A87302F00014E14 /* BWCircularSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWCircularSliderView.swift; sourceTree = "<group>"; };
+		470C59B41A8730B700014E14 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		470C59B71A8733BC00014E14 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
+		470C59BB1A87370E00014E14 /* xbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xbtn.png; path = ../xbtn.png; sourceTree = "<group>"; };
+		47344B961A87404400A4C3FC /* TempoWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TempoWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47344B991A87404400A4C3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47344B9A1A87404400A4C3FC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		47344B9B1A87404400A4C3FC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		47344B9D1A87404400A4C3FC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		47344B9F1A87404400A4C3FC /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		47344BA11A87404400A4C3FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47344BA51A87404400A4C3FC /* TempoWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TempoWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47344BAB1A87404400A4C3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47344BAD1A87404400A4C3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		47344BAF1A87404400A4C3FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47344BBA1A8741C000A4C3FC /* PausedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PausedController.swift; sourceTree = "<group>"; };
+		47344BBB1A8741C000A4C3FC /* RunningController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningController.swift; sourceTree = "<group>"; };
+		47344BC01A8743AD00A4C3FC /* TempoWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TempoWatch.entitlements; sourceTree = "<group>"; };
+		47344BC11A87442400A4C3FC /* TempoWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "TempoWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,10 +146,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				470C59A01A872C9A00014E14 /* TempoSharedFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		470C59261A87284100014E14 /* Frameworks */ = {
+		470C59611A87293E00014E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47344B931A87404400A4C3FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,8 +170,11 @@
 		470C59081A87284100014E14 = {
 			isa = PBXGroup;
 			children = (
+				470C59B41A8730B700014E14 /* Default-568h@2x.png */,
 				470C59131A87284100014E14 /* TempoWatch */,
-				470C592C1A87284100014E14 /* TempoWatchTests */,
+				470C59661A87293E00014E14 /* TempoSharedFramework */,
+				47344B971A87404400A4C3FC /* TempoWatch WatchKit Extension */,
+				47344BA91A87404400A4C3FC /* TempoWatch WatchKit App */,
 				470C59121A87284100014E14 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				470C59111A87284100014E14 /* TempoWatch.app */,
-				470C59291A87284100014E14 /* TempoWatchTests.xctest */,
+				470C59651A87293E00014E14 /* TempoSharedFramework.framework */,
+				47344B961A87404400A4C3FC /* TempoWatch WatchKit Extension.appex */,
+				47344BA51A87404400A4C3FC /* TempoWatch WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,8 +193,14 @@
 		470C59131A87284100014E14 /* TempoWatch */ = {
 			isa = PBXGroup;
 			children = (
+				47344BC01A8743AD00A4C3FC /* TempoWatch.entitlements */,
+				470C59B01A87302F00014E14 /* BWCircularSlider.swift */,
+				470C59B11A87302F00014E14 /* BWCircularSliderView.swift */,
+				470C599F1A872BAE00014E14 /* Assets */,
+				470C599E1A872B9F00014E14 /* Extensions */,
+				470C599C1A872B5E00014E14 /* HomeViewController */,
+				470C598E1A872B1300014E14 /* TempoWatch-Bridging-Header.h */,
 				470C59161A87284100014E14 /* AppDelegate.swift */,
-				470C591B1A87284100014E14 /* ViewController.swift */,
 				470C591D1A87284100014E14 /* Main.storyboard */,
 				470C59201A87284100014E14 /* Images.xcassets */,
 				470C59221A87284100014E14 /* LaunchScreen.xib */,
@@ -98,24 +218,130 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		470C592C1A87284100014E14 /* TempoWatchTests */ = {
+		470C59661A87293E00014E14 /* TempoSharedFramework */ = {
 			isa = PBXGroup;
 			children = (
-				470C592F1A87284100014E14 /* TempoWatchTests.swift */,
-				470C592D1A87284100014E14 /* Supporting Files */,
+				470C59AE1A872F0100014E14 /* TimerModel.swift */,
+				470C59AB1A872D5200014E14 /* iWatchMsgController.swift */,
+				470C59A51A872CB600014E14 /* MMWormhole.h */,
+				470C59A61A872CB600014E14 /* MMWormhole.m */,
+				470C59691A87293E00014E14 /* TempoSharedFramework.h */,
+				470C59671A87293E00014E14 /* Supporting Files */,
 			);
-			path = TempoWatchTests;
+			path = TempoSharedFramework;
 			sourceTree = "<group>";
 		};
-		470C592D1A87284100014E14 /* Supporting Files */ = {
+		470C59671A87293E00014E14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				470C592E1A87284100014E14 /* Info.plist */,
+				470C59681A87293E00014E14 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		470C599C1A872B5E00014E14 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				470C59871A872B1300014E14 /* HomeViewController.swift */,
+				470C599D1A872B8800014E14 /* Views */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		470C599D1A872B8800014E14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				470C598C1A872B1300014E14 /* RestView.swift */,
+				470C59851A872B1300014E14 /* ContainerView.swift */,
+				470C59861A872B1300014E14 /* HomeView.swift */,
+				470C598D1A872B1300014E14 /* SettingsView.swift */,
+				470C59901A872B1300014E14 /* WorkView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		470C599E1A872B9F00014E14 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				470C598F1A872B1300014E14 /* UIColor+Tempo.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		470C599F1A872BAE00014E14 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				470C59B61A8733BC00014E14 /* Images */,
+				470C59891A872B1300014E14 /* Montserrat-Bold.ttf */,
+				470C598A1A872B1300014E14 /* Montserrat-Regular.ttf */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		470C59B61A8733BC00014E14 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				470C59BB1A87370E00014E14 /* xbtn.png */,
+				470C59B71A8733BC00014E14 /* menu-icon.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		47344B971A87404400A4C3FC /* TempoWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				47344BC11A87442400A4C3FC /* TempoWatch WatchKit Extension.entitlements */,
+				47344BBA1A8741C000A4C3FC /* PausedController.swift */,
+				47344BBB1A8741C000A4C3FC /* RunningController.swift */,
+				47344B9B1A87404400A4C3FC /* InterfaceController.swift */,
+				47344B9D1A87404400A4C3FC /* NotificationController.swift */,
+				47344B9F1A87404400A4C3FC /* GlanceController.swift */,
+				47344BA11A87404400A4C3FC /* Images.xcassets */,
+				47344B981A87404400A4C3FC /* Supporting Files */,
+			);
+			path = "TempoWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		47344B981A87404400A4C3FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47344B991A87404400A4C3FC /* Info.plist */,
+				47344B9A1A87404400A4C3FC /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47344BA91A87404400A4C3FC /* TempoWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				47344BAC1A87404400A4C3FC /* Interface.storyboard */,
+				47344BAF1A87404400A4C3FC /* Images.xcassets */,
+				47344BAA1A87404400A4C3FC /* Supporting Files */,
+			);
+			path = "TempoWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		47344BAA1A87404400A4C3FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47344BAB1A87404400A4C3FC /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		470C59621A87293E00014E14 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				470C596A1A87293E00014E14 /* TempoSharedFramework.h in Headers */,
+				470C59A81A872CB600014E14 /* MMWormhole.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		470C59101A87284100014E14 /* TempoWatch */ = {
@@ -125,33 +351,70 @@
 				470C590D1A87284100014E14 /* Sources */,
 				470C590E1A87284100014E14 /* Frameworks */,
 				470C590F1A87284100014E14 /* Resources */,
+				470C595F1A87291600014E14 /* Embed App Extensions */,
+				470C59A41A872C9A00014E14 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				470C59A31A872C9A00014E14 /* PBXTargetDependency */,
+				47344BB21A87404400A4C3FC /* PBXTargetDependency */,
 			);
 			name = TempoWatch;
 			productName = TempoWatch;
 			productReference = 470C59111A87284100014E14 /* TempoWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		470C59281A87284100014E14 /* TempoWatchTests */ = {
+		470C59641A87293E00014E14 /* TempoSharedFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 470C59361A87284100014E14 /* Build configuration list for PBXNativeTarget "TempoWatchTests" */;
+			buildConfigurationList = 470C597E1A87293E00014E14 /* Build configuration list for PBXNativeTarget "TempoSharedFramework" */;
 			buildPhases = (
-				470C59251A87284100014E14 /* Sources */,
-				470C59261A87284100014E14 /* Frameworks */,
-				470C59271A87284100014E14 /* Resources */,
+				470C59601A87293E00014E14 /* Sources */,
+				470C59611A87293E00014E14 /* Frameworks */,
+				470C59621A87293E00014E14 /* Headers */,
+				470C59631A87293E00014E14 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				470C592B1A87284100014E14 /* PBXTargetDependency */,
 			);
-			name = TempoWatchTests;
-			productName = TempoWatchTests;
-			productReference = 470C59291A87284100014E14 /* TempoWatchTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = TempoSharedFramework;
+			productName = TempoSharedFramework;
+			productReference = 470C59651A87293E00014E14 /* TempoSharedFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		47344B951A87404400A4C3FC /* TempoWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47344BB71A87404400A4C3FC /* Build configuration list for PBXNativeTarget "TempoWatch WatchKit Extension" */;
+			buildPhases = (
+				47344B921A87404400A4C3FC /* Sources */,
+				47344B931A87404400A4C3FC /* Frameworks */,
+				47344B941A87404400A4C3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47344BA81A87404400A4C3FC /* PBXTargetDependency */,
+			);
+			name = "TempoWatch WatchKit Extension";
+			productName = "TempoWatch WatchKit Extension";
+			productReference = 47344B961A87404400A4C3FC /* TempoWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		47344BA41A87404400A4C3FC /* TempoWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47344BB41A87404400A4C3FC /* Build configuration list for PBXNativeTarget "TempoWatch WatchKit App" */;
+			buildPhases = (
+				47344BA31A87404400A4C3FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TempoWatch WatchKit App";
+			productName = "TempoWatch WatchKit App";
+			productReference = 47344BA51A87404400A4C3FC /* TempoWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
 
@@ -164,10 +427,28 @@
 				TargetAttributes = {
 					470C59101A87284100014E14 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 5DJNDYCH54;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
-					470C59281A87284100014E14 = {
+					470C59641A87293E00014E14 = {
 						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 470C59101A87284100014E14;
+					};
+					47344B951A87404400A4C3FC = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 5DJNDYCH54;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					47344BA41A87404400A4C3FC = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 5DJNDYCH54;
 					};
 				};
 			};
@@ -185,7 +466,9 @@
 			projectRoot = "";
 			targets = (
 				470C59101A87284100014E14 /* TempoWatch */,
-				470C59281A87284100014E14 /* TempoWatchTests */,
+				470C59641A87293E00014E14 /* TempoSharedFramework */,
+				47344B951A87404400A4C3FC /* TempoWatch WatchKit Extension */,
+				47344BA41A87404400A4C3FC /* TempoWatch WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -195,16 +478,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				470C59951A872B1300014E14 /* Montserrat-Bold.ttf in Resources */,
 				470C591F1A87284100014E14 /* Main.storyboard in Resources */,
 				470C59241A87284100014E14 /* LaunchScreen.xib in Resources */,
+				470C59961A872B1300014E14 /* Montserrat-Regular.ttf in Resources */,
+				470C59B81A8733BC00014E14 /* menu-icon.png in Resources */,
 				470C59211A87284100014E14 /* Images.xcassets in Resources */,
+				470C59B51A8730B700014E14 /* Default-568h@2x.png in Resources */,
+				470C59BC1A87370F00014E14 /* xbtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		470C59271A87284100014E14 /* Resources */ = {
+		470C59631A87293E00014E14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47344B941A87404400A4C3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47344BA61A87404400A4C3FC /* TempoWatch WatchKit App.app in Resources */,
+				47344BA21A87404400A4C3FC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47344BA31A87404400A4C3FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47344BAE1A87404400A4C3FC /* Interface.storyboard in Resources */,
+				47344BB01A87404400A4C3FC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,27 +521,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				470C591C1A87284100014E14 /* ViewController.swift in Sources */,
+				470C59B21A87302F00014E14 /* BWCircularSlider.swift in Sources */,
+				470C599A1A872B1300014E14 /* UIColor+Tempo.swift in Sources */,
+				470C59911A872B1300014E14 /* ContainerView.swift in Sources */,
 				470C59171A87284100014E14 /* AppDelegate.swift in Sources */,
+				470C59B31A87302F00014E14 /* BWCircularSliderView.swift in Sources */,
+				470C59921A872B1300014E14 /* HomeView.swift in Sources */,
 				470C591A1A87284100014E14 /* TempoWatch.xcdatamodeld in Sources */,
+				470C59991A872B1300014E14 /* SettingsView.swift in Sources */,
+				470C599B1A872B1300014E14 /* WorkView.swift in Sources */,
+				470C59931A872B1300014E14 /* HomeViewController.swift in Sources */,
+				470C59981A872B1300014E14 /* RestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		470C59251A87284100014E14 /* Sources */ = {
+		470C59601A87293E00014E14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				470C59301A87284100014E14 /* TempoWatchTests.swift in Sources */,
+				470C59AF1A872F0100014E14 /* TimerModel.swift in Sources */,
+				470C59A91A872CB600014E14 /* MMWormhole.m in Sources */,
+				470C59AC1A872D5200014E14 /* iWatchMsgController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47344B921A87404400A4C3FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47344B9E1A87404400A4C3FC /* NotificationController.swift in Sources */,
+				47344B9C1A87404400A4C3FC /* InterfaceController.swift in Sources */,
+				47344BA01A87404400A4C3FC /* GlanceController.swift in Sources */,
+				47344BBD1A8741C000A4C3FC /* RunningController.swift in Sources */,
+				47344BBC1A8741C000A4C3FC /* PausedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		470C592B1A87284100014E14 /* PBXTargetDependency */ = {
+		470C59A31A872C9A00014E14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 470C59101A87284100014E14 /* TempoWatch */;
-			targetProxy = 470C592A1A87284100014E14 /* PBXContainerItemProxy */;
+			target = 470C59641A87293E00014E14 /* TempoSharedFramework */;
+			targetProxy = 470C59A21A872C9A00014E14 /* PBXContainerItemProxy */;
+		};
+		47344BA81A87404400A4C3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47344BA41A87404400A4C3FC /* TempoWatch WatchKit App */;
+			targetProxy = 47344BA71A87404400A4C3FC /* PBXContainerItemProxy */;
+		};
+		47344BB21A87404400A4C3FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47344B951A87404400A4C3FC /* TempoWatch WatchKit Extension */;
+			targetProxy = 47344BB11A87404400A4C3FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -254,6 +592,14 @@
 				470C59231A87284100014E14 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		47344BAC1A87404400A4C3FC /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47344BAD1A87404400A4C3FC /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -297,6 +643,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "TempoWatch/TempoWatch-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -332,6 +679,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "TempoWatch/TempoWatch-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -340,9 +688,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = TempoWatch/TempoWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TempoWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -350,43 +704,125 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = TempoWatch/TempoWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TempoWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
-		470C59371A87284100014E14 /* Debug */ = {
+		470C597F1A87293E00014E14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TempoWatchTests/Info.plist;
+				INFOPLIST_FILE = TempoSharedFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TempoWatch.app/TempoWatch";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		470C59381A87284100014E14 /* Release */ = {
+		470C59801A87293E00014E14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TempoWatchTests/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TempoSharedFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TempoWatch.app/TempoWatch";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		47344BB51A87404400A4C3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = TempoWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "TempoWatch WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		47344BB61A87404400A4C3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IBSC_MODULE = TempoWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "TempoWatch WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		47344BB81A87404400A4C3FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TempoWatch WatchKit Extension/TempoWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TempoWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		47344BB91A87404400A4C3FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TempoWatch WatchKit Extension/TempoWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "TempoWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -409,14 +845,34 @@
 				470C59351A87284100014E14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		470C59361A87284100014E14 /* Build configuration list for PBXNativeTarget "TempoWatchTests" */ = {
+		470C597E1A87293E00014E14 /* Build configuration list for PBXNativeTarget "TempoSharedFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				470C59371A87284100014E14 /* Debug */,
-				470C59381A87284100014E14 /* Release */,
+				470C597F1A87293E00014E14 /* Debug */,
+				470C59801A87293E00014E14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47344BB41A87404400A4C3FC /* Build configuration list for PBXNativeTarget "TempoWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47344BB51A87404400A4C3FC /* Debug */,
+				47344BB61A87404400A4C3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47344BB71A87404400A4C3FC /* Build configuration list for PBXNativeTarget "TempoWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47344BB81A87404400A4C3FC /* Debug */,
+				47344BB91A87404400A4C3FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
