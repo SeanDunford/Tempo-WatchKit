@@ -53,9 +53,9 @@
 		47D387901A318A2E0074A1AA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3878F1A318A2E0074A1AA /* NotificationController.swift */; };
 		47D387921A318A2E0074A1AA /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D387911A318A2E0074A1AA /* GlanceController.swift */; };
 		47D387941A318A2E0074A1AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D387931A318A2E0074A1AA /* Images.xcassets */; };
-		47D387981A318A2E0074A1AA /* BitWatch Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 47D387971A318A2E0074A1AA /* BitWatch Watch App.app */; };
+		47D387981A318A2E0074A1AA /* Tempo Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = 47D387971A318A2E0074A1AA /* Tempo Watch App.app */; };
 		47D387A11A318A2E0074A1AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D387A01A318A2E0074A1AA /* Images.xcassets */; };
-		47D387A41A318A2E0074A1AA /* BitWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47D387871A318A2E0074A1AA /* BitWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		47D387A41A318A2E0074A1AA /* Tempo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47D387871A318A2E0074A1AA /* Tempo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		47D387AC1A31A3CF0074A1AA /* InterfaceController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D387AB1A31A3CF0074A1AA /* InterfaceController.storyboard */; };
 		47D387AE1A3422D30074A1AA /* RunningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D387AD1A3422D30074A1AA /* RunningController.swift */; };
 		63A9DF8D1A6AE00000ACDCDF /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63A9DF8B1A6AD7BA00ACDCDF /* Montserrat-Bold.ttf */; };
@@ -66,8 +66,8 @@
 		7B876B711A1C9F2D00A76FAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B876B701A1C9F2D00A76FAF /* Images.xcassets */; };
 		7B876B741A1C9F2D00A76FAF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B876B721A1C9F2D00A76FAF /* LaunchScreen.xib */; };
 		7B876BB81A1CA05900A76FAF /* BitWatchKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B876BB71A1CA05900A76FAF /* BitWatchKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B876BCA1A1CA05900A76FAF /* BitWatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B876BB31A1CA05900A76FAF /* BitWatchKit.framework */; };
-		7B876BCB1A1CA05900A76FAF /* BitWatchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B876BB31A1CA05900A76FAF /* BitWatchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7B876BCA1A1CA05900A76FAF /* TempoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B876BB31A1CA05900A76FAF /* TempoKit.framework */; };
+		7B876BCB1A1CA05900A76FAF /* TempoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B876BB31A1CA05900A76FAF /* TempoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +101,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7B876BCB1A1CA05900A76FAF /* BitWatchKit.framework in Embed Frameworks */,
+				7B876BCB1A1CA05900A76FAF /* TempoKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,7 +112,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				47D387A41A318A2E0074A1AA /* BitWatch WatchKit Extension.appex in Embed App Extensions */,
+				47D387A41A318A2E0074A1AA /* Tempo WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,21 +139,21 @@
 		4783C1DC1A87159A00D28097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4783C1E71A87159A00D28097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4783C1E81A87159A00D28097 /* BitWatch7_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitWatch7_0Tests.swift; sourceTree = "<group>"; };
-		4783C21C1A8717E000D28097 /* BitWatch copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitWatch copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4783C21C1A8717E000D28097 /* Tempo copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempo copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4783C21D1A8717E100D28097 /* BitWatch copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BitWatch copy-Info.plist"; path = "/Users/seandunford/GitProjects/BitWatch-Starter/BitWatch copy-Info.plist"; sourceTree = "<absolute>"; };
 		47A902BA1A342868004812C7 /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerModel.swift; path = "../BitWatch WatchKit Extension/TimerModel.swift"; sourceTree = "<group>"; };
 		47AC90F51A6B7870007F5BC3 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		47AC90F71A6B7932007F5BC3 /* WorkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
 		47AC90F91A6B793E007F5BC3 /* RestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		47AC90FB1A6B7A01007F5BC3 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		47D387871A318A2E0074A1AA /* BitWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BitWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D387871A318A2E0074A1AA /* Tempo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tempo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D3878B1A318A2E0074A1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47D3878C1A318A2E0074A1AA /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
 		47D3878D1A318A2E0074A1AA /* PausedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausedController.swift; sourceTree = "<group>"; };
 		47D3878F1A318A2E0074A1AA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		47D387911A318A2E0074A1AA /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		47D387931A318A2E0074A1AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		47D387971A318A2E0074A1AA /* BitWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D387971A318A2E0074A1AA /* Tempo Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempo Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D3879D1A318A2E0074A1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47D387A01A318A2E0074A1AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47D387AB1A31A3CF0074A1AA /* InterfaceController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InterfaceController.storyboard; sourceTree = "<group>"; };
@@ -162,13 +162,13 @@
 		63A9DF8C1A6AD7BA00ACDCDF /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		63F185B51A61C3130020C193 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		63FB9F551A37781D004B27ED /* BitWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BitWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		7B876B641A1C9F2D00A76FAF /* BitWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B876B641A1C9F2D00A76FAF /* Tempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B876B681A1C9F2D00A76FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B876B691A1C9F2D00A76FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B876B6E1A1C9F2D00A76FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B876B701A1C9F2D00A76FAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7B876B731A1C9F2D00A76FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		7B876BB31A1CA05900A76FAF /* BitWatchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitWatchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B876BB31A1CA05900A76FAF /* TempoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TempoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B876BB61A1CA05900A76FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B876BB71A1CA05900A76FAF /* BitWatchKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitWatchKit.h; sourceTree = "<group>"; };
 		7BA883AD1A1CABEE00C53ECE /* BitWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BitWatch.entitlements; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B876BCA1A1CA05900A76FAF /* BitWatchKit.framework in Frameworks */,
+				7B876BCA1A1CA05900A76FAF /* TempoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,11 +382,11 @@
 		7B876B651A1C9F2D00A76FAF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B876B641A1C9F2D00A76FAF /* BitWatch.app */,
-				7B876BB31A1CA05900A76FAF /* BitWatchKit.framework */,
-				47D387871A318A2E0074A1AA /* BitWatch WatchKit Extension.appex */,
-				47D387971A318A2E0074A1AA /* BitWatch Watch App.app */,
-				4783C21C1A8717E000D28097 /* BitWatch copy.app */,
+				7B876B641A1C9F2D00A76FAF /* Tempo.app */,
+				7B876BB31A1CA05900A76FAF /* TempoKit.framework */,
+				47D387871A318A2E0074A1AA /* Tempo WatchKit Extension.appex */,
+				47D387971A318A2E0074A1AA /* Tempo Watch App.app */,
+				4783C21C1A8717E000D28097 /* Tempo copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,9 +462,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4783C1F91A8717E000D28097 /* BitWatch7.0 */ = {
+		4783C1F91A8717E000D28097 /* Tempo7.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4783C2191A8717E000D28097 /* Build configuration list for PBXNativeTarget "BitWatch7.0" */;
+			buildConfigurationList = 4783C2191A8717E000D28097 /* Build configuration list for PBXNativeTarget "Tempo7.0" */;
 			buildPhases = (
 				4783C1FE1A8717E000D28097 /* Sources */,
 				4783C20A1A8717E000D28097 /* Frameworks */,
@@ -474,14 +474,14 @@
 			);
 			dependencies = (
 			);
-			name = BitWatch7.0;
+			name = Tempo7.0;
 			productName = BitWatch;
-			productReference = 4783C21C1A8717E000D28097 /* BitWatch copy.app */;
+			productReference = 4783C21C1A8717E000D28097 /* Tempo copy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		47D387861A318A2E0074A1AA /* BitWatch WatchKit Extension */ = {
+		47D387861A318A2E0074A1AA /* Tempo WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47D387AA1A318A2E0074A1AA /* Build configuration list for PBXNativeTarget "BitWatch WatchKit Extension" */;
+			buildConfigurationList = 47D387AA1A318A2E0074A1AA /* Build configuration list for PBXNativeTarget "Tempo WatchKit Extension" */;
 			buildPhases = (
 				47D387831A318A2E0074A1AA /* Sources */,
 				47D387841A318A2E0074A1AA /* Frameworks */,
@@ -492,14 +492,14 @@
 			dependencies = (
 				47D3879A1A318A2E0074A1AA /* PBXTargetDependency */,
 			);
-			name = "BitWatch WatchKit Extension";
+			name = "Tempo WatchKit Extension";
 			productName = "BitWatch WatchKit Extension";
-			productReference = 47D387871A318A2E0074A1AA /* BitWatch WatchKit Extension.appex */;
+			productReference = 47D387871A318A2E0074A1AA /* Tempo WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit-extension";
 		};
-		47D387961A318A2E0074A1AA /* BitWatch Watch App */ = {
+		47D387961A318A2E0074A1AA /* Tempo Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47D387A91A318A2E0074A1AA /* Build configuration list for PBXNativeTarget "BitWatch Watch App" */;
+			buildConfigurationList = 47D387A91A318A2E0074A1AA /* Build configuration list for PBXNativeTarget "Tempo Watch App" */;
 			buildPhases = (
 				47D387951A318A2E0074A1AA /* Resources */,
 			);
@@ -507,14 +507,14 @@
 			);
 			dependencies = (
 			);
-			name = "BitWatch Watch App";
+			name = "Tempo Watch App";
 			productName = "BitWatch Watch App";
-			productReference = 47D387971A318A2E0074A1AA /* BitWatch Watch App.app */;
+			productReference = 47D387971A318A2E0074A1AA /* Tempo Watch App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
-		7B876B631A1C9F2D00A76FAF /* BitWatch */ = {
+		7B876B631A1C9F2D00A76FAF /* Tempo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B876B831A1C9F2D00A76FAF /* Build configuration list for PBXNativeTarget "BitWatch" */;
+			buildConfigurationList = 7B876B831A1C9F2D00A76FAF /* Build configuration list for PBXNativeTarget "Tempo" */;
 			buildPhases = (
 				7B876B601A1C9F2D00A76FAF /* Sources */,
 				7B876B611A1C9F2D00A76FAF /* Frameworks */,
@@ -528,14 +528,14 @@
 				7B876BC91A1CA05900A76FAF /* PBXTargetDependency */,
 				47D387A31A318A2E0074A1AA /* PBXTargetDependency */,
 			);
-			name = BitWatch;
+			name = Tempo;
 			productName = BitWatch;
-			productReference = 7B876B641A1C9F2D00A76FAF /* BitWatch.app */;
+			productReference = 7B876B641A1C9F2D00A76FAF /* Tempo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7B876BB21A1CA05900A76FAF /* BitWatchKit */ = {
+		7B876BB21A1CA05900A76FAF /* TempoKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B876BCC1A1CA05900A76FAF /* Build configuration list for PBXNativeTarget "BitWatchKit" */;
+			buildConfigurationList = 7B876BCC1A1CA05900A76FAF /* Build configuration list for PBXNativeTarget "TempoKit" */;
 			buildPhases = (
 				7B876BAE1A1CA05900A76FAF /* Sources */,
 				7B876BAF1A1CA05900A76FAF /* Frameworks */,
@@ -546,9 +546,9 @@
 			);
 			dependencies = (
 			);
-			name = BitWatchKit;
+			name = TempoKit;
 			productName = BitWatchKit;
-			productReference = 7B876BB31A1CA05900A76FAF /* BitWatchKit.framework */;
+			productReference = 7B876BB31A1CA05900A76FAF /* TempoKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -590,7 +590,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7B876B5F1A1C9F2D00A76FAF /* Build configuration list for PBXProject "BitWatch" */;
+			buildConfigurationList = 7B876B5F1A1C9F2D00A76FAF /* Build configuration list for PBXProject "Tempo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -603,11 +603,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B876B631A1C9F2D00A76FAF /* BitWatch */,
-				7B876BB21A1CA05900A76FAF /* BitWatchKit */,
-				47D387861A318A2E0074A1AA /* BitWatch WatchKit Extension */,
-				47D387961A318A2E0074A1AA /* BitWatch Watch App */,
-				4783C1F91A8717E000D28097 /* BitWatch7.0 */,
+				7B876B631A1C9F2D00A76FAF /* Tempo */,
+				7B876BB21A1CA05900A76FAF /* TempoKit */,
+				47D387861A318A2E0074A1AA /* Tempo WatchKit Extension */,
+				47D387961A318A2E0074A1AA /* Tempo Watch App */,
+				4783C1F91A8717E000D28097 /* Tempo7.0 */,
 			);
 		};
 /* End PBXProject section */
@@ -633,7 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D387941A318A2E0074A1AA /* Images.xcassets in Resources */,
-				47D387981A318A2E0074A1AA /* BitWatch Watch App.app in Resources */,
+				47D387981A318A2E0074A1AA /* Tempo Watch App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,17 +738,17 @@
 /* Begin PBXTargetDependency section */
 		47D3879A1A318A2E0074A1AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 47D387961A318A2E0074A1AA /* BitWatch Watch App */;
+			target = 47D387961A318A2E0074A1AA /* Tempo Watch App */;
 			targetProxy = 47D387991A318A2E0074A1AA /* PBXContainerItemProxy */;
 		};
 		47D387A31A318A2E0074A1AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 47D387861A318A2E0074A1AA /* BitWatch WatchKit Extension */;
+			target = 47D387861A318A2E0074A1AA /* Tempo WatchKit Extension */;
 			targetProxy = 47D387A21A318A2E0074A1AA /* PBXContainerItemProxy */;
 		};
 		7B876BC91A1CA05900A76FAF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B876BB21A1CA05900A76FAF /* BitWatchKit */;
+			target = 7B876BB21A1CA05900A76FAF /* TempoKit */;
 			targetProxy = 7B876BC81A1CA05900A76FAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -800,7 +800,7 @@
 				INFOPLIST_FILE = "BitWatch copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "BitWatch copy";
+				PRODUCT_NAME = "Tempo copy";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -817,7 +817,7 @@
 				INFOPLIST_FILE = "BitWatch copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "BitWatch copy";
+				PRODUCT_NAME = "Tempo copy";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -835,7 +835,7 @@
 				);
 				INFOPLIST_FILE = "BitWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "Tempo WatchKit Extension";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
@@ -849,7 +849,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BitWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "Tempo WatchKit Extension";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
@@ -866,7 +866,7 @@
 				);
 				IBSC_MODULE = BitWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "BitWatch Watch App/Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tempo Watch App";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -880,7 +880,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				IBSC_MODULE = BitWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "BitWatch Watch App/Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tempo Watch App";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -993,7 +993,7 @@
 				INFOPLIST_FILE = BitWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tempo;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1011,7 +1011,7 @@
 				INFOPLIST_FILE = BitWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tempo;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1036,7 +1036,7 @@
 				INFOPLIST_FILE = BitWatchKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TempoKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1060,7 +1060,7 @@
 				INFOPLIST_FILE = BitWatchKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TempoKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1071,7 +1071,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4783C2191A8717E000D28097 /* Build configuration list for PBXNativeTarget "BitWatch7.0" */ = {
+		4783C2191A8717E000D28097 /* Build configuration list for PBXNativeTarget "Tempo7.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4783C21A1A8717E000D28097 /* Debug */,
@@ -1080,7 +1080,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47D387A91A318A2E0074A1AA /* Build configuration list for PBXNativeTarget "BitWatch Watch App" */ = {
+		47D387A91A318A2E0074A1AA /* Build configuration list for PBXNativeTarget "Tempo Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47D387A71A318A2E0074A1AA /* Debug */,
@@ -1089,7 +1089,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47D387AA1A318A2E0074A1AA /* Build configuration list for PBXNativeTarget "BitWatch WatchKit Extension" */ = {
+		47D387AA1A318A2E0074A1AA /* Build configuration list for PBXNativeTarget "Tempo WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47D387A51A318A2E0074A1AA /* Debug */,
@@ -1098,7 +1098,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B876B5F1A1C9F2D00A76FAF /* Build configuration list for PBXProject "BitWatch" */ = {
+		7B876B5F1A1C9F2D00A76FAF /* Build configuration list for PBXProject "Tempo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B876B811A1C9F2D00A76FAF /* Debug */,
@@ -1107,7 +1107,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B876B831A1C9F2D00A76FAF /* Build configuration list for PBXNativeTarget "BitWatch" */ = {
+		7B876B831A1C9F2D00A76FAF /* Build configuration list for PBXNativeTarget "Tempo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B876B841A1C9F2D00A76FAF /* Debug */,
@@ -1116,7 +1116,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B876BCC1A1CA05900A76FAF /* Build configuration list for PBXNativeTarget "BitWatchKit" */ = {
+		7B876BCC1A1CA05900A76FAF /* Build configuration list for PBXNativeTarget "TempoKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B876BCD1A1CA05900A76FAF /* Debug */,
