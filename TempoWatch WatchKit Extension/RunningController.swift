@@ -18,7 +18,7 @@ class RunningController: WKInterfaceController {
         NSLog("%@ init", self)
     }
     override func awakeWithContext(context: AnyObject?) {
-        self.timerObj = context as TimerModel
+        self.timerObj = context as! TimerModel
     }
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

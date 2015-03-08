@@ -34,6 +34,8 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     var countDownTimer: NSTimer!
     var currentCountDown = 0
     var currentInterval: Int = 1
+    var totalIntervals: Int = TimerModel().getIntervalAmount();
+    var paused = false;
     
     //Main Views
     var containerView: ContainerView!
@@ -52,10 +54,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     var restRed: UIColor = UIColor().restRed()
 
     func setupIAds(){
-        self.canDisplayBannerAds = true;
-        self.adBannerView = ADBannerView(frame: CGRectMake(0, height - 50, width, 50));
-        self.adBannerView.delegate = self;
-        self.adBannerView.hidden = true;
+//        self.canDisplayBannerAds = true;
+//        self.adBannerView = ADBannerView(frame: CGRectMake(0, height - 50, width, 50));
+//        self.adBannerView.delegate = self;
+//        self.adBannerView.hidden = true;
     }
     override init() {
         super.init()
@@ -72,7 +74,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
                 object: nil)
     }
     func defualtsChanged(notification: NSNotification){
-        var defaults: NSUserDefaults = notification.object as NSUserDefaults
+        var defaults: NSUserDefaults = notification.object as! NSUserDefaults
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -182,26 +184,30 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     
     func beginWorkCountdown(){
         workView.startTimer()
+        workView.updateInterval(currentInterval, total: totalIntervals)
         currentCountDown = timerObj.getWorkSeconds()
         countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
     }
     
     func beginRestCountdown(){
         restView.startTimer()
+        restView.updateInterval(currentInterval, total: totalIntervals)
         currentCountDown = timerObj.getRestSeconds()
         countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
     }
     
     func updateCountdown() {
-        if( currentCountDown - 1 > 0 ){
-            currentCountDown--;
-            updateTime()
-        }
-        
-        // if we are at 0, reset the countdown, update the label and stop the countdown timer.
-        else if( currentCountDown - 1 == 0 ){
-            countDownTimer.invalidate();
-            stopTimer()
+        if( !paused ){
+            if( currentCountDown - 1 > 0 ){
+                currentCountDown--;
+                updateTime()
+            }
+            
+            // if we are at 0, reset the countdown, update the label and stop the countdown timer.
+            else if( currentCountDown - 1 == 0 ){
+                countDownTimer.invalidate();
+                stopTimer()
+            }
         }
     }
     
@@ -255,6 +261,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     func menuClicked(){
         containerView.toggleMenuOpen()
+        paused = ( !paused ) ? true : false;
         dismissKeyBoard()
     }
     func dismissKeyBoard(){

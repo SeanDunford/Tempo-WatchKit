@@ -64,6 +64,7 @@
 		47344C101A87490900A4C3FC /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 470C59891A872B1300014E14 /* Montserrat-Bold.ttf */; };
 		47344C111A87490900A4C3FC /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 470C598A1A872B1300014E14 /* Montserrat-Regular.ttf */; };
 		47344C121A87491400A4C3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47344BD11A87451800A4C3FC /* Main.storyboard */; };
+		63C10A711AAAADBA00AE4902 /* PausedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBA1A8741C000A4C3FC /* PausedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -545,7 +546,7 @@
 				TargetAttributes = {
 					470C59101A87284100014E14 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 5DJNDYCH54;
+						DevelopmentTeam = CB8A2UT3FF;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -557,7 +558,7 @@
 					};
 					47344B951A87404400A4C3FC = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 5DJNDYCH54;
+						DevelopmentTeam = CB8A2UT3FF;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -566,10 +567,10 @@
 					};
 					47344BA41A87404400A4C3FC = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 5DJNDYCH54;
+						DevelopmentTeam = CB8A2UT3FF;
 					};
 					47344BEB1A87456100A4C3FC = {
-						DevelopmentTeam = 5DJNDYCH54;
+						DevelopmentTeam = CB8A2UT3FF;
 					};
 				};
 			};
@@ -664,6 +665,7 @@
 				470C59B31A87302F00014E14 /* BWCircularSliderView.swift in Sources */,
 				470C59921A872B1300014E14 /* HomeView.swift in Sources */,
 				470C591A1A87284100014E14 /* TempoWatch.xcdatamodeld in Sources */,
+				63C10A711AAAADBA00AE4902 /* PausedController.swift in Sources */,
 				470C59991A872B1300014E14 /* SettingsView.swift in Sources */,
 				470C599B1A872B1300014E14 /* WorkView.swift in Sources */,
 				470C59931A872B1300014E14 /* HomeViewController.swift in Sources */,
@@ -871,9 +873,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = TempoWatch/TempoWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TempoWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -887,9 +890,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = TempoWatch/TempoWatch.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = TempoWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -18,9 +18,11 @@ class ContainerView: UIView{
         height = frame.size.height
         initialize()
     }
+    
     required init(coder aDeCoder:NSCoder){
         super.init(coder:aDeCoder)
     }
+    
     func initialize(){
         width = self.frame.size.width
         height = self.frame.size.height
