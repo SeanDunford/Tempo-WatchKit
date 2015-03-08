@@ -45,11 +45,13 @@ class ContainerView: UIView{
         var swipeRight: UISwipeGestureRecognizer =
             UISwipeGestureRecognizer(target: self, action:"viewWasSwiped:");
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right;
+        swipeRight.cancelsTouchesInView = false
         scrollView.addGestureRecognizer(swipeRight);
         
         var swipeLeft: UISwipeGestureRecognizer =
             UISwipeGestureRecognizer(target: self, action: "viewWasSwiped:");
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left;
+        swipeLeft.cancelsTouchesInView = false
         scrollView.addGestureRecognizer(swipeLeft);
     }
 

@@ -100,6 +100,7 @@ class BWCircularSlider: UIControl {
         textField?.textAlignment = .Center
         textField?.font = font
         textField?.text = "\(self.angle)"
+        textField?.userInteractionEnabled = false
         
         addSubview(textField!)
     }
@@ -111,13 +112,23 @@ class BWCircularSlider: UIControl {
     
     override func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) -> Bool {
         super.beginTrackingWithTouch(touch, withEvent: event)
-        
+        println("beginTrackingWithTouch")
         return true
     }
     
+    override func cancelTrackingWithEvent(event: UIEvent?){
+        println("event cancelled")
+        println("cancelling because of event \(event?.description)")
+        println("event type \(event?.type)")
+        println("event subtype \(event?.subtype)")
+        //println("event type \(event?.)")
+//        super.cancelTrackingWithEvent(event)
+    }
     
     override func continueTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) -> Bool {
-        super.continueTrackingWithTouch(touch, withEvent: event)
+        if(!super.continueTrackingWithTouch(touch, withEvent: event)){
+            println("super continue tracking failed")
+        }
         
         let lastPoint = touch.locationInView(self)
         
@@ -130,6 +141,7 @@ class BWCircularSlider: UIControl {
     
     override func endTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) {
         super.endTrackingWithTouch(touch, withEvent: event)
+        println("endTrackingWithTouch")
     }
     
     func updateView(
@@ -286,7 +298,7 @@ class BWCircularSlider: UIControl {
             self.currValue = CGFloat(intervals)
             textField!.text = "\(intervals)"
         }
-
+        
     }
     /** Given the angle, get the point position on circumference **/
     func pointFromAngle(angleInt:Int)->CGPoint{
