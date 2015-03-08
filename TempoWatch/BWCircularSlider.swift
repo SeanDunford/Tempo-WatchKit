@@ -13,6 +13,7 @@ struct Config {
     static let TB_SLIDER_SIZE:CGFloat = UIScreen.mainScreen().bounds.size.width
     static let TB_SAFEAREA_PADDING:CGFloat = 60.0
     static let TB_LINE_WIDTH:CGFloat = 20.0
+    static let TB_HANDLE_CIRCUMFERENCE:CGFloat = 20.0
     static let TB_FONTSIZE:CGFloat = 40.0
     
 }
@@ -36,7 +37,7 @@ func Square (value:CGFloat) -> CGFloat {
 
 class BWCircularSlider: UIControl {
 
-    var textField:UITextField?
+    var textField:UILabel?
     var radius:CGFloat = 0
     var angle:CGFloat = 360{
         willSet(x){
@@ -93,8 +94,8 @@ class BWCircularSlider: UIControl {
             (frame.size.height - fontSize.height) / 2.0,
             fontSize.width, fontSize.height);
         
-        textField = UITextField(frame: textFieldRect)
-        textField?.backgroundColor = UIColor.clearColor()
+        textField = UILabel(frame: textFieldRect)
+//        textField?.backgroundColor = UIColor.clearColor()
         textField?.textColor = textColor.colorWithAlphaComponent(0.8)
         textField?.textAlignment = .Center
         textField?.font = font
@@ -244,7 +245,7 @@ class BWCircularSlider: UIControl {
 
         //Draw It!
         UIColor.blackColor().colorWithAlphaComponent(0.7).set()
-        CGContextFillEllipseInRect(ctx, CGRectMake(handleCenter.x, handleCenter.y, Config.TB_LINE_WIDTH, Config.TB_LINE_WIDTH));
+        CGContextFillEllipseInRect(ctx, CGRectMake(handleCenter.x, handleCenter.y, Config.TB_HANDLE_CIRCUMFERENCE, Config.TB_HANDLE_CIRCUMFERENCE));
         
         CGContextRestoreGState(ctx);
     }

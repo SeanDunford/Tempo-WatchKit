@@ -231,12 +231,12 @@ public class SettingsView: UIView, UITextFieldDelegate{
         var m = (restSecs / 60) % 60;
         var s = restSecs % 60;
         var formattedTime: NSString = String(format: "%02u:%02u", m, s);
-        restSetting.text = formattedTime
+        restSetting.text = formattedTime as String
         
         m = (workSecs / 60) % 60;
         s = workSecs % 60;
         formattedTime = String(format: "%02u:%02u", m, s);
-        workSetting.text = formattedTime
+        workSetting.text = formattedTime as? String
     }
     
 }
