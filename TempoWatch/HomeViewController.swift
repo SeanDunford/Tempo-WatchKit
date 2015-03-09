@@ -268,12 +268,13 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     func menuClicked(){
         containerView.toggleMenuOpen()
-        paused = ( !paused ) ? true : false;
+//        paused = ( !paused ) ? true : false;
         dismissKeyBoard()
     }
     
     func cancelClicked(){
-        
+        currentInterval = 1;
+        self.state = .home
     }
     
     func dismissKeyBoard(){
