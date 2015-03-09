@@ -117,8 +117,8 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         homeView.beginBlock = beginHomeCountdown
         
         addMenuButtonToView(homeView)
-        addMenuButtonToView(workView)
-        addMenuButtonToView(restView)
+        addCancelButtonToView(workView)
+        addCancelButtonToView(restView)
         
     }
     func increaseState(){
@@ -259,11 +259,23 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         menuButton.addTarget(self, action: "menuClicked", forControlEvents: UIControlEvents.TouchUpInside);
         view.addSubview(menuButton);
     }
+    func addCancelButtonToView(view: UIView){
+        var cancelButton: UIButton = UIButton(frame: CGRectMake(width - 35, 10, 25, 25));
+        var cancelImage: UIImage! = UIImage(named: "xBtn");
+        cancelButton.setBackgroundImage(cancelImage, forState: UIControlState.Normal);
+        cancelButton.addTarget(self, action: "cancelClicked", forControlEvents: UIControlEvents.TouchUpInside);
+        view.addSubview(cancelButton);
+    }
     func menuClicked(){
         containerView.toggleMenuOpen()
         paused = ( !paused ) ? true : false;
         dismissKeyBoard()
     }
+    
+    func cancelClicked(){
+        
+    }
+    
     func dismissKeyBoard(){
         settingsView.workSetting.resignFirstResponder()
         settingsView.restSetting.resignFirstResponder()
