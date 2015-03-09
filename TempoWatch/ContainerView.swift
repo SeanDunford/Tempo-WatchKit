@@ -8,6 +8,12 @@ class ContainerView: UIView{
     var menuOpen: Bool = false
     var disableScrolling = false
     
+    var pauseImg: UIImage!
+    var playImg: UIImage!
+    var pauseImgV: UIImageView!
+    var smallFrame: CGRect!
+    var partialFrame: CGRect!
+    var bigFrame: CGRect!
     
     var width: CGFloat!
     var height: CGFloat!
@@ -36,10 +42,44 @@ class ContainerView: UIView{
         super.addSubview(scrollView)
         
         
+        smallFrame = CGRectMake((width - 50)/2, (height - 50)/2, 50, 50)
+        let partialH = height * 0.8
+        let partialW = width * 0.8
+        partialFrame = CGRectMake((width - partialW)/2, (height - partialH)/2, partialW, partialH)
+        bigFrame = CGRectMake(0, 0, width, height)
+        pauseImg = UIImage(named:"pause")
+        playImg = UIImage(named: "play")
+        pauseImgV = UIImageView(frame: smallFrame)
+        pauseImgV.contentMode = .ScaleAspectFill
+        self.addSubview(pauseImgV)
+        
         addGestures()
     }
     override func addSubview(view: UIView) {
         scrollView.addSubview(view)
+    }
+    func showPauseAnimation(pause:Bool){
+        self.bringSubviewToFront(pauseImgV)
+        pauseImgV.frame = smallFrame
+        pauseImgV.alpha = 0
+        pauseImgV.image = (pause) ? pauseImg : playImg
+        UIView.animateWithDuration(0.1, delay: 0, options: .CurveEaseIn, animations: {
+            println("animation started")
+            self.pauseImgV.alpha = 0.10
+        }, completion: { finished in
+            println("animation continuing")
+            UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+                self.pauseImgV.frame = self.partialFrame
+                }, completion: { finished in
+                    println("animation finishing")
+                    UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseOut, animations: {
+                        self.pauseImgV.frame = self.bigFrame
+                        self.pauseImgV.alpha = 0
+                        }, completion: { finished in
+                            println("animation finished")
+                    })
+            })
+        })
     }
     func addGestures(){
         var swipeRight: UISwipeGestureRecognizer =

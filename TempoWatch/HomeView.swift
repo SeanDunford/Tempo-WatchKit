@@ -43,6 +43,7 @@ public class HomeView: UIView {
         countDownLabel.font = UIFont(name: "Montserrat-Bold", size: 125);
         stopTimer()
         self.addSubview(countDownLabel)
+        
     }
     func startTimer(){
         beginButton.alpha = 0
