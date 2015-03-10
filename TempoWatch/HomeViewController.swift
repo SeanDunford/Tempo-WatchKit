@@ -111,6 +111,9 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         workView.timerObj = self.timerObj
         settingsView.timerObj = self.timerObj
         
+        workView.pauseCb = togglePauseState
+        restView.pauseCb = togglePauseState
+        
         setupViews()
     }
     func setupViews(){
@@ -120,6 +123,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         addCancelButtonToView(workView)
         addCancelButtonToView(restView)
         
+    }
+    func togglePauseState(){
+        paused = !paused
+        containerView.showPauseAnimation(paused)
     }
     func increaseState(){
         switch(state){

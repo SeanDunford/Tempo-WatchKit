@@ -9,6 +9,8 @@ public class RestView: UIView{
     var width: CGFloat!
     var restTime: UILabel!
     var intervalLabel: UILabel!
+    var pauseGesture: UITapGestureRecognizer!
+    var pauseCb: (() -> ())?
     var timerObj: TimerModel!{
         willSet(x){
             restTime.text = String(x.getRestSeconds());
@@ -19,10 +21,16 @@ public class RestView: UIView{
         super.init(frame:frame)
         height = frame.size.height
         width = frame.size.width
+        pauseGesture = UITapGestureRecognizer(target: self, action: Selector("didTap"))
+        self.addGestureRecognizer(pauseGesture)
+        pauseGesture.cancelsTouchesInView = false
         initialize()
     }
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    func didTap(){
+        pauseCb?()
     }
     func initialize(){
         var restLabel: UILabel = UILabel(frame: CGRectMake(0, (height * 0.4) - 30, width, 50));
