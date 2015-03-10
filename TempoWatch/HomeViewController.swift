@@ -54,10 +54,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     var restRed: UIColor = UIColor().restRed()
 
     func setupIAds(){
-//        self.canDisplayBannerAds = true;
-//        self.adBannerView = ADBannerView(frame: CGRectMake(0, height - 50, width, 50));
-//        self.adBannerView.delegate = self;
-//        self.adBannerView.hidden = true;
+        self.canDisplayBannerAds = true;
+        self.adBannerView = ADBannerView(frame: CGRectMake(0, height - 50, width, 50));
+        self.adBannerView.delegate = self;
+        self.adBannerView.hidden = true;
     }
     override init() {
         super.init()
@@ -96,8 +96,6 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         f = CGRectMake(width, 0, width - 45, height)
         settingsView = SettingsView(frame:f)
         settingsView.delegate = self;
-        
-
         
         self.state = .home
         self.view.backgroundColor = UIColor.whiteColor()
@@ -280,7 +278,9 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     
     func cancelClicked(){
+        // Reset Interval
         currentInterval = 1;
+        // Reset State to Home
         self.state = .home
     }
     
