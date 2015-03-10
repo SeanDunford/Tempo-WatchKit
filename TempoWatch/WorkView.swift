@@ -8,6 +8,8 @@ public class WorkView: UIView{
     var width: CGFloat!
     var workTime: UILabel!
     var intervalLabel: UILabel!
+    var pauseGesture: UITapGestureRecognizer!
+    var pauseCb: (() -> ())?
     var timerObj: TimerModel!{
         willSet(x){
             workTime.text = String(x.getWorkSeconds());
@@ -16,8 +18,12 @@ public class WorkView: UIView{
     
     override init(frame: CGRect) {
         super.init(frame:frame)
+        
         height = frame.size.height
         width = frame.size.width
+        pauseGesture = UITapGestureRecognizer(target: self, action: Selector("didTap"))
+        self.addGestureRecognizer(pauseGesture)
+        pauseGesture.cancelsTouchesInView = false
         initialize()
     }
     required public init(coder aDecoder: NSCoder) {
@@ -46,6 +52,9 @@ public class WorkView: UIView{
         self.addSubview(workLabel);
         self.addSubview(workTime);
         self.addSubview(intervalLabel);
+    }
+    func didTap(){
+        pauseCb?()
     }
     func updateTime(secs: Int){
         var m = (secs / 60) % 60;

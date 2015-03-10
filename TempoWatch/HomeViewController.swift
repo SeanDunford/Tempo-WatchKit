@@ -111,6 +111,9 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         workView.timerObj = self.timerObj
         settingsView.timerObj = self.timerObj
         
+        workView.pauseCb = togglePauseState
+        restView.pauseCb = togglePauseState
+        
         setupViews()
     }
     func setupViews(){
@@ -120,6 +123,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         addMenuButtonToView(workView)
         addMenuButtonToView(restView)
         
+    }
+    func togglePauseState(){
+        paused = !paused
+        containerView.showPauseAnimation(paused)
     }
     func increaseState(){
         switch(state){
@@ -261,7 +268,6 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     func menuClicked(){
         containerView.toggleMenuOpen()
-        paused = ( !paused ) ? true : false;
         dismissKeyBoard()
     }
     func dismissKeyBoard(){

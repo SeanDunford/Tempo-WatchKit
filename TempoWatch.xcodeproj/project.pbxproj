@@ -33,6 +33,10 @@
 		470C59B51A8730B700014E14 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 470C59B41A8730B700014E14 /* Default-568h@2x.png */; };
 		470C59B81A8733BC00014E14 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 470C59B71A8733BC00014E14 /* menu-icon.png */; };
 		470C59BC1A87370F00014E14 /* xbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 470C59BB1A87370E00014E14 /* xbtn.png */; };
+		472E59941AAD2C7A00E09EC8 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 472E59921AAD2C7A00E09EC8 /* play.png */; };
+		472E59951AAD2C7A00E09EC8 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 472E59921AAD2C7A00E09EC8 /* play.png */; };
+		472E59961AAD2C7A00E09EC8 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 472E59931AAD2C7A00E09EC8 /* pause.png */; };
+		472E59971AAD2C7A00E09EC8 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 472E59931AAD2C7A00E09EC8 /* pause.png */; };
 		47344B9C1A87404400A4C3FC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344B9B1A87404400A4C3FC /* InterfaceController.swift */; };
 		47344B9E1A87404400A4C3FC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344B9D1A87404400A4C3FC /* NotificationController.swift */; };
 		47344BA01A87404400A4C3FC /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344B9F1A87404400A4C3FC /* GlanceController.swift */; };
@@ -184,6 +188,8 @@
 		470C59B41A8730B700014E14 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		470C59B71A8733BC00014E14 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		470C59BB1A87370E00014E14 /* xbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xbtn.png; path = ../xbtn.png; sourceTree = "<group>"; };
+		472E59921AAD2C7A00E09EC8 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		472E59931AAD2C7A00E09EC8 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		47344B961A87404400A4C3FC /* TempoWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TempoWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47344B991A87404400A4C3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47344B9A1A87404400A4C3FC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -363,6 +369,8 @@
 		470C59B61A8733BC00014E14 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				472E59921AAD2C7A00E09EC8 /* play.png */,
+				472E59931AAD2C7A00E09EC8 /* pause.png */,
 				470C59BB1A87370E00014E14 /* xbtn.png */,
 				470C59B71A8733BC00014E14 /* menu-icon.png */,
 			);
@@ -609,6 +617,8 @@
 			files = (
 				470C59951A872B1300014E14 /* Montserrat-Bold.ttf in Resources */,
 				470C591F1A87284100014E14 /* Main.storyboard in Resources */,
+				472E59961AAD2C7A00E09EC8 /* pause.png in Resources */,
+				472E59941AAD2C7A00E09EC8 /* play.png in Resources */,
 				470C59241A87284100014E14 /* LaunchScreen.xib in Resources */,
 				470C59961A872B1300014E14 /* Montserrat-Regular.ttf in Resources */,
 				470C59B81A8733BC00014E14 /* menu-icon.png in Resources */,
@@ -648,9 +658,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				47344C121A87491400A4C3FC /* Main.storyboard in Resources */,
+				472E59951AAD2C7A00E09EC8 /* play.png in Resources */,
 				47344C101A87490900A4C3FC /* Montserrat-Bold.ttf in Resources */,
 				47344C111A87490900A4C3FC /* Montserrat-Regular.ttf in Resources */,
 				47344C031A87456100A4C3FC /* menu-icon.png in Resources */,
+				472E59971AAD2C7A00E09EC8 /* pause.png in Resources */,
 				47344C041A87456100A4C3FC /* Images.xcassets in Resources */,
 				47344C051A87456100A4C3FC /* Default-568h@2x.png in Resources */,
 				47344C061A87456100A4C3FC /* xbtn.png in Resources */,
