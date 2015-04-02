@@ -2,6 +2,7 @@
 import UIKit
 import iAd
 import TempoSharedFramework
+import AVFoundation
 
 class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDelegate {
     enum HomeViewControllerState: Int{
@@ -28,6 +29,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
             }
         }
     }
+    
+    var audioPlayer:AVAudioPlayer!
+    var shortBeep:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("short", ofType: "wav"))
+    var longBeep:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("long", ofType: "wav"))
     
     var adBannerView: ADBannerView!
     var timerObj = TimerModel()
@@ -78,6 +83,9 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        audioPlayer = AVAudioPlayer();
+        
         monitorDefaults()
         
         height = self.view.frame.size.height;
@@ -227,6 +235,24 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         default:
             return
         }
+        
+        if( currentCountDown <= 3 && currentCountDown > 0 ){
+            playSound(shortBeep);
+        }
+        
+        if( currentCountDown == 0 ){
+            playSound(longBeep);
+        }
+    }
+    
+    func playSound(soundPath: NSString){
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil);
+        AVAudioSession.sharedInstance().setActive(true, error: nil);
+        var error:NSError?
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: soundPath, error: &error);
+        audioPlayer.prepareToPlay();
+        audioPlayer.play();
     }
     
     func stopTimer(){
