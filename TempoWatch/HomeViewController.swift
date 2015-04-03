@@ -31,8 +31,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     
     var audioPlayer:AVAudioPlayer!
-    var shortBeep:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("short", ofType: "wav"))
-    var longBeep:NSURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("long", ofType: "wav"))
+    var sound:NSURL!
     
     var adBannerView: ADBannerView!
     var timerObj = TimerModel()
@@ -196,6 +195,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     
     func beginWorkCountdown(){
+        playSound("long");
         workView.startTimer()
         workView.updateInterval(currentInterval, total: totalIntervals)
         currentCountDown = timerObj.getWorkSeconds()
@@ -203,6 +203,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     
     func beginRestCountdown(){
+        playSound("long");
         restView.startTimer()
         restView.updateInterval(currentInterval, total: totalIntervals)
         currentCountDown = timerObj.getRestSeconds()
@@ -237,22 +238,27 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         }
         
         if( currentCountDown <= 3 && currentCountDown > 0 ){
-            playSound(shortBeep);
-        }
-        
-        if( currentCountDown == 0 ){
-            playSound(longBeep);
+            playSound("short");
         }
     }
     
     func playSound(soundPath: NSString){
+        var filePath:NSString!
+        if( soundPath == "short" ){
+            filePath = NSBundle.mainBundle().pathForResource("short", ofType: "wav");
+        } else if( soundPath == "long" ){
+            filePath = NSBundle.mainBundle().pathForResource("long", ofType: "wav");
+        }
+        
+        self.sound = NSURL(fileURLWithPath: filePath as String)
+        
         AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil);
         AVAudioSession.sharedInstance().setActive(true, error: nil);
         var error:NSError?
         
-        audioPlayer = AVAudioPlayer(contentsOfURL: soundPath, error: &error);
-        audioPlayer.prepareToPlay();
-        audioPlayer.play();
+        self.audioPlayer = AVAudioPlayer(contentsOfURL: sound, error: &error);
+        self.audioPlayer.prepareToPlay();
+        self.audioPlayer.play();
     }
     
     func stopTimer(){

@@ -75,6 +75,16 @@
 		47344C121A87491400A4C3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47344BD11A87451800A4C3FC /* Main.storyboard */; };
 		476302BE1AAC271D00EF4B1D /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476302BD1AAC271D00EF4B1D /* Reveal.framework */; };
 		476302BF1AAC271D00EF4B1D /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476302BD1AAC271D00EF4B1D /* Reveal.framework */; };
+		63030C4A1ACF56DA0053D47E /* PausedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBA1A8741C000A4C3FC /* PausedController.swift */; };
+		63030C4B1ACF56DD0053D47E /* RunningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBB1A8741C000A4C3FC /* RunningController.swift */; };
+		63030C4C1ACF56DE0053D47E /* RunningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBB1A8741C000A4C3FC /* RunningController.swift */; };
+		63030C4D1ACF577A0053D47E /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59AE1A872F0100014E14 /* TimerModel.swift */; };
+		63030C4E1ACF577B0053D47E /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59AE1A872F0100014E14 /* TimerModel.swift */; };
+		63030C4F1ACF57B20053D47E /* iWatchMsgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59AB1A872D5200014E14 /* iWatchMsgController.swift */; };
+		63030C501ACF57B20053D47E /* iWatchMsgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C59AB1A872D5200014E14 /* iWatchMsgController.swift */; };
+		63030C511ACF57ED0053D47E /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 470C59A61A872CB600014E14 /* MMWormhole.m */; };
+		63030C521ACF57ED0053D47E /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 470C59A61A872CB600014E14 /* MMWormhole.m */; };
+		63030C531ACF57FF0053D47E /* TempoWatch-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 470C598E1A872B1300014E14 /* TempoWatch-Bridging-Header.h */; };
 		63C10A711AAAADBA00AE4902 /* PausedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBA1A8741C000A4C3FC /* PausedController.swift */; };
 /* End PBXBuildFile section */
 
@@ -468,6 +478,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63030C531ACF57FF0053D47E /* TempoWatch-Bridging-Header.h in Headers */,
 				470C596A1A87293E00014E14 /* TempoSharedFramework.h in Headers */,
 				470C59A81A872CB600014E14 /* MMWormhole.h in Headers */,
 			);
@@ -710,8 +721,12 @@
 				63C10A711AAAADBA00AE4902 /* PausedController.swift in Sources */,
 				470C59991A872B1300014E14 /* SettingsView.swift in Sources */,
 				470C599B1A872B1300014E14 /* WorkView.swift in Sources */,
+				63030C4F1ACF57B20053D47E /* iWatchMsgController.swift in Sources */,
 				470C59931A872B1300014E14 /* HomeViewController.swift in Sources */,
+				63030C4D1ACF577A0053D47E /* TimerModel.swift in Sources */,
 				470C59981A872B1300014E14 /* RestView.swift in Sources */,
+				63030C511ACF57ED0053D47E /* MMWormhole.m in Sources */,
+				63030C4C1ACF56DE0053D47E /* RunningController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +737,8 @@
 				470C59AF1A872F0100014E14 /* TimerModel.swift in Sources */,
 				470C59A91A872CB600014E14 /* MMWormhole.m in Sources */,
 				470C59AC1A872D5200014E14 /* iWatchMsgController.swift in Sources */,
+				63030C4B1ACF56DD0053D47E /* RunningController.swift in Sources */,
+				63030C4A1ACF56DA0053D47E /* PausedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,8 +749,11 @@
 				47344B9E1A87404400A4C3FC /* NotificationController.swift in Sources */,
 				47344B9C1A87404400A4C3FC /* InterfaceController.swift in Sources */,
 				47344BA01A87404400A4C3FC /* GlanceController.swift in Sources */,
+				63030C4E1ACF577B0053D47E /* TimerModel.swift in Sources */,
 				47344BBD1A8741C000A4C3FC /* RunningController.swift in Sources */,
 				47344BBC1A8741C000A4C3FC /* PausedController.swift in Sources */,
+				63030C521ACF57ED0053D47E /* MMWormhole.m in Sources */,
+				63030C501ACF57B20053D47E /* iWatchMsgController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
