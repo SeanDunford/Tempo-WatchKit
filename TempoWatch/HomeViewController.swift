@@ -2,6 +2,7 @@
 import UIKit
 import iAd
 import TempoSharedFramework
+import AVFoundation
 
 class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDelegate {
     enum HomeViewControllerState: Int{
@@ -29,6 +30,9 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         }
     }
     
+    var audioPlayer:AVAudioPlayer!
+    var sound:NSURL!
+    
     var adBannerView: ADBannerView!
     var timerObj = TimerModel()
     var countDownTimer: NSTimer!
@@ -54,10 +58,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     var restRed: UIColor = UIColor().restRed()
 
     func setupIAds(){
-//        self.canDisplayBannerAds = true;
-//        self.adBannerView = ADBannerView(frame: CGRectMake(0, height - 50, width, 50));
-//        self.adBannerView.delegate = self;
-//        self.adBannerView.hidden = true;
+        self.canDisplayBannerAds = true;
+        self.adBannerView = ADBannerView(frame: CGRectMake(0, height - 50, width, 50));
+        self.adBannerView.delegate = self;
+        self.adBannerView.hidden = true;
     }
     override init() {
         super.init()
@@ -78,6 +82,9 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        audioPlayer = AVAudioPlayer();
+        
         monitorDefaults()
         
         height = self.view.frame.size.height;
@@ -96,8 +103,6 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         f = CGRectMake(width, 0, width - 45, height)
         settingsView = SettingsView(frame:f)
         settingsView.delegate = self;
-        
-
         
         self.state = .home
         self.view.backgroundColor = UIColor.whiteColor()
@@ -190,6 +195,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     
     func beginWorkCountdown(){
+        playSound("long");
         workView.startTimer()
         workView.updateInterval(currentInterval, total: totalIntervals)
         currentCountDown = timerObj.getWorkSeconds()
@@ -197,6 +203,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     
     func beginRestCountdown(){
+        playSound("long");
         restView.startTimer()
         restView.updateInterval(currentInterval, total: totalIntervals)
         currentCountDown = timerObj.getRestSeconds()
@@ -229,6 +236,29 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         default:
             return
         }
+        
+        if( currentCountDown <= 3 && currentCountDown > 0 ){
+            playSound("short");
+        }
+    }
+    
+    func playSound(soundPath: NSString){
+        var filePath:NSString!
+        if( soundPath == "short" ){
+            filePath = NSBundle.mainBundle().pathForResource("short", ofType: "wav");
+        } else if( soundPath == "long" ){
+            filePath = NSBundle.mainBundle().pathForResource("long", ofType: "wav");
+        }
+        
+        self.sound = NSURL(fileURLWithPath: filePath as String)
+        
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil);
+        AVAudioSession.sharedInstance().setActive(true, error: nil);
+        var error:NSError?
+        
+        self.audioPlayer = AVAudioPlayer(contentsOfURL: sound, error: &error);
+        self.audioPlayer.prepareToPlay();
+        self.audioPlayer.play();
     }
     
     func stopTimer(){
@@ -280,7 +310,9 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     }
     
     func cancelClicked(){
+        // Reset Interval
         currentInterval = 1;
+        // Reset State to Home
         self.state = .home
     }
     
