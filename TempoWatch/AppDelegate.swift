@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             println("Font Names = [\(names)]")
         }
     }
+    
+    GAI.sharedInstance().trackUncaughtExceptions = true;
+    GAI.sharedInstance().dispatchInterval = 20;
+    GAI.sharedInstance().trackerWithTrackingId("UA-59048243-1");
+    
 //    printFonts()
     return true
   }

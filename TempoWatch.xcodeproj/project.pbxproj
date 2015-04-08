@@ -86,6 +86,23 @@
 		63030C521ACF57ED0053D47E /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 470C59A61A872CB600014E14 /* MMWormhole.m */; };
 		63030C531ACF57FF0053D47E /* TempoWatch-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 470C598E1A872B1300014E14 /* TempoWatch-Bridging-Header.h */; };
 		63C10A711AAAADBA00AE4902 /* PausedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBA1A8741C000A4C3FC /* PausedController.swift */; };
+		63E311941AD1F906004A1857 /* GAI.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E3118A1AD1F906004A1857 /* GAI.h */; };
+		63E311951AD1F906004A1857 /* GAIDictionaryBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E3118B1AD1F906004A1857 /* GAIDictionaryBuilder.h */; };
+		63E311961AD1F906004A1857 /* GAIEcommerceFields.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E3118C1AD1F906004A1857 /* GAIEcommerceFields.h */; };
+		63E311971AD1F906004A1857 /* GAIEcommerceProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E3118D1AD1F906004A1857 /* GAIEcommerceProduct.h */; };
+		63E311981AD1F906004A1857 /* GAIEcommerceProductAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E3118E1AD1F906004A1857 /* GAIEcommerceProductAction.h */; };
+		63E311991AD1F906004A1857 /* GAIEcommercePromotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E3118F1AD1F906004A1857 /* GAIEcommercePromotion.h */; };
+		63E3119A1AD1F906004A1857 /* GAIFields.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E311901AD1F906004A1857 /* GAIFields.h */; };
+		63E3119B1AD1F906004A1857 /* GAILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E311911AD1F906004A1857 /* GAILogger.h */; };
+		63E3119C1AD1F906004A1857 /* GAITrackedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E311921AD1F906004A1857 /* GAITrackedViewController.h */; };
+		63E3119D1AD1F906004A1857 /* GAITracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E311931AD1F906004A1857 /* GAITracker.h */; };
+		63E3119F1AD1F9E1004A1857 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E3119E1AD1F9E1004A1857 /* CoreData.framework */; };
+		63E311A11AD1F9EB004A1857 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E311A01AD1F9EB004A1857 /* SystemConfiguration.framework */; };
+		63E311A31AD1F9F5004A1857 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E311A21AD1F9F4004A1857 /* libz.dylib */; };
+		63E311A51AD1F9FF004A1857 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E311A41AD1F9FF004A1857 /* libsqlite3.dylib */; };
+		63E311A71AD1FA38004A1857 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E311A61AD1FA38004A1857 /* libGoogleAnalyticsServices.a */; };
+		63E311AD1AD1FE94004A1857 /* GoogleAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E311A81AD1FB7D004A1857 /* GoogleAnalytics.swift */; };
+		63E311AE1AD1FE96004A1857 /* GoogleAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E311A81AD1FB7D004A1857 /* GoogleAnalytics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,6 +249,22 @@
 		47344BD71A87451800A4C3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		47344C0E1A87456100A4C3FC /* TempoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		476302BD1AAC271D00EF4B1D /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		63E3118A1AD1F906004A1857 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		63E3118B1AD1F906004A1857 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		63E3118C1AD1F906004A1857 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		63E3118D1AD1F906004A1857 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		63E3118E1AD1F906004A1857 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		63E3118F1AD1F906004A1857 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		63E311901AD1F906004A1857 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		63E311911AD1F906004A1857 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		63E311921AD1F906004A1857 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		63E311931AD1F906004A1857 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		63E3119E1AD1F9E1004A1857 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		63E311A01AD1F9EB004A1857 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		63E311A21AD1F9F4004A1857 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		63E311A41AD1F9FF004A1857 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		63E311A61AD1FA38004A1857 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		63E311A81AD1FB7D004A1857 /* GoogleAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalytics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +272,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E311A71AD1FA38004A1857 /* libGoogleAnalyticsServices.a in Frameworks */,
+				63E311A51AD1F9FF004A1857 /* libsqlite3.dylib in Frameworks */,
+				63E311A31AD1F9F5004A1857 /* libz.dylib in Frameworks */,
+				63E311A11AD1F9EB004A1857 /* SystemConfiguration.framework in Frameworks */,
+				63E3119F1AD1F9E1004A1857 /* CoreData.framework in Frameworks */,
 				448730151ACD9EA900E91750 /* AVFoundation.framework in Frameworks */,
 				470C59A01A872C9A00014E14 /* TempoSharedFramework.framework in Frameworks */,
 				476302BE1AAC271D00EF4B1D /* Reveal.framework in Frameworks */,
@@ -283,6 +321,11 @@
 		470C59081A87284100014E14 = {
 			isa = PBXGroup;
 			children = (
+				63E311A61AD1FA38004A1857 /* libGoogleAnalyticsServices.a */,
+				63E311A41AD1F9FF004A1857 /* libsqlite3.dylib */,
+				63E311A21AD1F9F4004A1857 /* libz.dylib */,
+				63E311A01AD1F9EB004A1857 /* SystemConfiguration.framework */,
+				63E3119E1AD1F9E1004A1857 /* CoreData.framework */,
 				448730141ACD9EA900E91750 /* AVFoundation.framework */,
 				470C59B41A8730B700014E14 /* Default-568h@2x.png */,
 				470C59131A87284100014E14 /* TempoWatch */,
@@ -309,6 +352,7 @@
 		470C59131A87284100014E14 /* TempoWatch */ = {
 			isa = PBXGroup;
 			children = (
+				63E311891AD1F8F7004A1857 /* Google Analytics */,
 				476302BD1AAC271D00EF4B1D /* Reveal.framework */,
 				47344BC01A8743AD00A4C3FC /* TempoWatch.entitlements */,
 				470C59B01A87302F00014E14 /* BWCircularSlider.swift */,
@@ -318,6 +362,7 @@
 				470C599C1A872B5E00014E14 /* HomeViewController */,
 				470C598E1A872B1300014E14 /* TempoWatch-Bridging-Header.h */,
 				470C59161A87284100014E14 /* AppDelegate.swift */,
+				63E311A81AD1FB7D004A1857 /* GoogleAnalytics.swift */,
 				470C591D1A87284100014E14 /* Main.storyboard */,
 				470C59201A87284100014E14 /* Images.xcassets */,
 				470C59221A87284100014E14 /* LaunchScreen.xib */,
@@ -471,6 +516,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		63E311891AD1F8F7004A1857 /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				63E3118A1AD1F906004A1857 /* GAI.h */,
+				63E3118B1AD1F906004A1857 /* GAIDictionaryBuilder.h */,
+				63E3118C1AD1F906004A1857 /* GAIEcommerceFields.h */,
+				63E3118D1AD1F906004A1857 /* GAIEcommerceProduct.h */,
+				63E3118E1AD1F906004A1857 /* GAIEcommerceProductAction.h */,
+				63E3118F1AD1F906004A1857 /* GAIEcommercePromotion.h */,
+				63E311901AD1F906004A1857 /* GAIFields.h */,
+				63E311911AD1F906004A1857 /* GAILogger.h */,
+				63E311921AD1F906004A1857 /* GAITrackedViewController.h */,
+				63E311931AD1F906004A1857 /* GAITracker.h */,
+			);
+			name = "Google Analytics";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -478,8 +540,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E311941AD1F906004A1857 /* GAI.h in Headers */,
+				63E311991AD1F906004A1857 /* GAIEcommercePromotion.h in Headers */,
+				63E3119C1AD1F906004A1857 /* GAITrackedViewController.h in Headers */,
+				63E311981AD1F906004A1857 /* GAIEcommerceProductAction.h in Headers */,
+				63E3119B1AD1F906004A1857 /* GAILogger.h in Headers */,
+				63E3119A1AD1F906004A1857 /* GAIFields.h in Headers */,
 				63030C531ACF57FF0053D47E /* TempoWatch-Bridging-Header.h in Headers */,
 				470C596A1A87293E00014E14 /* TempoSharedFramework.h in Headers */,
+				63E311951AD1F906004A1857 /* GAIDictionaryBuilder.h in Headers */,
+				63E311971AD1F906004A1857 /* GAIEcommerceProduct.h in Headers */,
+				63E3119D1AD1F906004A1857 /* GAITracker.h in Headers */,
+				63E311961AD1F906004A1857 /* GAIEcommerceFields.h in Headers */,
 				470C59A81A872CB600014E14 /* MMWormhole.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,6 +797,7 @@
 				470C59931A872B1300014E14 /* HomeViewController.swift in Sources */,
 				63030C4D1ACF577A0053D47E /* TimerModel.swift in Sources */,
 				470C59981A872B1300014E14 /* RestView.swift in Sources */,
+				63E311AD1AD1FE94004A1857 /* GoogleAnalytics.swift in Sources */,
 				63030C511ACF57ED0053D47E /* MMWormhole.m in Sources */,
 				63030C4C1ACF56DE0053D47E /* RunningController.swift in Sources */,
 			);
@@ -766,6 +839,7 @@
 				47344BF31A87456100A4C3FC /* ContainerView.swift in Sources */,
 				47344BF41A87456100A4C3FC /* AppDelegate.swift in Sources */,
 				47344BF51A87456100A4C3FC /* BWCircularSliderView.swift in Sources */,
+				63E311AE1AD1FE96004A1857 /* GoogleAnalytics.swift in Sources */,
 				47344BF61A87456100A4C3FC /* HomeView.swift in Sources */,
 				47344BF71A87456100A4C3FC /* TempoWatch.xcdatamodeld in Sources */,
 				47344BF81A87456100A4C3FC /* SettingsView.swift in Sources */,
@@ -944,6 +1018,10 @@
 				INFOPLIST_FILE = TempoWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
@@ -971,6 +1049,10 @@
 				INFOPLIST_FILE = TempoWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7c882a0-5d38-4d2e-80a6-c5f34ef5e016";
 			};
