@@ -63,9 +63,7 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         self.adBannerView.delegate = self;
         self.adBannerView.hidden = true;
     }
-    override init() {
-        super.init()
-    }
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
     }
