@@ -1,21 +1,20 @@
 {
   "images" : [
     {
-      "extent" : "full-screen",
       "idiom" : "watch",
-      "subtype" : "38mm",
+      "scale" : "2x",
+      "filename" : "appIcon55x55.png"
+    },
+    {
+      "idiom" : "watch",
+      "screenWidth" : "{130,145}",
       "filename" : "launch272x340.png",
-      "minimum-system-version" : "8.0",
-      "orientation" : "portrait",
       "scale" : "2x"
     },
     {
-      "extent" : "full-screen",
       "idiom" : "watch",
-      "subtype" : "42mm",
+      "screenWidth" : "{146,165}",
       "filename" : "launch312x390.png",
-      "minimum-system-version" : "8.0",
-      "orientation" : "portrait",
       "scale" : "2x"
     }
   ],

@@ -11,7 +11,7 @@
       "size" : "27.5x27.5",
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "appicon36.png",
+      "filename" : "appIcon55x55.png",
       "role" : "notificationCenter",
       "subtype" : "42mm"
     },
@@ -58,30 +58,6 @@
       "filename" : "appicon196.png",
       "role" : "quickLook",
       "subtype" : "42mm"
-    },
-    {
-      "role" : "appLauncher",
-      "size" : "44x44",
-      "idiom" : "watch",
-      "filename" : "appIcon88x88-1.png",
-      "subtype" : "42mm",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "scale" : "2x",
-      "idiom" : "watch",
-      "filename" : "appIcon29x29.png",
-      "unassigned" : true,
-      "role" : "notificationCenter",
-      "subtype" : "38mm"
-    },
-    {
-      "idiom" : "watch",
-      "filename" : "appIcon88x88.png",
-      "unassigned" : true,
-      "role" : "companionSettings",
-      "scale" : "3x"
     }
   ],
   "info" : {

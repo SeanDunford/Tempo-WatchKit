@@ -10,8 +10,6 @@
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIcons</key>
 	<dict/>
-	<key>CFBundleIcons~ipad</key>
-	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>GG.TempoWatch.watchkitapp</string>
 	<key>CFBundleInfoDictionaryVersion</key>
