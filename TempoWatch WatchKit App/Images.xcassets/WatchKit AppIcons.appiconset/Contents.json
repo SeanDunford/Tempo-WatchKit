@@ -4,6 +4,7 @@
       "size" : "24x24",
       "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "appIcon48x48.png",
       "role" : "notificationCenter",
       "subtype" : "38mm"
     },
@@ -25,6 +26,7 @@
     {
       "size" : "29x29",
       "idiom" : "watch",
+      "filename" : "appIcon87x87.png",
       "role" : "companionSettings",
       "scale" : "3x"
     },
@@ -40,6 +42,7 @@
       "size" : "44x44",
       "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "appIcon88x88.png",
       "role" : "longLook",
       "subtype" : "42mm"
     },
