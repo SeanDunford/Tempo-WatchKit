@@ -29,7 +29,13 @@ public class TimerModel: NSObject {
     private var skey = "start Timer Value"
     private var ikey = "interval Count Value"
     
+    public enum TimerState {
+        case work
+        case rest
+        case pause
+    }
     
+    public var state: TimerState = .rest
     
     public override init() {
         super.init()
@@ -37,6 +43,9 @@ public class TimerModel: NSObject {
         getStoredValues()
         //setupKVO()   this didn't seem to be working in swift
         setupWormhole()
+    }
+    public func setTimerState(s: TimerState){
+        state = s
     }
     private func setupWormhole(){
         wormhole = iWatchMsgController()

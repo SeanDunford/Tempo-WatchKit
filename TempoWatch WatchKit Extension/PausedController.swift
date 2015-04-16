@@ -66,5 +66,6 @@ class PausedController: WKInterfaceController {
         workTimer.stop()
         restTimer.start()
         restTimer.stop()
+        timerObj.setTimerState(.rest)
     }
   }

@@ -50,12 +50,14 @@ class RunningController: WKInterfaceController {
         var wd = NSDate().dateByAddingTimeInterval(secs)
         NSTimer.scheduledTimerWithTimeInterval(secs, target: self, selector: Selector("workUpdate"), userInfo: nil, repeats: false)
         runningTimer.setDate(wd)
+        timerObj.setTimerState(.work)
     }
     func startRestTimer(){
         var secs = Double(timerObj.getRestSeconds()) + 1
         var rd = NSDate().dateByAddingTimeInterval(secs)
         NSTimer.scheduledTimerWithTimeInterval(secs, target: self, selector: Selector("restUpdate"), userInfo: nil, repeats: false)
         runningTimer.setDate(rd)
+        timerObj.setTimerState(.work)
     }
     func workUpdate() {
         println("workUpdate")

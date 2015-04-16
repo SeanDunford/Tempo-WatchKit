@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14C94b" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--PausedController-->
@@ -18,7 +18,7 @@
                                 <action selector="GoButtonPressed" destination="AgC-eL-Hgc" id="YLk-P4-Ao4"/>
                             </connections>
                         </button>
-                        <group width="1" height="0.40000000000000002" alignment="left" accessibilityLabel="WorkGroup" layout="vertical" hasDetent="YES" id="cGx-Y9-Lwc" userLabel="Work Timer Group">
+                        <group width="1" height="0.40000000000000002" alignment="left" accessibilityLabel="WorkGroup" layout="vertical" id="cGx-Y9-Lwc" userLabel="Work Timer Group">
                             <items>
                                 <label height="0.29999999999999999" alignment="left" accessibilityLabel="WorkLabel" text="Work" id="mb1-JO-1s1">
                                     <color key="textColor" red="0.44167889160000001" green="1" blue="0.25641622580000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -26,10 +26,11 @@
                                 </label>
                                 <timer width="1" height="0.69999999999999996" alignment="right" accessibilityLabel="WorkTimer" textAlignment="right" previewedSeconds="900" id="Cyk-XC-wG9">
                                     <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
                                 </timer>
                             </items>
                         </group>
-                        <group width="1" height="0.40000000000000002" alignment="left" accessibilityLabel="RestGroup" layout="vertical" hasDetent="YES" id="lXm-YV-4KO" userLabel="Rest Timer Group">
+                        <group width="1" height="0.40000000000000002" alignment="left" accessibilityLabel="RestGroup" layout="vertical" id="lXm-YV-4KO" userLabel="Rest Timer Group">
                             <items>
                                 <label height="0.29999999999999999" alignment="left" accessibilityLabel="RestLabel" text="Rest" id="LZS-Wt-RPQ">
                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,6 +38,7 @@
                                 </label>
                                 <timer width="1" height="0.69999999999999996" alignment="right" accessibilityLabel="RestTimer" textAlignment="right" previewedSeconds="300" id="SL4-yv-hd3">
                                     <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
                                 </timer>
                             </items>
                         </group>
@@ -57,6 +59,7 @@
                     <items>
                         <timer width="1" height="0.69999999999999996" alignment="right" verticalAlignment="bottom" accessibilityLabel="WorkTimer" textAlignment="center" id="8eo-OG-Epx">
                             <fontDescription key="font" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                            <calendarUnit key="units" minute="YES" second="YES"/>
                         </timer>
                         <label width="1" height="0.29999999999999999" alignment="left" accessibilityLabel="WorkLabel" text="Work" textAlignment="center" id="7OO-IF-72n">
                             <color key="textColor" red="0.44167889160000001" green="1" blue="0.25641622580000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,12 +77,30 @@
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="TempoWatch_Watch_App" customModuleProvider="target">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="TempoWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label width="136" height="46" alignment="left" accessibilityLabel="WorkLabel" text="Tempo" textAlignment="center" id="iTs-Ha-jKd">
+                                    <color key="textColor" red="0.44167889160000001" green="1" blue="0.25641622580000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="41"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label width="136" height="46" alignment="left" accessibilityLabel="WorkLabel" text="Working" textAlignment="center" id="yl7-eg-FPu">
+                                    <color key="textColor" red="0.44167889160000001" green="1" blue="0.25641622580000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="32"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="glanceInfoLabel" destination="yl7-eg-FPu" id="wLX-vm-z0U"/>
+                        <outlet property="glanceTitleLabel" destination="iTs-Ha-jKd" id="lBc-u1-SnO"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>
@@ -103,7 +124,7 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="TempoWatch_Watch_App" customModuleProvider="target"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="TempoWatch_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>

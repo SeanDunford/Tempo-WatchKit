@@ -212,7 +212,7 @@
 		470C598C1A872B1300014E14 /* RestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
 		470C598D1A872B1300014E14 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		470C598E1A872B1300014E14 /* TempoWatch-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempoWatch-Bridging-Header.h"; sourceTree = "<group>"; };
-		470C598F1A872B1300014E14 /* UIColor+Tempo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Tempo.swift"; sourceTree = "<group>"; };
+		470C598F1A872B1300014E14 /* UIColor+Tempo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Tempo.swift"; path = "../TempoWatch/UIColor+Tempo.swift"; sourceTree = "<group>"; };
 		470C59901A872B1300014E14 /* WorkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
 		470C59A51A872CB600014E14 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
 		470C59A61A872CB600014E14 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
@@ -383,6 +383,7 @@
 		470C59661A87293E00014E14 /* TempoSharedFramework */ = {
 			isa = PBXGroup;
 			children = (
+				470C598F1A872B1300014E14 /* UIColor+Tempo.swift */,
 				470C59AE1A872F0100014E14 /* TimerModel.swift */,
 				470C59AB1A872D5200014E14 /* iWatchMsgController.swift */,
 				470C59A51A872CB600014E14 /* MMWormhole.h */,
@@ -425,7 +426,6 @@
 		470C599E1A872B9F00014E14 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				470C598F1A872B1300014E14 /* UIColor+Tempo.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
