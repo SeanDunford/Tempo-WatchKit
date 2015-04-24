@@ -14,8 +14,6 @@ class PausedController: WKInterfaceController {
     @IBOutlet weak var restTimer: WKInterfaceTimer!
     
     
-    
-    
     override init() {
         // Initialize variables here.
         super.init()
