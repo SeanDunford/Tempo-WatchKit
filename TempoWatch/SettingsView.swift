@@ -10,8 +10,6 @@ protocol SettingsViewDelegate {
 }
 
 public class SettingsView: UIView, UITextFieldDelegate{
-    var width: CGFloat!
-    var height: CGFloat!
     var mode: Int!
     var disableButtons = false
     var timerObj: TimerModel!{
@@ -41,8 +39,6 @@ public class SettingsView: UIView, UITextFieldDelegate{
     
     override init(frame:CGRect){
         super.init(frame:frame)
-        width = frame.size.width
-        height = frame.size.height
         initialize()
     }
     
@@ -67,6 +63,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
         workBtn.backgroundColor = UIColor.clearColor()
         workBtn.addTarget(self, action: "btnPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         workBtn.tag = 0
+        
         
         self.addSubview(workLabel);
         self.addSubview(workSetting);

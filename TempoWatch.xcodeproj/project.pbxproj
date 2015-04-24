@@ -75,6 +75,7 @@
 		47344C121A87491400A4C3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47344BD11A87451800A4C3FC /* Main.storyboard */; };
 		476302BE1AAC271D00EF4B1D /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476302BD1AAC271D00EF4B1D /* Reveal.framework */; };
 		476302BF1AAC271D00EF4B1D /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476302BD1AAC271D00EF4B1D /* Reveal.framework */; };
+		4C824372399A94A1ECC179BB /* libPods-TempoWatch7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BADAA7A48B3614B89E26280 /* libPods-TempoWatch7.0.a */; };
 		63030C4A1ACF56DA0053D47E /* PausedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBA1A8741C000A4C3FC /* PausedController.swift */; };
 		63030C4B1ACF56DD0053D47E /* RunningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBB1A8741C000A4C3FC /* RunningController.swift */; };
 		63030C4C1ACF56DE0053D47E /* RunningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47344BBB1A8741C000A4C3FC /* RunningController.swift */; };
@@ -103,6 +104,7 @@
 		63E311A71AD1FA38004A1857 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E311A61AD1FA38004A1857 /* libGoogleAnalyticsServices.a */; };
 		63E311AD1AD1FE94004A1857 /* GoogleAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E311A81AD1FB7D004A1857 /* GoogleAnalytics.swift */; };
 		63E311AE1AD1FE96004A1857 /* GoogleAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E311A81AD1FB7D004A1857 /* GoogleAnalytics.swift */; };
+		9354B2159A69D185FFF42326 /* libPods-TempoWatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D17BF284D9A4E3BC4603A781 /* libPods-TempoWatch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +193,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09170D669BB39E07175A3E6E /* Pods-TempoWatch7.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempoWatch7.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-TempoWatch7.0/Pods-TempoWatch7.0.release.xcconfig"; sourceTree = "<group>"; };
+		0BADAA7A48B3614B89E26280 /* libPods-TempoWatch7.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempoWatch7.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C03E8392F355399D3789746 /* Pods-TempoWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempoWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-TempoWatch/Pods-TempoWatch.release.xcconfig"; sourceTree = "<group>"; };
+		12E4FD4AC075311250652F52 /* Pods-TempoSharedFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempoSharedFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-TempoSharedFramework/Pods-TempoSharedFramework.release.xcconfig"; sourceTree = "<group>"; };
+		3A41B57CE8324A5DF9F6050B /* Pods-TempoWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempoWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TempoWatch/Pods-TempoWatch.debug.xcconfig"; sourceTree = "<group>"; };
 		4487300E1ACD9BF700E91750 /* long.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = long.wav; sourceTree = "<group>"; };
 		4487300F1ACD9BF700E91750 /* short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = short.wav; sourceTree = "<group>"; };
 		448730141ACD9EA900E91750 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -249,6 +256,8 @@
 		47344BD71A87451800A4C3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		47344C0E1A87456100A4C3FC /* TempoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		476302BD1AAC271D00EF4B1D /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		549DA9726E3A4AE877AF463F /* Pods-TempoSharedFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempoSharedFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TempoSharedFramework/Pods-TempoSharedFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		5ECB36CDF3509AE4AE7CEB7F /* libPods-TempoSharedFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempoSharedFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E3118A1AD1F906004A1857 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
 		63E3118B1AD1F906004A1857 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
 		63E3118C1AD1F906004A1857 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
@@ -265,6 +274,8 @@
 		63E311A41AD1F9FF004A1857 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		63E311A61AD1FA38004A1857 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		63E311A81AD1FB7D004A1857 /* GoogleAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalytics.swift; sourceTree = "<group>"; };
+		B064E802812EA47B57B54A40 /* Pods-TempoWatch7.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempoWatch7.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TempoWatch7.0/Pods-TempoWatch7.0.debug.xcconfig"; sourceTree = "<group>"; };
+		D17BF284D9A4E3BC4603A781 /* libPods-TempoWatch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempoWatch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +291,7 @@
 				448730151ACD9EA900E91750 /* AVFoundation.framework in Frameworks */,
 				470C59A01A872C9A00014E14 /* TempoSharedFramework.framework in Frameworks */,
 				476302BE1AAC271D00EF4B1D /* Reveal.framework in Frameworks */,
+				9354B2159A69D185FFF42326 /* libPods-TempoWatch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +315,7 @@
 			files = (
 				47344BFD1A87456100A4C3FC /* TempoSharedFramework.framework in Frameworks */,
 				476302BF1AAC271D00EF4B1D /* Reveal.framework in Frameworks */,
+				4C824372399A94A1ECC179BB /* libPods-TempoWatch7.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +347,8 @@
 				47344BA91A87404400A4C3FC /* TempoWatch WatchKit App */,
 				47344BC71A87451700A4C3FC /* TempoWatch7.0 */,
 				470C59121A87284100014E14 /* Products */,
+				63CAE6BEBA455BC3DBE91E38 /* Pods */,
+				C1E17A6E3B1CA40910F11BFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -516,6 +531,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		63CAE6BEBA455BC3DBE91E38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				549DA9726E3A4AE877AF463F /* Pods-TempoSharedFramework.debug.xcconfig */,
+				12E4FD4AC075311250652F52 /* Pods-TempoSharedFramework.release.xcconfig */,
+				B064E802812EA47B57B54A40 /* Pods-TempoWatch7.0.debug.xcconfig */,
+				09170D669BB39E07175A3E6E /* Pods-TempoWatch7.0.release.xcconfig */,
+				3A41B57CE8324A5DF9F6050B /* Pods-TempoWatch.debug.xcconfig */,
+				0C03E8392F355399D3789746 /* Pods-TempoWatch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		63E311891AD1F8F7004A1857 /* Google Analytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +559,16 @@
 				63E311931AD1F906004A1857 /* GAITracker.h */,
 			);
 			name = "Google Analytics";
+			sourceTree = "<group>";
+		};
+		C1E17A6E3B1CA40910F11BFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ECB36CDF3509AE4AE7CEB7F /* libPods-TempoSharedFramework.a */,
+				0BADAA7A48B3614B89E26280 /* libPods-TempoWatch7.0.a */,
+				D17BF284D9A4E3BC4603A781 /* libPods-TempoWatch.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,11 +601,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 470C59331A87284100014E14 /* Build configuration list for PBXNativeTarget "TempoWatch" */;
 			buildPhases = (
+				74E654BBF210B7455F1E0A6B /* Check Pods Manifest.lock */,
 				470C590D1A87284100014E14 /* Sources */,
 				470C590E1A87284100014E14 /* Frameworks */,
 				470C590F1A87284100014E14 /* Resources */,
 				470C595F1A87291600014E14 /* Embed App Extensions */,
 				470C59A41A872C9A00014E14 /* Embed Frameworks */,
+				BE69DD331ED189CE78668299 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -635,11 +675,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47344C0B1A87456100A4C3FC /* Build configuration list for PBXNativeTarget "TempoWatch7.0" */;
 			buildPhases = (
+				1393F660F189807851BD2EAA /* Check Pods Manifest.lock */,
 				47344BF01A87456100A4C3FC /* Sources */,
 				47344BFC1A87456100A4C3FC /* Frameworks */,
 				47344BFE1A87456100A4C3FC /* Resources */,
 				47344C071A87456100A4C3FC /* Embed App Extensions */,
 				47344C091A87456100A4C3FC /* Embed Frameworks */,
+				193BB59E8588CB2634040476 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -777,6 +819,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1393F660F189807851BD2EAA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		193BB59E8588CB2634040476 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TempoWatch7.0/Pods-TempoWatch7.0-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74E654BBF210B7455F1E0A6B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE69DD331ED189CE78668299 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TempoWatch/Pods-TempoWatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		470C590D1A87284100014E14 /* Sources */ = {
@@ -960,10 +1065,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				PROVISIONING_PROFILE = "276ced37-479f-44e0-ae2e-de198ab12db4";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "TempoWatch/TempoWatch-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -997,15 +1104,18 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				PROVISIONING_PROFILE = "276ced37-479f-44e0-ae2e-de198ab12db4";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "TempoWatch/TempoWatch-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		470C59341A87284100014E14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A41B57CE8324A5DF9F6050B /* Pods-TempoWatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1024,19 +1134,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c1c23a9f-5c30-4daa-9d5e-6a31f04dabe8";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
 		470C59351A87284100014E14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C03E8392F355399D3789746 /* Pods-TempoWatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1055,8 +1162,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c1c23a9f-5c30-4daa-9d5e-6a31f04dabe8";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};
@@ -1180,6 +1289,7 @@
 		};
 		47344C0C1A87456100A4C3FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B064E802812EA47B57B54A40 /* Pods-TempoWatch7.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1198,6 +1308,7 @@
 					"-lz",
 					"-framework",
 					Reveal,
+					"$(inherited)",
 				);
 				PRODUCT_NAME = TempoWatch;
 				PROVISIONING_PROFILE = "ef4a3747-215a-4eaa-aea1-1b168bda2b5f";
@@ -1206,6 +1317,7 @@
 		};
 		47344C0D1A87456100A4C3FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09170D669BB39E07175A3E6E /* Pods-TempoWatch7.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

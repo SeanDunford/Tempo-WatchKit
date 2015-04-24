@@ -5,8 +5,6 @@ import UIKit
 import TempoSharedFramework
 
 public class RestView: UIView{
-    var height: CGFloat!
-    var width: CGFloat!
     var restTime: UILabel!
     var intervalLabel: UILabel!
     var pauseGesture: UITapGestureRecognizer!
@@ -19,8 +17,6 @@ public class RestView: UIView{
     
     override init(frame: CGRect) {
         super.init(frame:frame)
-        height = frame.size.height
-        width = frame.size.width
         pauseGesture = UITapGestureRecognizer(target: self, action: Selector("didTap"))
         self.addGestureRecognizer(pauseGesture)
         pauseGesture.cancelsTouchesInView = false

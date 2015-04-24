@@ -6,68 +6,486 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0031CCB1C740E5844F3D3680 /* UIView+Positioning.h in Headers */ = {isa = PBXBuildFile; fileRef = B6BBB4AC08DA31E6FC22C267 /* UIView+Positioning.h */; };
+		0E3936444D2573251F6D059F /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 446B8D69058D12419708FD4B /* UIView+Positioning.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		46267ACDD1B0EA94C050C979 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0B8886CA29AFD7B0AF705C /* Foundation.framework */; };
+		51186EB127C7E709028DFB97 /* Pods-TempoWatch7.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D17624BF79202B8704F95CE8 /* Pods-TempoWatch7.0-dummy.m */; };
+		5AFB62F103DFCC7D3BC5F79F /* Pods-TempoWatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C6752480E70BA38ED35643 /* Pods-TempoWatch-dummy.m */; };
+		83A4272D6FBCEAC37A2A8693 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0B8886CA29AFD7B0AF705C /* Foundation.framework */; };
+		A45503BC4D25C8A6B5C33C1C /* UIView+Positioning.h in Headers */ = {isa = PBXBuildFile; fileRef = B6BBB4AC08DA31E6FC22C267 /* UIView+Positioning.h */; };
+		B67E370D4444BEBBE5B3A8D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0B8886CA29AFD7B0AF705C /* Foundation.framework */; };
+		BC232F7E77E65E59F9323169 /* UIView+Positioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 446B8D69058D12419708FD4B /* UIView+Positioning.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C4D0D8FFE747C8E5A111B0E2 /* Pods-TempoWatch7.0-UIView+Positioning-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DED08A184EF32B947A139D /* Pods-TempoWatch7.0-UIView+Positioning-dummy.m */; };
+		DD223480E12C37CA41E910AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0B8886CA29AFD7B0AF705C /* Foundation.framework */; };
+		F58F2E269D7C005E7FAB18F8 /* Pods-TempoWatch-UIView+Positioning-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751C63B94ACCD3124B248F4 /* Pods-TempoWatch-UIView+Positioning-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D1BA2CA7F8E117E20AB4A1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00985E681A951C968C49E218 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09DCDF47BA527AF95293D98B;
+			remoteInfo = "Pods-TempoWatch-UIView+Positioning";
+		};
+		8EDFFCBC2DDEC2040CA35FB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00985E681A951C968C49E218 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 087180798A6B5CB4CAC2F592;
+			remoteInfo = "Pods-TempoWatch7.0-UIView+Positioning";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		38ADE5D415FB7CF7D41F573F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		066CBCD5AF5F166DDB644C17 /* Pods-TempoWatch-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TempoWatch-environment.h"; sourceTree = "<group>"; };
+		0DE7B1CC6986322AAAE90E5B /* Pods-TempoWatch7.0-UIView+Positioning.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempoWatch7.0-UIView+Positioning.xcconfig"; path = "../Pods-TempoWatch7.0-UIView+Positioning/Pods-TempoWatch7.0-UIView+Positioning.xcconfig"; sourceTree = "<group>"; };
+		15FF70D015661151AEDA3A2C /* Pods-TempoWatch-UIView+Positioning.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TempoWatch-UIView+Positioning.xcconfig"; sourceTree = "<group>"; };
+		1A0B8886CA29AFD7B0AF705C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		25957E51A3C91A30342C2803 /* Pods-TempoWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TempoWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		3A6802486BB798D624914C3B /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		446B8D69058D12419708FD4B /* UIView+Positioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Positioning.m"; sourceTree = "<group>"; };
+		46628448308BFAEFD5186C03 /* Pods-TempoWatch7.0-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TempoWatch7.0-environment.h"; sourceTree = "<group>"; };
+		4751C63B94ACCD3124B248F4 /* Pods-TempoWatch-UIView+Positioning-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TempoWatch-UIView+Positioning-dummy.m"; sourceTree = "<group>"; };
+		4EE691A41E6568E78AB77F1A /* Pods-TempoWatch-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TempoWatch-acknowledgements.markdown"; sourceTree = "<group>"; };
+		51BCC835314F028A11BF1386 /* Pods-TempoWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TempoWatch.release.xcconfig"; sourceTree = "<group>"; };
+		58DED08A184EF32B947A139D /* Pods-TempoWatch7.0-UIView+Positioning-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-TempoWatch7.0-UIView+Positioning-dummy.m"; path = "../Pods-TempoWatch7.0-UIView+Positioning/Pods-TempoWatch7.0-UIView+Positioning-dummy.m"; sourceTree = "<group>"; };
+		634543DA0C3702D9B92FA024 /* Pods-TempoWatch7.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TempoWatch7.0.debug.xcconfig"; sourceTree = "<group>"; };
+		6B3180B2CE046264D4445E72 /* Pods-TempoWatch7.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TempoWatch7.0.release.xcconfig"; sourceTree = "<group>"; };
+		6FBBD3B4D833263AAAFB0663 /* Pods-TempoWatch7.0-UIView+Positioning-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-TempoWatch7.0-UIView+Positioning-prefix.pch"; path = "../Pods-TempoWatch7.0-UIView+Positioning/Pods-TempoWatch7.0-UIView+Positioning-prefix.pch"; sourceTree = "<group>"; };
+		7DBC5CAC86AF05C65327B1AF /* Pods-TempoWatch-UIView+Positioning-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TempoWatch-UIView+Positioning-Private.xcconfig"; sourceTree = "<group>"; };
+		849A3A179BAC1E893EE3944D /* libPods-TempoWatch-UIView+Positioning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempoWatch-UIView+Positioning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C6752480E70BA38ED35643 /* Pods-TempoWatch-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TempoWatch-dummy.m"; sourceTree = "<group>"; };
+		92062F6FCB216FC225554345 /* Pods-TempoWatch7.0-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TempoWatch7.0-acknowledgements.plist"; sourceTree = "<group>"; };
+		9E78D7F16DA284850775F989 /* Pods-TempoWatch-UIView+Positioning-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TempoWatch-UIView+Positioning-prefix.pch"; sourceTree = "<group>"; };
+		A16EC5305360BD54CC724E1E /* Pods-TempoWatch-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TempoWatch-acknowledgements.plist"; sourceTree = "<group>"; };
+		A736791475D8A7FF2470F56A /* Pods-TempoWatch7.0-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TempoWatch7.0-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B6BBB4AC08DA31E6FC22C267 /* UIView+Positioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Positioning.h"; sourceTree = "<group>"; };
+		B74079805FA102D49D0F903C /* Pods-TempoWatch7.0-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TempoWatch7.0-resources.sh"; sourceTree = "<group>"; };
+		B947386A1CCD976B4634A607 /* Pods-TempoWatch7.0-UIView+Positioning-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempoWatch7.0-UIView+Positioning-Private.xcconfig"; path = "../Pods-TempoWatch7.0-UIView+Positioning/Pods-TempoWatch7.0-UIView+Positioning-Private.xcconfig"; sourceTree = "<group>"; };
+		CB1637753183CC9712BECAC1 /* Pods-TempoWatch-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TempoWatch-resources.sh"; sourceTree = "<group>"; };
+		D17624BF79202B8704F95CE8 /* Pods-TempoWatch7.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TempoWatch7.0-dummy.m"; sourceTree = "<group>"; };
+		DB245086CD0683F9AD7FEBA0 /* libPods-TempoWatch7.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempoWatch7.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD604D29BB5F2B90CB719EBA /* libPods-TempoWatch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempoWatch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21DB8C30EB0AE6CBC961976 /* libPods-TempoWatch7.0-UIView+Positioning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempoWatch7.0-UIView+Positioning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		44C6D5D04155B644C00E4B7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46267ACDD1B0EA94C050C979 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A492076F6D7462F22705EEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A4272D6FBCEAC37A2A8693 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77F412CC24CD88CEB0D1EF2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD223480E12C37CA41E910AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0609873BC9EDAE4C2EB2544 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67E370D4444BEBBE5B3A8D7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		70F4CB343AA5D5D6E7279091 /* Frameworks */ = {
+		25B0DD51FDD3B61581B2C545 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				15FF70D015661151AEDA3A2C /* Pods-TempoWatch-UIView+Positioning.xcconfig */,
+				7DBC5CAC86AF05C65327B1AF /* Pods-TempoWatch-UIView+Positioning-Private.xcconfig */,
+				4751C63B94ACCD3124B248F4 /* Pods-TempoWatch-UIView+Positioning-dummy.m */,
+				9E78D7F16DA284850775F989 /* Pods-TempoWatch-UIView+Positioning-prefix.pch */,
+				0DE7B1CC6986322AAAE90E5B /* Pods-TempoWatch7.0-UIView+Positioning.xcconfig */,
+				B947386A1CCD976B4634A607 /* Pods-TempoWatch7.0-UIView+Positioning-Private.xcconfig */,
+				58DED08A184EF32B947A139D /* Pods-TempoWatch7.0-UIView+Positioning-dummy.m */,
+				6FBBD3B4D833263AAAFB0663 /* Pods-TempoWatch7.0-UIView+Positioning-prefix.pch */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/Pods-TempoWatch-UIView+Positioning";
 			sourceTree = "<group>";
 		};
-		9B74D33A9D4D918862ED9305 = {
+		39DBAEAD88E07DF72B3FAE2D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				38ADE5D415FB7CF7D41F573F /* Podfile */,
-				70F4CB343AA5D5D6E7279091 /* Frameworks */,
-				CC368BDEA93E8B8FBAF61D55 /* Products */,
-				A63781820269340DAA9EBA81 /* Targets Support Files */,
+				1A0B8886CA29AFD7B0AF705C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		70F94B66A9F55B50CC86CF27 = {
+			isa = PBXGroup;
+			children = (
+				3A6802486BB798D624914C3B /* Podfile */,
+				AE2B7661B95F9785CABD620B /* Frameworks */,
+				B06FD6D648A2866B68C5AB36 /* Pods */,
+				ADC155B0B1BA65088FB19522 /* Products */,
+				E27441FA179B32E5261E52EE /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A63781820269340DAA9EBA81 /* Targets Support Files */ = {
+		7C53D599F8ECC67C963FF069 /* UIView+Positioning */ = {
 			isa = PBXGroup;
 			children = (
+				B6BBB4AC08DA31E6FC22C267 /* UIView+Positioning.h */,
+				446B8D69058D12419708FD4B /* UIView+Positioning.m */,
+				25B0DD51FDD3B61581B2C545 /* Support Files */,
 			);
-			name = "Targets Support Files";
+			path = "UIView+Positioning";
 			sourceTree = "<group>";
 		};
-		CC368BDEA93E8B8FBAF61D55 /* Products */ = {
+		ADC155B0B1BA65088FB19522 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				DD604D29BB5F2B90CB719EBA /* libPods-TempoWatch.a */,
+				849A3A179BAC1E893EE3944D /* libPods-TempoWatch-UIView+Positioning.a */,
+				DB245086CD0683F9AD7FEBA0 /* libPods-TempoWatch7.0.a */,
+				F21DB8C30EB0AE6CBC961976 /* libPods-TempoWatch7.0-UIView+Positioning.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AE2B7661B95F9785CABD620B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39DBAEAD88E07DF72B3FAE2D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B06FD6D648A2866B68C5AB36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C53D599F8ECC67C963FF069 /* UIView+Positioning */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E27441FA179B32E5261E52EE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6B83D02C98484B1CE602502 /* Pods-TempoWatch */,
+				E3F57574B73A1B1D7001FA91 /* Pods-TempoWatch7.0 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E3F57574B73A1B1D7001FA91 /* Pods-TempoWatch7.0 */ = {
+			isa = PBXGroup;
+			children = (
+				A736791475D8A7FF2470F56A /* Pods-TempoWatch7.0-acknowledgements.markdown */,
+				92062F6FCB216FC225554345 /* Pods-TempoWatch7.0-acknowledgements.plist */,
+				D17624BF79202B8704F95CE8 /* Pods-TempoWatch7.0-dummy.m */,
+				46628448308BFAEFD5186C03 /* Pods-TempoWatch7.0-environment.h */,
+				B74079805FA102D49D0F903C /* Pods-TempoWatch7.0-resources.sh */,
+				634543DA0C3702D9B92FA024 /* Pods-TempoWatch7.0.debug.xcconfig */,
+				6B3180B2CE046264D4445E72 /* Pods-TempoWatch7.0.release.xcconfig */,
+			);
+			name = "Pods-TempoWatch7.0";
+			path = "Target Support Files/Pods-TempoWatch7.0";
+			sourceTree = "<group>";
+		};
+		F6B83D02C98484B1CE602502 /* Pods-TempoWatch */ = {
+			isa = PBXGroup;
+			children = (
+				4EE691A41E6568E78AB77F1A /* Pods-TempoWatch-acknowledgements.markdown */,
+				A16EC5305360BD54CC724E1E /* Pods-TempoWatch-acknowledgements.plist */,
+				84C6752480E70BA38ED35643 /* Pods-TempoWatch-dummy.m */,
+				066CBCD5AF5F166DDB644C17 /* Pods-TempoWatch-environment.h */,
+				CB1637753183CC9712BECAC1 /* Pods-TempoWatch-resources.sh */,
+				25957E51A3C91A30342C2803 /* Pods-TempoWatch.debug.xcconfig */,
+				51BCC835314F028A11BF1386 /* Pods-TempoWatch.release.xcconfig */,
+			);
+			name = "Pods-TempoWatch";
+			path = "Target Support Files/Pods-TempoWatch";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A54D185C8DFA877B19068EBA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A45503BC4D25C8A6B5C33C1C /* UIView+Positioning.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA2AABADE689B1F65BCBE34 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0031CCB1C740E5844F3D3680 /* UIView+Positioning.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		087180798A6B5CB4CAC2F592 /* Pods-TempoWatch7.0-UIView+Positioning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603F65F9B96C5D6FBBF9E1F5 /* Build configuration list for PBXNativeTarget "Pods-TempoWatch7.0-UIView+Positioning" */;
+			buildPhases = (
+				6AA78C51DD8D8F38AE47F811 /* Sources */,
+				77F412CC24CD88CEB0D1EF2C /* Frameworks */,
+				A54D185C8DFA877B19068EBA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TempoWatch7.0-UIView+Positioning";
+			productName = "Pods-TempoWatch7.0-UIView+Positioning";
+			productReference = F21DB8C30EB0AE6CBC961976 /* libPods-TempoWatch7.0-UIView+Positioning.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		09DCDF47BA527AF95293D98B /* Pods-TempoWatch-UIView+Positioning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A2F10C089A948C34EEC0922 /* Build configuration list for PBXNativeTarget "Pods-TempoWatch-UIView+Positioning" */;
+			buildPhases = (
+				6F8443FC2CF0D89444B5D75A /* Sources */,
+				5A492076F6D7462F22705EEC /* Frameworks */,
+				EFA2AABADE689B1F65BCBE34 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TempoWatch-UIView+Positioning";
+			productName = "Pods-TempoWatch-UIView+Positioning";
+			productReference = 849A3A179BAC1E893EE3944D /* libPods-TempoWatch-UIView+Positioning.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AFC74DD25BA7122CFFFED8E0 /* Pods-TempoWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAAE8E33FAE0A7BE50776388 /* Build configuration list for PBXNativeTarget "Pods-TempoWatch" */;
+			buildPhases = (
+				AB57A689A56C597FC6146455 /* Sources */,
+				B0609873BC9EDAE4C2EB2544 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDC8A77EA14894D367B2848F /* PBXTargetDependency */,
+			);
+			name = "Pods-TempoWatch";
+			productName = "Pods-TempoWatch";
+			productReference = DD604D29BB5F2B90CB719EBA /* libPods-TempoWatch.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F394B38FB2EDD7C9CDAF244E /* Pods-TempoWatch7.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064666B75BD036BB301B58D2 /* Build configuration list for PBXNativeTarget "Pods-TempoWatch7.0" */;
+			buildPhases = (
+				37094AE24BA1D46EAC523CB7 /* Sources */,
+				44C6D5D04155B644C00E4B7C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6414B0C8329F0390D8434A4 /* PBXTargetDependency */,
+			);
+			name = "Pods-TempoWatch7.0";
+			productName = "Pods-TempoWatch7.0";
+			productReference = DB245086CD0683F9AD7FEBA0 /* libPods-TempoWatch7.0.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
-		5AC0D00BA7B940AFC3A30D9C /* Project object */ = {
+		00985E681A951C968C49E218 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 67248508865EC7D5461EF5EE /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4330CCB414B4CCD6FFF23764 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 9B74D33A9D4D918862ED9305;
-			productRefGroup = CC368BDEA93E8B8FBAF61D55 /* Products */;
+			mainGroup = 70F94B66A9F55B50CC86CF27;
+			productRefGroup = ADC155B0B1BA65088FB19522 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				AFC74DD25BA7122CFFFED8E0 /* Pods-TempoWatch */,
+				09DCDF47BA527AF95293D98B /* Pods-TempoWatch-UIView+Positioning */,
+				F394B38FB2EDD7C9CDAF244E /* Pods-TempoWatch7.0 */,
+				087180798A6B5CB4CAC2F592 /* Pods-TempoWatch7.0-UIView+Positioning */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		37094AE24BA1D46EAC523CB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51186EB127C7E709028DFB97 /* Pods-TempoWatch7.0-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AA78C51DD8D8F38AE47F811 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D0D8FFE747C8E5A111B0E2 /* Pods-TempoWatch7.0-UIView+Positioning-dummy.m in Sources */,
+				0E3936444D2573251F6D059F /* UIView+Positioning.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F8443FC2CF0D89444B5D75A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F58F2E269D7C005E7FAB18F8 /* Pods-TempoWatch-UIView+Positioning-dummy.m in Sources */,
+				BC232F7E77E65E59F9323169 /* UIView+Positioning.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB57A689A56C597FC6146455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFB62F103DFCC7D3BC5F79F /* Pods-TempoWatch-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6414B0C8329F0390D8434A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TempoWatch7.0-UIView+Positioning";
+			target = 087180798A6B5CB4CAC2F592 /* Pods-TempoWatch7.0-UIView+Positioning */;
+			targetProxy = 8EDFFCBC2DDEC2040CA35FB9 /* PBXContainerItemProxy */;
+		};
+		BDC8A77EA14894D367B2848F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TempoWatch-UIView+Positioning";
+			target = 09DCDF47BA527AF95293D98B /* Pods-TempoWatch-UIView+Positioning */;
+			targetProxy = 4D1BA2CA7F8E117E20AB4A1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		8826441AAAB138B262D591BD /* Debug */ = {
+		3585D3484127C8534AF3509E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DBC5CAC86AF05C65327B1AF /* Pods-TempoWatch-UIView+Positioning-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TempoWatch-UIView+Positioning/Pods-TempoWatch-UIView+Positioning-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		69C30598CFF270C1EAB92B2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25957E51A3C91A30342C2803 /* Pods-TempoWatch.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6AAB040D1EC032A9612F9886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 634543DA0C3702D9B92FA024 /* Pods-TempoWatch7.0.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		749839017D72B31F245B818D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B947386A1CCD976B4634A607 /* Pods-TempoWatch7.0-UIView+Positioning-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TempoWatch7.0-UIView+Positioning/Pods-TempoWatch7.0-UIView+Positioning-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7BFC442018E3E7B47CC36224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51BCC835314F028A11BF1386 /* Pods-TempoWatch.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		864CFCA23AF4B0182B78F220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DBC5CAC86AF05C65327B1AF /* Pods-TempoWatch-UIView+Positioning-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TempoWatch-UIView+Positioning/Pods-TempoWatch-UIView+Positioning-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B0FD01DE4A909D21ECD890B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -106,7 +524,7 @@
 			};
 			name = Debug;
 		};
-		9E78F82621801B95E8D2159E /* Release */ = {
+		B5FCB2C34B3AAB0687A20A55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -140,19 +558,87 @@
 			};
 			name = Release;
 		};
+		DA54C645E1A3D651628315E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B3180B2CE046264D4445E72 /* Pods-TempoWatch7.0.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FAAA2C3043AFDD8635D6FC90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B947386A1CCD976B4634A607 /* Pods-TempoWatch7.0-UIView+Positioning-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-TempoWatch7.0-UIView+Positioning/Pods-TempoWatch7.0-UIView+Positioning-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67248508865EC7D5461EF5EE /* Build configuration list for PBXProject "Pods" */ = {
+		064666B75BD036BB301B58D2 /* Build configuration list for PBXNativeTarget "Pods-TempoWatch7.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8826441AAAB138B262D591BD /* Debug */,
-				9E78F82621801B95E8D2159E /* Release */,
+				6AAB040D1EC032A9612F9886 /* Debug */,
+				DA54C645E1A3D651628315E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4330CCB414B4CCD6FFF23764 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0FD01DE4A909D21ECD890B8 /* Debug */,
+				B5FCB2C34B3AAB0687A20A55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603F65F9B96C5D6FBBF9E1F5 /* Build configuration list for PBXNativeTarget "Pods-TempoWatch7.0-UIView+Positioning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAAA2C3043AFDD8635D6FC90 /* Debug */,
+				749839017D72B31F245B818D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A2F10C089A948C34EEC0922 /* Build configuration list for PBXNativeTarget "Pods-TempoWatch-UIView+Positioning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				864CFCA23AF4B0182B78F220 /* Debug */,
+				3585D3484127C8534AF3509E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAAE8E33FAE0A7BE50776388 /* Build configuration list for PBXNativeTarget "Pods-TempoWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69C30598CFF270C1EAB92B2D /* Debug */,
+				7BFC442018E3E7B47CC36224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5AC0D00BA7B940AFC3A30D9C /* Project object */;
+	rootObject = 00985E681A951C968C49E218 /* Project object */;
 }

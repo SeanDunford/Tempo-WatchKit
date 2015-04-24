@@ -5,5 +5,5 @@
 #import <TempoSharedFramework/TempoSharedFramework.h>
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
-
+#import "UIView+Positioning.h"
 #endif

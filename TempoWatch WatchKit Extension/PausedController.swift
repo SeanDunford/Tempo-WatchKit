@@ -25,6 +25,9 @@ class PausedController: WKInterfaceController {
         wormHole.listenForMessageWithIdentifier(
             "updateTimers", listener: updateTimers)
         
+        var x = UIView()
+        
+        
     }
     func updateTimers(AnyObject!){
         timerObj.update()

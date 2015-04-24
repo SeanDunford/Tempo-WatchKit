@@ -10,6 +10,8 @@ public class iWatchMsgController: NSObject {
     public override init(){
         super.init()
         initialize()
+        let x = UIView()
+        
     }
     private func initialize(){
         wormhole = MMWormhole(

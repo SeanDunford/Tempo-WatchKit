@@ -1,0 +1,5 @@
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#endif
+
+#import "Pods-TempoWatch7.0-environment.h"

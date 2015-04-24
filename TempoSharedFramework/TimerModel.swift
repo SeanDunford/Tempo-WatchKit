@@ -123,5 +123,4 @@ public class TimerModel: NSObject {
     public func getIntervalAmount()-> Int{
         return iAmnt;
     }
-    
 }

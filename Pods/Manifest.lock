@@ -1,1 +1,10 @@
+PODS:
+  - UIView+Positioning (1.1)
+
+DEPENDENCIES:
+  - UIView+Positioning (~> 1.1)
+
+SPEC CHECKSUMS:
+  UIView+Positioning: e93fe9e3186d1ed7d60e344aa12787911e902056
+
 COCOAPODS: 0.36.4

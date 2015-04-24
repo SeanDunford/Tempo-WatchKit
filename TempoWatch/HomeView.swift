@@ -6,8 +6,6 @@ import TempoSharedFramework
 public class HomeView: UIView {
     var beginButton: UIButton!
     var countDownLabel: UILabel!
-    var width: CGFloat!
-    var height: CGFloat!
     var disableButtons = false
     var timerObj: TimerModel!{
         willSet(x){
@@ -20,8 +18,6 @@ public class HomeView: UIView {
     override init(frame: CGRect) {
         
         super.init(frame: frame)
-        width = frame.size.width
-        height = frame.size.height
         initialize()
     }
     required public init(coder aDecoder: NSCoder) {

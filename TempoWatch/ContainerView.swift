@@ -14,15 +14,11 @@ class ContainerView: UIView{
     var partialFrame: CGRect!
     var bigFrame: CGRect!
     
-    var width: CGFloat!
-    var height: CGFloat!
     var homeViewSwipedOpen: (() -> ())?
     var menuViewSwipedOpen: (() -> ())?
     
     override init(frame:CGRect){
         super.init(frame:frame)
-        width = frame.size.width
-        height = frame.size.height
         initialize()
     }
     

@@ -4,8 +4,6 @@ import UIKit
 import TempoSharedFramework
 
 public class WorkView: UIView{
-    var height: CGFloat!
-    var width: CGFloat!
     var workTime: UILabel!
     var intervalLabel: UILabel!
     var pauseGesture: UITapGestureRecognizer!
@@ -18,9 +16,6 @@ public class WorkView: UIView{
     
     override init(frame: CGRect) {
         super.init(frame:frame)
-        
-        height = frame.size.height
-        width = frame.size.width
         pauseGesture = UITapGestureRecognizer(target: self, action: Selector("didTap"))
         self.addGestureRecognizer(pauseGesture)
         pauseGesture.cancelsTouchesInView = false
