@@ -13,6 +13,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
     var width: CGFloat!
     var height: CGFloat!
     var mode: Int!
+    var disableButtons = false
     var timerObj: TimerModel!{
         didSet{
             updateLabels()
@@ -114,8 +115,8 @@ public class SettingsView: UIView, UITextFieldDelegate{
         circleView = BWCircularSlider(textColor:color, startColor:color, endColor:color, frame: frame)
         circleView.alpha = 0
         self.addSubview(circleView)
-        
-        var xImg =  UIImage(named:"xBtn")
+                
+        var xImg =  UIImage(named:"xbtn")
         var size = xImg?.size
         
         xBtn = UIButton(frame: CGRectMake(width - 30 - 5, 10, 25, 25))
@@ -145,6 +146,10 @@ public class SettingsView: UIView, UITextFieldDelegate{
         self.delegate.enableScroll(true)
     }
     func btnPressed(btn: UIButton){
+        if(disableButtons){
+            disableButtons = false
+            return
+        }
         var tag: Int = btn.tag
         var color: UIColor
         var maxValue: CGFloat
