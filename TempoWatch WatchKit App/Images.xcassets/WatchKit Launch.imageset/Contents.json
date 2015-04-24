@@ -3,18 +3,18 @@
     {
       "idiom" : "watch",
       "scale" : "2x",
-      "filename" : "appIcon55x55.png"
+      "filename" : "55x55icon.png"
     },
     {
       "idiom" : "watch",
       "screenWidth" : "{130,145}",
-      "filename" : "launch272x340.png",
+      "filename" : "272x340launch.png",
       "scale" : "2x"
     },
     {
       "idiom" : "watch",
       "screenWidth" : "{146,165}",
-      "filename" : "launch312x390.png",
+      "filename" : "312x390launch.png",
       "scale" : "2x"
     }
   ],
