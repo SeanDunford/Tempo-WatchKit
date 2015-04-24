@@ -92,6 +92,8 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
  
         var f: CGRect = CGRectMake(0, 0, width, height - 50)
         containerView = ContainerView(frame: f)
+        containerView.homeViewSwipedOpen = homeViewSwipedOpen
+        containerView.menuViewSwipedOpen = menuViewSwipedOpen
         
         f = CGRectMake(0, 0, width, height)
         homeView = HomeView(frame: f)
@@ -122,7 +124,10 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
     func setupViews(){
         homeView.beginBlock = beginHomeCountdown
         
+        addCancelButtonToView(homeView)
         addMenuButtonToView(homeView)
+        homeView.hideMenu(false)
+        
         addCancelButtonToView(workView)
         addCancelButtonToView(restView)
         
@@ -186,13 +191,23 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         self.adBannerView.hidden = false;
     }
     
+    func menuViewSwipedOpen(){
+        homeView.disableButtons = true
+    }
+    func homeViewSwipedOpen(){
+        settingsView.disableButtons = true
+    }
+    
     func beginHomeCountdown() {
+        homeView.hideMenu(true)
         homeView.startTimer()
         currentCountDown = timerObj.getStartSeconds()
         countDownTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateCountdown"), userInfo: nil, repeats: true)
+        enableScroll(false)
     }
     
     func beginWorkCountdown(){
+        homeView.hideMenu(false)
         playSound("long");
         workView.startTimer()
         workView.updateInterval(currentInterval, total: totalIntervals)
@@ -234,29 +249,32 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         default:
             return
         }
-        
         if( currentCountDown <= 3 && currentCountDown > 0 ){
             playSound("short");
         }
     }
     
     func playSound(soundPath: NSString){
-        var filePath:NSString!
-        if( soundPath == "short" ){
+        #if (arch(i386) || arch(x86_64)) && os(iOS)
+            //println("is simulator")
+        #else
+            var filePath:NSString!
+            if( soundPath == "short" ){
             filePath = NSBundle.mainBundle().pathForResource("short", ofType: "wav");
-        } else if( soundPath == "long" ){
+            } else if( soundPath == "long" ){
             filePath = NSBundle.mainBundle().pathForResource("long", ofType: "wav");
-        }
-        
-        self.sound = NSURL(fileURLWithPath: filePath as String)
-        
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil);
-        AVAudioSession.sharedInstance().setActive(true, error: nil);
-        var error:NSError?
-        
-        self.audioPlayer = AVAudioPlayer(contentsOfURL: sound, error: &error);
-        self.audioPlayer.prepareToPlay();
-        self.audioPlayer.play();
+            }
+            
+            self.sound = NSURL(fileURLWithPath: filePath as String)
+            
+            AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil);
+            AVAudioSession.sharedInstance().setActive(true, error: nil);
+            var error:NSError?
+            
+            self.audioPlayer = AVAudioPlayer(contentsOfURL: sound, error: &error);
+            self.audioPlayer.prepareToPlay();
+            self.audioPlayer.play();
+        #endif
     }
     
     func stopTimer(){
@@ -292,26 +310,32 @@ class HomeViewController: UIViewController, ADBannerViewDelegate, SettingsViewDe
         var menuImage: UIImage! = UIImage(named: "menu-icon");
         menuButton.setBackgroundImage(menuImage, forState: UIControlState.Normal);
         menuButton.addTarget(self, action: "menuClicked", forControlEvents: UIControlEvents.TouchUpInside);
+        menuButton.tag = 99
         view.addSubview(menuButton);
     }
     func addCancelButtonToView(view: UIView){
         var cancelButton: UIButton = UIButton(frame: CGRectMake(width - 35, 10, 25, 25));
-        var cancelImage: UIImage! = UIImage(named: "xBtn");
+        var cancelImage: UIImage! = UIImage(named: "xbtn");
         cancelButton.setBackgroundImage(cancelImage, forState: UIControlState.Normal);
         cancelButton.addTarget(self, action: "cancelClicked", forControlEvents: UIControlEvents.TouchUpInside);
+        cancelButton.tag = 98
         view.addSubview(cancelButton);
     }
     func menuClicked(){
         containerView.toggleMenuOpen()
-//        paused = ( !paused ) ? true : false;
         dismissKeyBoard()
     }
     
     func cancelClicked(){
         // Reset Interval
         currentInterval = 1;
-        // Reset State to Home
+        // Reset State to 
+        homeView.stopTimer()
+        homeView.hideMenu(false)
+        homeView.disableButtons = false
+        paused = false
         self.state = .home
+        enableScroll(true)
     }
     
     func dismissKeyBoard(){

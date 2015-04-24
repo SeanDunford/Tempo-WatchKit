@@ -8,6 +8,7 @@ public class HomeView: UIView {
     var countDownLabel: UILabel!
     var width: CGFloat!
     var height: CGFloat!
+    var disableButtons = false
     var timerObj: TimerModel!{
         willSet(x){
             countDownLabel.text = String(x.getStartSeconds());
@@ -54,11 +55,22 @@ public class HomeView: UIView {
         countDownLabel.alpha = 0
         if((timerObj) != nil){
             countDownLabel.text = String(timerObj.getStartSeconds())
-    
         }
     }
+    func hideMenu(flag: Bool){
+        var menuView: UIView = self.viewWithTag(99)!
+        var cancelView: UIView = self.viewWithTag(98)!
+        
+        menuView.hidden = flag
+        cancelView.hidden = !flag
+    }
     func beginPressed(){
+        if(disableButtons){
+            disableButtons = false
+            return
+        }
         beginBlock?()
+        
     }
     func updateTime(seconds: Int){
         countDownLabel.text = String(seconds)

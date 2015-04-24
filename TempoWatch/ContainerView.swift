@@ -7,7 +7,6 @@ class ContainerView: UIView{
     var scrollView: UIScrollView!
     var menuOpen: Bool = false
     var disableScrolling = false
-    
     var pauseImg: UIImage!
     var playImg: UIImage!
     var pauseImgV: UIImageView!
@@ -17,6 +16,8 @@ class ContainerView: UIView{
     
     var width: CGFloat!
     var height: CGFloat!
+    var homeViewSwipedOpen: (() -> ())?
+    var menuViewSwipedOpen: (() -> ())?
     
     override init(frame:CGRect){
         super.init(frame:frame)
@@ -64,19 +65,15 @@ class ContainerView: UIView{
         pauseImgV.alpha = 0
         pauseImgV.image = (pause) ? pauseImg : playImg
         UIView.animateWithDuration(0.1, delay: 0, options: .CurveEaseIn, animations: {
-            println("animation started")
             self.pauseImgV.alpha = 0.10
         }, completion: { finished in
-            println("animation continuing")
             UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
                 self.pauseImgV.frame = self.partialFrame
                 }, completion: { finished in
-                    println("animation finishing")
                     UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseOut, animations: {
                         self.pauseImgV.frame = self.bigFrame
                         self.pauseImgV.alpha = 0
                         }, completion: { finished in
-                            println("animation finished")
                     })
             })
         })
@@ -112,9 +109,11 @@ class ContainerView: UIView{
             if( swipeGesture.direction == UISwipeGestureRecognizerDirection.Right){
                 scrollView.setContentOffset(CGPointMake(0, 0), animated: true);
                 menuOpen = false;
+                homeViewSwipedOpen?()
             } else if( swipeGesture.direction == UISwipeGestureRecognizerDirection.Left ){
                 scrollView.setContentOffset(CGPointMake(width - 45, 0), animated: true);
                 menuOpen = true;
+                menuViewSwipedOpen?()
             }
         }
     }
