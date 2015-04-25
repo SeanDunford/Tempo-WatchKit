@@ -34,7 +34,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
     var xBtn: UIButton!
     
     var circleView: BWCircularSlider!
-    
+    var donebtn: UIButton!
     var delegate: SettingsViewDelegate!
     
     override init(frame:CGRect){
@@ -112,6 +112,18 @@ public class SettingsView: UIView, UITextFieldDelegate{
         circleView = BWCircularSlider(textColor:color, startColor:color, endColor:color, frame: frame)
         circleView.alpha = 0
         self.addSubview(circleView)
+        
+        donebtn = UIButton()
+        donebtn.width = circleView.width
+        donebtn.center = circleView.center
+        donebtn.top = circleView.bottom
+        donebtn.height = 20
+        donebtn.setTitle("save", forState: UIControlState.Normal)
+        donebtn.titleLabel?.font = UIFont(name:"Montserrat", size: 20)
+        donebtn.titleLabel?.textColor = UIColor().workPurple()
+        donebtn.alpha = 0
+        donebtn.addTarget(self, action: "donebtnPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        self.addSubview(donebtn)
                 
         var xImg =  UIImage(named:"xbtn")
         var size = xImg?.size
@@ -125,7 +137,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
         self.addSubview(xBtn)
         
     }
-    func xBtnPressed(){
+    func donebtnPressed(){
         var val = circleView.currValue
         switch(mode){
         case 0:
@@ -138,6 +150,11 @@ public class SettingsView: UIView, UITextFieldDelegate{
             return;
         }
         updateLabels()
+        fadeSettingsViews(true)
+        mode = 0
+        self.delegate.enableScroll(true)
+    }
+    func xBtnPressed(){
         fadeSettingsViews(true)
         mode = 0
         self.delegate.enableScroll(true)
@@ -177,6 +194,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
             maxValue: maxValue,
             currValue: currValue,
             timeMode:timeMode)
+        donebtn.titleLabel?.textColor = color
         
         updateLabels()
         fadeSettingsViews(false)
@@ -198,6 +216,7 @@ public class SettingsView: UIView, UITextFieldDelegate{
                 //Flip alpha value
                 alpha = (alpha == 1.0) ? 0.0 : 1.0
                 self.circleView.alpha = alpha
+                self.donebtn.alpha = alpha
                 self.xBtn.alpha = alpha
             }, completion: {
                 (value: Bool) in
